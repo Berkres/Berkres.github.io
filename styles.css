@@ -1,0 +1,633 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.center-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background-color: rgb(238,237,235);
+  position: fixed;
+  width: 100%;
+  margin-top: 52px;
+  filter: drop-shadow(0px 5px 30px rgba(44, 42, 42, 0.624));
+  z-index: 100;
+}
+
+.lexend-deca-font {
+  display: flex;
+}
+
+.home {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0,0,0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
+.home:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 50px;
+  background: rgb(0,0,0);
+  transform: scaleX(0);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.home:hover:before {
+  transform: scaleX(1);
+}
+
+.news {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0,0,0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.news:hover {
+  cursor: pointer;
+}
+
+.news:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 48px;
+  background: rgb(0,0,0);
+  transform: scaleX(0);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.news:hover:before {
+  transform: scaleX(1);
+}
+
+.discography {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0,0,0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.discography:hover {
+  cursor: pointer;
+}
+
+.discography:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 72px;
+  background: rgb(0,0,0);
+  transform: scaleX(0);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.discography:hover:before {
+  transform: scaleX(1);
+}
+
+.about {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.about:hover {
+  cursor: pointer;
+}
+
+.about:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 56px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(0);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.about:hover:before {
+  transform: scaleX(1);
+}
+
+.contact {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.contact:hover {
+  cursor: pointer;
+}
+
+.contact:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 76px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(0);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.contact:hover:before {
+  transform: scaleX(1);
+}
+
+.start-img {
+  width: 102%;
+}
+
+.home-heading {
+  display: flex;
+  background-color: #f0f0f0;
+  width: 90%;
+  max-width: 800px;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.home-text {
+  display: flex;
+  background-color: #f0f0f0;
+  width: 90%;
+  max-width: 800px;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+  line-height: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 900px;
+  background-color: #f0f0f0;
+  margin-top: 50px;
+}
+
+.content-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f0f0f0;
+  z-index: -3;
+  margin-top: 50px;
+}
+
+.go-to-about {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  padding: 10px;
+  color: rgb(19, 17, 18);
+  outline: none;
+  background: transparent;
+  border: 1px solid rgb(19, 17, 18);
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+  transition: 0.15s;
+}
+
+.go-to-about:hover {
+  background-color: rgb(19, 17, 18);
+  color: #f0f0f0;
+}
+
+.home-img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  object-fit: cover;
+  filter: drop-shadow(0px 5px 13px rgba(44, 42, 42, 0.400));
+}
+
+.contact-img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  object-fit: cover;
+  filter: drop-shadow(0px 5px 13px rgba(44, 42, 42, 0.400));
+}
+
+.contact-heading {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+  margin-bottom: 50px;
+}
+
+.lexend-zetta-font {
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(202, 209, 209);
+  background-color: rgb(30, 30, 30);
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.berkresmusic {
+  text-decoration: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: rgb(202, 209, 209);
+}
+
+.berkresmusic:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  color:#f0f0f0;
+  text-shadow: 2px 2px 15px rgb(19, 17, 18);
+}
+
+.contact-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  color:#f0f0f0;
+  text-shadow: 2px 2px 15px rgb(19, 17, 18);
+}
+
+.contact-on-page {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.contact-on-page:hover {
+  cursor: pointer;
+}
+
+.contact-on-page:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 76px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(1);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.about-on-page {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.about-on-page:hover {
+  cursor: pointer;
+}
+
+.about-on-page:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 56px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(1);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.news-on-page {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.news-on-page:hover {
+  cursor: pointer;
+}
+
+.news-on-page:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 48px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(1);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.home-on-page {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+/*.home-on-page:hover {
+  cursor: pointer;
+}*/
+
+.home-on-page:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 50px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(1);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.discography-on-page {
+  margin-left: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: rgb(0, 0, 0);
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.discography-on-page:hover {
+  cursor: pointer;
+}
+
+.discography-on-page:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 72px;
+  background: rgb(0, 0, 0);
+  transform: scaleX(1);
+  transition: transform 0.06s linear;
+  position: fixed;
+}
+
+.contact-form {
+  width: 90%;
+  max-width: 600px;
+}
+
+.input-group {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.input-contact {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #555;
+  color: rgb(19, 17, 18);
+  background: transparent;
+  font-size: 14px;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+}
+
+.textarea-contact {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #555;
+  color: rgb(19, 17, 18);
+  background: transparent;
+  font-size: 14px;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+}
+
+.label-contact {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: rgb(19, 17, 18);
+  cursor: text;
+  transition: 0.14s;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+}
+
+.submit-button {
+  padding: 10px 0;
+  color: rgb(19, 17, 18);
+  outline: none;
+  background: transparent;
+  border: 1px solid rgb(19, 17, 18);
+  width: 100%;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+  margin-bottom: 50px;
+  transition: 0.15s;
+}
+
+.submit-button:hover {
+  background-color: rgb(19, 17, 18);
+  color: #f0f0f0;
+}
+
+.input-contact:focus~.label-contact,
+.input-contact:valid~.label-contact,
+.textarea-contact:focus~.label-contact,
+.textarea-contact:valid~.label-contact {
+  top: -35px;
+  font-size: 13px;
+}
+
+.contact-font {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 330;
+  font-style: bold;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(210, 210, 210);
+  width: 100%;
+  height: 400px;
+}
+
+.link-logos {
+  display: flex;
+  justify-content: space-evenly;
+  background:rgb(19, 17, 18);
+  margin-top: 40px;
+  size: 100px;
+}
+
+.news-artwork {
+  width: 400px;
+  height: 400px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  margin-bottom: 15px;
+}
+
+.no-orientation {
+  width: 300px;
+  height: 300px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  margin-bottom: 15px;
+}
+
+.thankfulness {
+  width: 300px;
+  height: 300px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  margin-bottom: 15px;
+}
+
+.lavender {
+  width: 300px;
+  height: 300px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  margin-bottom: 15px;
+}
+
+.leftover {
+  width: 300px;
+  height: 300px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  margin-bottom: 15px;
+}
+
+.silence {
+  width: 300px;
+  height: 300px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  margin-bottom: 15px;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
