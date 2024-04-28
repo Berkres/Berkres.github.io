@@ -11,9 +11,9 @@ body {
   background-color: rgb(238,237,235);
   position: fixed;
   width: 100%;
-  margin-top: 52px;
   filter: drop-shadow(0px 5px 30px rgba(44, 42, 42, 0.624));
   z-index: 100;
+  /*margin-top: 52px;*/
 }
 
 .lexend-deca-font {
@@ -39,7 +39,7 @@ body {
   position: absolute;
   top: 50px;
   height: 1px;
-  width: 50px;
+  width: 48px;
   background: rgb(0,0,0);
   transform: scaleX(0);
   transition: transform 0.06s linear;
@@ -288,6 +288,22 @@ body {
   z-index: 10;
 }
 
+.berkresmusic-side {
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  position: absolute;
+  font-style: normal;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  color: rgb(30, 30, 30);
+  display: flex;
+  left: 77px;
+  top: 25px;
+}
+
 .berkresmusic {
   text-decoration: none;
   padding-left: 4px;
@@ -431,7 +447,7 @@ body {
   position: absolute;
   top: 50px;
   height: 1px;
-  width: 50px;
+  width: 48px;
   background: rgb(0, 0, 0);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -630,4 +646,233 @@ body {
   max-width: 1200px;
   width: 100%;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px)
+{
+  .home {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0,0,0);
+    transition: 0.15s;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .home:hover {
+    cursor: pointer;
+  }
+  
+  .home:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    height: 1px;
+    width: 50px;
+    background: rgb(0,0,0);
+    transform: scaleX(0);
+    transition: transform 0.06s linear;
+    position: fixed;
+  }
+  
+  .home:hover:before {
+    transform: scaleX(1);
+  }
+  
+  .news {
+    margin-left: 36px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0,0,0);
+    transition: 0.15s;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .news:hover {
+    cursor: pointer;
+  }
+  
+  .news:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    height: 1px;
+    width: 48px;
+    background: rgb(0,0,0);
+    transform: scaleX(0);
+    transition: transform 0.06s linear;
+    position: fixed;
+  }
+  
+  .news:hover:before {
+    transform: scaleX(1);
+  }
+  
+  .discography {
+    margin-left: 36px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0,0,0);
+    transition: 0.15s;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .discography:hover {
+    cursor: pointer;
+  }
+  
+  .discography:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    height: 1px;
+    width: 72px;
+    background: rgb(0,0,0);
+    transform: scaleX(0);
+    transition: transform 0.06s linear;
+    position: fixed;
+  }
+  
+  .discography:hover:before {
+    transform: scaleX(1);
+  }
+  
+  .about {
+    margin-left: 36px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0, 0, 0);
+    transition: 0.15s;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .about:hover {
+    cursor: pointer;
+  }
+  
+  .about:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    height: 1px;
+    width: 56px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform 0.06s linear;
+    position: fixed;
+  }
+  
+  .about:hover:before {
+    transform: scaleX(1);
+  }
+  
+  .contact {
+    margin-left: 36px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0, 0, 0);
+    transition: 0.15s;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .contact:hover {
+    cursor: pointer;
+  }
+  
+  .contact:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    height: 1px;
+    width: 76px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform 0.06s linear;
+    position: fixed;
+  }
+  
+  .contact:hover:before {
+    transform: scaleX(1);
+  }
+
+  .contact-on-page {
+    margin-left: 36px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0, 0, 0);
+    transition: 0.15s;
+    text-decoration: none;
+    display: none;
+  }
+
+  .berkresmusic {
+    text-decoration: none;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: rgb(0, 0, 0);
+    top: 50px;
+  }
+  
+  .berkresmusic:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .lexend-zetta-font {
+    font-family: "Lexend Zetta", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: rgb(202, 209, 209);
+    background-color: rgb(30, 30, 30);
+    position: fixed;
+    width: 100%;
+    height: 52px;
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  .center-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: rgb(238,237,235);
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+    filter: drop-shadow(0px 5px 30px rgba(44, 42, 42, 0.624));
+    z-index: 100;
+  }
+
+  .no-orientation {
+    width: 230px;
+    height: 230px;
+    background-color: #555;
+    object-fit: contain;
+    border: 1px rgb(19, 17, 18) solid;
+    margin-bottom: 15px;
+  }
 }
