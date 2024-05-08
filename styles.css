@@ -427,10 +427,17 @@ body {
   position: fixed;
 }
 
+.signature {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  margin-top: -70px;
+}
+
 .logo {
   color: rgb(30, 30, 30);
   transition: 0.15s;
-  background-color: blanchedalmond;
   padding: 5px;
 }
 
