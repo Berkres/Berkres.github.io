@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   height: 75px;
-  background-color: rgb(238,237,235);
+  background-color: #f9f9f9;
   position: fixed;
   width: 100%;
   filter: drop-shadow(0px 5px 30px rgba(44, 42, 42, 0.624));
@@ -193,7 +193,6 @@ body {
 
 .home-text {
   display: flex;
-  background-color: #f0f0f0;
   width: 90%;
   max-width: 800px;
   justify-content: center;
@@ -201,14 +200,13 @@ body {
   font-optical-sizing: auto;
   font-weight: 330;
   font-style: bold;
-  line-height: 2;
+  line-height: 2.1;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 900px;
   background-color: #f0f0f0;
   margin-top: 50px;
 }
@@ -236,7 +234,7 @@ body {
   cursor: pointer;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 330;
+  font-weight: 350;
   font-style: bold;
   transition: 0.15s;
 }
@@ -430,11 +428,23 @@ body {
 }
 
 .logo {
-  color: black;
+  color: rgb(30, 30, 30);
   transition: 0.15s;
+  background-color: blanchedalmond;
+  padding: 5px;
 }
 
 .logo:hover {
+  opacity: 0.7;
+}
+
+.logo-fr {
+  color: rgb(30, 30, 30);
+  transition: 0.15s;
+  display: block;
+}
+
+.logo-fr:hover {
   opacity: 0.7;
 }
 
@@ -446,12 +456,13 @@ body {
 .bar {
   display: block;
   width: 25px;
-  height: 3px;
+  height: 2px;
   margin: 5px auto;
   -webkit-transition: all 0.3 ease-in-out;
   transition: all 0.3 ease-in-out;
   background-color: rgb(30, 30, 30);
   transition: 0.15s;
+  border-radius: 5px;
 }
 
 .home-on-page {
@@ -597,22 +608,91 @@ body {
   font-style: bold;
 }
 
+.gallery-row {
+  display: flex;
+  /* background-color: rgb(138, 82, 13); */
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 310px;
+}
+
+.title-row {
+  display: flex;
+  /* background-color: rgb(188, 121, 38); */
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 18px;
+}
+
+.title {
+  /* background-color: #555; */
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-row {
+  display: flex;
+  /*background-color: rgb(188, 80, 38);*/
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: start;
+  height: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 50px;
+}
+
+.year {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
 .footer {
   display: flex;
   justify-content: center;
-  background-color: rgb(210, 210, 210);
+  background-color: rgb(185, 185, 185);
   width: 100%;
-  height: 300px;
+  height: 180px;
 }
 
 .link-logos {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background:rgb(148, 80, 114);
   margin-top: 40px;
   height: 50px;
   width: 600px;
+  /* background-color: aquamarine; */
+}
+
+.copyright {
+  width: 600px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  margin-top: 120px;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: bold;
+  /* background-color: tomato; */
 }
 
 .news-artwork {
@@ -624,57 +704,63 @@ body {
   margin-bottom: 15px;
 }
 
-.no-orientation {
+/* .no-orientation {
   width: 300px;
   height: 300px;
   background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+  
+} */
+
+/* .thankfulness {
+  width: 300px;
+  height: 300px;
+  background-color: #555;
+  object-fit: contain;
+  border: 1px rgb(19, 17, 18) solid;
+} */
+
+.artwork {
+  width: 300px;
+  height: 300px;
   object-fit: contain;
   border: 1px rgb(19, 17, 18) solid;
   margin-bottom: 15px;
 }
 
-.thankfulness {
+/* .lavender {
   width: 300px;
   height: 300px;
   background-color: #555;
   object-fit: contain;
   border: 1px rgb(19, 17, 18) solid;
-  margin-bottom: 15px;
-}
+  
+} */
 
-.lavender {
+/* .leftover {
   width: 300px;
   height: 300px;
   background-color: #555;
   object-fit: contain;
   border: 1px rgb(19, 17, 18) solid;
-  margin-bottom: 15px;
-}
+  
+} */
 
-.leftover {
+/* .silence {
   width: 300px;
   height: 300px;
   background-color: #555;
   object-fit: contain;
   border: 1px rgb(19, 17, 18) solid;
-  margin-bottom: 15px;
-}
-
-.silence {
-  width: 300px;
-  height: 300px;
-  background-color: #555;
-  object-fit: contain;
-  border: 1px rgb(19, 17, 18) solid;
-  margin-bottom: 15px;
-}
+  
+} */
 
 .gallery-grid {
   display: flex;
   justify-content: space-evenly;
   max-width: 1200px;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 
@@ -898,6 +984,39 @@ body {
     text-decoration: none;
     display: none;
   }*/
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(185, 185, 185);
+    width: 100%;
+    height: 180px;
+  }
+  
+  .link-logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    height: 50px;
+    width: 300px;
+    background-color: aquamarine;
+  }
+  
+  .copyright {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    margin-top: 120px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: bold;
+    background-color: tomato;
+  }
 
   .berkresmusic {
     text-decoration: none;
@@ -937,7 +1056,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 75px;
-    background-color: rgb(238,237,235);
+    background-color: #f9f9f9;
     position: fixed;
     width: 100%;
     margin-top: 0px;
@@ -952,7 +1071,7 @@ body {
     justify-content: space-between;
     align-items: start;
     height: 375px;
-    background-color: rgb(238,237,235);
+    background-color: #f9f9f9;
     position: fixed;
     width: 100%;
     margin-top: 0px;
@@ -1034,10 +1153,12 @@ body {
     text-align: center;
     gap: 25px;
     transition: 0.2s;
+    opacity: 0;
   }
 
   .lexend-deca-font.active {
     right: -62px;
+    opacity: 1;
   }
 
   .no-orientation {
@@ -1072,11 +1193,11 @@ body {
   }
 
   .hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .hamburger.active {
-    margin-top: 23px;
+    margin-top: 25px;
   }
 }
 
