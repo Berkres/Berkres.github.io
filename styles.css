@@ -349,6 +349,21 @@ body {
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
 }
 
+.gallery-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  color:#f0f0f0;
+  text-shadow: 2px 2px 15px rgb(19, 17, 18);
+}
+
+
 .contact-title {
   position: absolute;
   top: 50%;
@@ -665,6 +680,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.gallery-main {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  /* height: 1000px; */
+  flex-wrap: wrap;
+  column-gap: 60px;
+}
+
+.image-group {
+  height: 390px;
+  margin-top: 40px;
 }
 
 .year-row {
@@ -687,6 +722,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .footer {
@@ -753,7 +792,7 @@ body {
   height: 300px;
   object-fit: contain;
   border: 1px rgb(19, 17, 18) solid;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* .lavender {
@@ -790,6 +829,16 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1466px)
+{
+  .gallery-main {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
+    column-gap: 60px;
+  }
+}
 
 @media screen and (max-width: 950px)
 {
@@ -1011,7 +1060,7 @@ body {
     text-decoration: none;
     display: none;
   }*/
-  
+
   .footer {
     display: flex;
     justify-content: center;
@@ -1248,10 +1297,26 @@ body {
     top: 25px;
     left: 35px;
   }
+
+  
 }
 
 @media screen and (max-width: 443px) {
   .contact-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Lexend Zetta", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color:#f0f0f0;
+    text-shadow: 2px 2px 15px rgb(19, 17, 18);
+  }
+
+  .gallery-title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1272,6 +1337,31 @@ body {
     filter: drop-shadow(0px 5px 13px rgba(44, 42, 42, 0.400));
     width: 300px;
     height: 300px;
+  }
+
+  .gallery-row {
+    display: flex;
+    /* background-color: rgb(138, 82, 13); */
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 310px;
+    flex-wrap: wrap;
+  }
+  
+  .title-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: rgb(188, 121, 38); */
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: bold;
+    font-size: 18px;
   }
 }
 
