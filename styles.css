@@ -624,7 +624,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 330;
   font-style: bold;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   transition: 0.15s;
 }
 
@@ -1061,6 +1061,16 @@ body {
     display: none;
   }*/
 
+  .home {
+    padding-left: 40px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: rgb(0,0,0);
+    transition: 0.15s;
+    text-decoration: none;
+  }
+
   .footer {
     display: flex;
     justify-content: center;
@@ -1297,8 +1307,6 @@ body {
     top: 25px;
     left: 35px;
   }
-
-  
 }
 
 @media screen and (max-width: 443px) {
