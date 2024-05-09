@@ -39,6 +39,18 @@
     </style>
 
     <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "8tptcTT8zvZe9tbJN",
+          });
+      })();
+    </script>
+
   </head>  
 
   <body style="margin: 0;">
@@ -52,11 +64,11 @@
         <a href="index.html" class="berkresmusic-side">BERKRES MUSIC</a>
       </div>
       <div class="lexend-deca-font">
-        <a href="index" class="home">HOME</a>
-        <a href="news" class="news">NEWS</a>
-        <a href="gallery" class="discography">GALLERY</a>
-        <a href="about" class="about">ABOUT</a>
-        <a href="contact" class="contact-on-page">CONTACT</a>
+        <a href="index.html" class="home">HOME</a>
+        <a href="news.html" class="news">NEWS</a>
+        <a href="gallery.html" class="discography">GALLERY</a>
+        <a href="about.html" class="about">ABOUT</a>
+        <a href="contact.html" class="contact-on-page">CONTACT</a>
       </div>
       <div class="hamburger">
         <span class="bar"></span>
@@ -67,7 +79,7 @@
 
     <div class="contact-img">
       
-      <img src="contact-banner-noise.png" class="contact-img">
+      <img src="contact-banner-noise-less.png" class="contact-img">
       <div class="contact-title">CONTACT</div>
         
       </div>
@@ -75,6 +87,11 @@
 
     <div class="content-contact">
       <h1 class="contact-heading">Ask me anything.</h1>
+
+      <div class="home-text" style="margin-bottom: 30px;">
+        <p>Make sure to provide a real email address so we can get in touch.</p>
+      </div>
+      
       <form class="contact-form">
         <div class="input-group">
           <input class="input-contact" type="text" id="name" required>
@@ -82,8 +99,8 @@
         </div>
 
         <div class="input-group">
-          <input class="input-contact" type="text" id="email" required>
-          <label class="label-contact" for="email">Email Address*</label>
+          <input class="input-contact" type="text" id="email_id" required>
+          <label class="label-contact" for="email_id">Email Address*</label>
         </div>
 
         <div class="input-group">
@@ -91,37 +108,47 @@
           <label class="label-contact" for="message">Message*</label>
         </div>
         
-        <button class="submit-button">Submit</button>
+        <button type="submit" class="submit-button" onclick="SendMail()">Submit</button>
+          
       </form>
     </div>
     <div class="footer">
       <div class="link-logos">
         <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
           <span class="logo">
-            <i class="fa-brands fa-spotify fa-2xl"></i>
+            <i class="fa-brands fa-spotify fa-xl"></i>
           </span>   
         </a>
 
-        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+        <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
           <span class="logo">
-            <i class="fa-brands fa-apple fa-2xl"></i>
+            <i class="fa-brands fa-apple fa-xl"></i>
           </span>   
         </a>
 
-        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+        <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
           <span class="logo">
-            <i class="fa-brands fa-amazon fa-2xl"></i>
+            <i class="fa-brands fa-youtube fa-xl"></i>
           </span>   
         </a>
 
-        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+        <a href="https://www.instagram.com/berkresmusic/" target="_blank">
           <span class="logo">
-            <i class="fa-brands fa-deezer fa-2xl"></i>
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </span>   
+        </a>
+
+        <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <span class="logo-fr">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
           </span>   
         </a>
       </div>
-      <!--<p>Subscribe! <span>&copy</span></p>-->
-        
+
+      <div class="copyright">
+        <p>&copy 2024 Berkres Music. All rights reserved.</p>
+      </div>
+      
     </div>
     <script src="script.js"></script>
   </body>
