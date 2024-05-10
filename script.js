@@ -8,16 +8,15 @@ hamburger.addEventListener("click", () => {
   centerHeader.classList.toggle("active");
 })
 
+const form = document.getElementById("form");
+form.addEventListener("submit", SendMail);
+
 function SendMail() {
   var params = {
       from_name : document.getElementById("name").value,
-      email_id : document.getElementById("email_id").value,
-      message : document.getElementsById("message").value
+      email_id : document.getElementById("email-id").value,
+      message : document.getElementById("message").value
   };
 
-  emailjs.send("service_tlz8uzl", "template_vrttl0i", params).then(alert("Message was sent succesfully!"))
-}
-
-function abc(){
-  alert("HAHAHAH")
+  emailjs.send("service_tlz8uzl", "template_vrttl0i", params).then(alert("Message was sent successfully!"))
 }

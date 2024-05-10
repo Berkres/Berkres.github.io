@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Berkres Music</title>
 
+    <link rel="icon" type="image/png" href="Icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
@@ -41,13 +43,13 @@
     <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
       (function(){
-          emailjs.init({
-            publicKey: "8tptcTT8zvZe9tbJN",
-          });
+        emailjs.init({
+          publicKey: "2qWK0oQ0ih1zCKjmg",
+        });
       })();
     </script>
 
@@ -94,15 +96,15 @@
         </p>
       </div>
       
-      <form class="contact-form">
+      <form id="form" class="contact-form">
         <div class="input-group">
           <input class="input-contact" type="text" id="name" required>
           <label class="label-contact" for="name">Name*</label>
         </div>
 
         <div class="input-group">
-          <input class="input-contact" type="text" id="email_id" required>
-          <label class="label-contact" for="email_id">Email Address*</label>
+          <input class="input-contact" type="text" id="email-id" required>
+          <label class="label-contact" for="email-id">Email Address*</label>
         </div>
 
         <div class="input-group">
@@ -110,7 +112,7 @@
           <label class="label-contact" for="message">Message*</label>
         </div>
         
-        <button type="submit" class="submit-button" onclick="SendMail()">Submit</button>
+        <button type="submit" class="submit-button">Submit</button>
           
       </form>
     </div>
