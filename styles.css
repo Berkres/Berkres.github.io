@@ -253,6 +253,12 @@ body {
   height: 400px;
 }
 
+.prevent-select {
+  -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .home-img {
   width: 100%;
   height: 100vh;
@@ -319,6 +325,9 @@ body {
   left: 77px;
   top: 25px;
   margin-right: 77px;
+  -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .berkresmusic {
@@ -1060,7 +1069,6 @@ body {
   .news-artwork {
     width: 300px;
     height: 300px;
-    background-color: #555;
     object-fit: contain;
     border: 1px rgb(19, 17, 18) solid;
     margin-bottom: 15px;
@@ -1110,6 +1118,9 @@ body {
     display: flex;
     top: 25px;
     left: 35px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 
@@ -1330,7 +1341,6 @@ body {
     font-weight: 300;
     font-style: bold;
     font-size: 13px;
-    /* background-color: tomato; */
   }
 
   .berkresmusic-side {
@@ -1347,6 +1357,9 @@ body {
     display: flex;
     top: 27px;
     left: 35px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 
@@ -1393,6 +1406,9 @@ body {
     display: flex;
     top: 16px;
     left: 35px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
   }
 
   .about-artwork {
