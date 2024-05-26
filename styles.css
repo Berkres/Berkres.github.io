@@ -38,10 +38,10 @@ body {
 .home:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 48px;
-  background: rgb(0,0,0);
+  top: 48px;
+  height: 2px;
+  width: 47px;
+  background: rgb(40, 40, 40);
   transform: scaleX(0);
   transition: transform 0.06s linear;
   position: fixed;
@@ -69,10 +69,10 @@ body {
 .news:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 48px;
-  background: rgb(0,0,0);
+  top: 48px;
+  height: 2px;
+  width: 44px;
+  background: rgb(40, 40, 40);
   transform: scaleX(0);
   transition: transform 0.06s linear;
   position: fixed;
@@ -100,10 +100,10 @@ body {
 .discography:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 72px;
-  background: rgb(0,0,0);
+  top: 48px;
+  height: 2px;
+  width: 57px;
+  background: rgb(40, 40, 40);
   transform: scaleX(0);
   transition: transform 0.06s linear;
   position: fixed;
@@ -131,10 +131,10 @@ body {
 .about:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 56px;
-  background: rgb(0, 0, 0);
+  top: 48px;
+  height: 2px;
+  width: 49px;
+  background: rgb(40, 40, 40);
   transform: scaleX(0);
   transition: transform 0.06s linear;
   position: fixed;
@@ -162,10 +162,10 @@ body {
 .contact:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 76px;
-  background: rgb(0, 0, 0);
+  top: 48px;
+  height: 2px;
+  width: 63px;
+  background: rgb(40, 40, 40);
   transform: scaleX(0);
   transition: transform 0.06s linear;
   position: fixed;
@@ -405,10 +405,10 @@ body {
 .contact-on-page:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 76px;
-  background: rgb(0, 0, 0);
+  top: 48px;
+  height: 2px;
+  width: 63px;
+  background: rgb(40, 40, 40);
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
@@ -432,10 +432,10 @@ body {
 .about-on-page:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 56px;
-  background: rgb(0, 0, 0);
+  top: 48px;
+  height: 2px;
+  width: 49px;
+  background: rgb(40, 40, 40);
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
@@ -459,10 +459,10 @@ body {
 .news-on-page:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 48px;
-  background: rgb(0, 0, 0);
+  top: 48px;
+  height: 2px;
+  width: 44px;
+  background: rgb(40, 40, 40);
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
@@ -531,9 +531,9 @@ body {
 .home-on-page:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 48px;
+  top: 48px;
+  height: 2px;
+  width: 47px;
   background: rgb(0, 0, 0);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -558,9 +558,9 @@ body {
 .discography-on-page:before {
   content: "";
   position: absolute;
-  top: 50px;
-  height: 1px;
-  width: 72px;
+  top: 48px;
+  height: 2px;
+  width: 57px;
   background: rgb(0, 0, 0);
   transform: scaleX(1);
   transition: transform 0.06s linear;
