@@ -1100,7 +1100,7 @@ body {
     justify-content: space-between;
     align-items: baseline;
     height: 75px;
-    background-color: var(--header-color);
+/*     background-color: var(--header-color); */
     position: fixed;
     width: 100%;
     margin-top: 0px;
@@ -1115,7 +1115,7 @@ body {
     justify-content: space-between;
     align-items: start;
     height: 375px;
-    background-color: var(--header-color);
+/*     background-color: var(--header-color); */
     position: fixed;
     width: 100%;
     margin-top: 0px;
@@ -1243,6 +1243,11 @@ body {
   .hamburger.active {
     margin-top: 25px;
   }
+
+  body {
+    background-color: red;
+    transition: 0.5s;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1287,6 +1292,11 @@ body {
 
   #dark-mode-icon-mobile {
     transition: 0.15s;
+  }
+
+  body {
+    background-color: red;
+    transition: 0.5s;
   }
 }
 
@@ -1341,6 +1351,11 @@ body {
     font-weight: 330;
     font-style: bold;
   }
+
+  body {
+    background-color: red;
+    transition: 0.5s;
+  }
 }
 
 @media screen and (max-width: 549px) {
@@ -1369,6 +1384,11 @@ body {
     font-weight: 330;
     font-style: bold;
   }
+
+  body {
+    background-color: red;
+    transition: 0.5s;
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -1388,6 +1408,11 @@ body {
   .berkresmusic-side {
     font-size: 16px;
     top: 28px;
+  }
+
+  body {
+    background-color: red;
+    transition: 0.5s;
   }
 }
 
@@ -1542,6 +1567,11 @@ body {
     -webkit-user-select: none; 
     -ms-user-select: none;
     user-select: none;
+  }
+
+  body {
+    background-color: red;
+    transition: 0.5s;
   }
 }
 
