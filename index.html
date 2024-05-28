@@ -59,17 +59,32 @@
 
   <body style="margin: 0;">
 
-    <div class="centerHeader">
+    <div class="centerHeader" class="darkmode">
       <div>
         <a href="index.html" class="berkresmusic-side">BERKRES MUSIC</a>
       </div>
+      
       <div class="lexend-deca-font">
+
+        <div style="margin-right: 35px;">
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          </button>
+        </div> 
+
         <a href="./" class="home-on-page">Home</a>
         <a href="./news" class="news">News</a>
         <a href="./gallery" class="discography">Gallery</a>
         <a href="./about" class="about">About</a>
         <a href="./contact" class="contact">Contact</a>
       </div>
+
+      <div style="margin-right: 70px;">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile">
+          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
+        </button>
+      </div>
+
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -79,7 +94,7 @@
 
     <div class="home-img">
       
-      <img src="home-banner.png" class="home-img">
+      <img src="smaller-banners/home-banner.png" class="home-img">
       <div class="home-title">HOME</div>
     </div>
 
@@ -108,7 +123,7 @@
       </div>
 
       <div>
-        <img class="signature" src="Signature-Transparent.png">
+        <img class="signature" id="signature-image" src="Signature-Transparent.png">
       </div>
 
       <div class="footer">
@@ -148,8 +163,18 @@
         <div class="copyright">
           <p>&copy 2024 Berkres Music. All rights reserved.</p>
         </div>
+
+        <!-- <button id="dark-mode-toggle" class="dark-mode-toggle">
+          <i class="fa-solid fa-moon"></i>
+          Dark Mode
+        </button> -->
+
       </div>
     </div>
+
+    <script src="darkmode.js"></script>
+
     <script src="script.js"></script>
+
   </body>
 </html>

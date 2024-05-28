@@ -61,12 +61,26 @@
         <a href="index.html" class="berkresmusic-side">BERKRES MUSIC</a>
       </div>
       <div class="lexend-deca-font">
+
+        <div style="margin-right: 71px;">
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          </button>
+        </div> 
+
         <a href="./" class="home">Home</a>
         <a href="./news" class="news">News</a>
         <a href="./gallery" class="discography">Gallery</a>
         <a href="./about" class="about-on-page">About</a>
         <a href="./contact" class="contact">Contact</a>
       </div>
+
+      <div style="margin-right: 70px;">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile">
+          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
+        </button>
+      </div>
+      
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -76,7 +90,7 @@
 
     <div class="home-img">
       
-      <img src="about-banner-noise.png" class="home-img">
+      <img src="smaller-banners/about-banner-noise.png" class="home-img">
       <div class="home-title">ABOUT</div>
     </div>
 
@@ -106,6 +120,10 @@
       
       <div class="about-artwork"> 
         <img class="about-artwork" src="abstract-art-2.png">
+      </div>
+
+      <div style="display: none;">
+        <img class="signature" id="signature-image" src="Signature-Transparent.png">
       </div>
 
       <div class="footer">
@@ -148,6 +166,7 @@
       </div>
     </div>
 
+    <script src="darkmode.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -62,12 +62,26 @@
         <a href="index.html" class="berkresmusic-side">BERKRES MUSIC</a>
       </div>
       <div class="lexend-deca-font">
+
+        <div style="margin-right: 71px;">
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          </button>
+        </div>
+
         <a href="./" class="home">Home</a>
         <a href="./news" class="news-on-page">News</a>
         <a href="./gallery" class="discography">Gallery</a>
         <a href="./about" class="about">About</a>
         <a href="./contact" class="contact">Contact</a>
       </div>
+
+      <div style="margin-right: 70px;">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile">
+          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
+        </button>
+      </div>
+      
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -77,7 +91,7 @@
 
     <div class="home-img">
       
-      <img src="news-banner-noise-less.png" class="home-img">
+      <img src="smaller-banners/news-banner.png" class="home-img">
       <div class="home-title">NEWS</div>
     </div>
 
@@ -108,24 +122,24 @@
       <div class="home-text">
         <p>With this single, I wanted to create <em>the</em> "ideal" dream.
           The title encourages you to dream like the music and as always,
-          the abstract cover art leaves room for interpretation and allows you to find your own meaning in the melody.<br><br><br>
+          the abstract cover art leaves room for interpretation and allows you to find your own meaning in the melody.<br><br>
         </p>
       </div>
 
-      <div class="next-article" style="background-color: #e8e8e8;">
+      <div class="next-article" style="background-color: var(--news-article-secondary);">
         
-        <div class="home-heading" style="margin-top: 65px;">
+        <div class="home-heading" style="margin-top: 30px;">
           <h2>Berkres Music has a website now!</h2>
         </div>
 
         <div>
-          <img class="news-artwork" style="border: none; width: 250px; height: 250px;" src="Signature-Transparent.png">
+          <img class="news-artwork" style="border: none; width: 250px; height: 250px;" id="signature-image" src="Signature-Transparent.png">
         </div>
         
         <div class="home-text">
           <p>I'm thrilled to announce that I now have an official website! Now everything is in one place.
             In the "Gallery" you'll find all of my works. Thank you for your support, and I hope you enjoy exploring the new website!
-            Let me know what you think!<br><br><br>
+            Let me know what you think!<br><br>
           </p>
         </div>
 
@@ -170,9 +184,15 @@
         <div class="copyright">
           <p>&copy 2024 Berkres Music. All rights reserved.</p>
         </div>
+
+        <!-- <button id="dark-mode-toggle" class="dark-mode-toggle">
+          <i class="fa-solid fa-moon"></i>
+          Dark Mode
+        </button> -->
       </div>
     </div>
       
+    <script src="darkmode.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
