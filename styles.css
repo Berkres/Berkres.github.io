@@ -1055,14 +1055,10 @@ body {
 
   body {
     background-color: rgb(23,23,23);;
-  }
-
-  .darkmode {
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-    background-color: var(--body);
   }
 
 /*   darkmode above is new and can be deleted if causing problem */
