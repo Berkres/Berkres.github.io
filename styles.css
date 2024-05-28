@@ -43,7 +43,7 @@
 }
 
 body {
-  background-color: var(--body);
+  background-color: rgb(23,23,23);
   transition: 0.5s;
 }
 
