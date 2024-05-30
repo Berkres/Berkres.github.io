@@ -42,10 +42,15 @@
   --dark-mode-button-shadow: rgba(151, 151, 151, 0.7);
 }
 
-body {
+body.darkmode {
   background-color: var(--body);
   transition: 0.5s;
 }
+
+/* body {
+  background-color: var(--body);
+  transition: 0.5s;
+} */
 
 .darkmode {
   padding-top: env(safe-area-inset-top);
