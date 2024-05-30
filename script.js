@@ -1,14 +1,16 @@
 const hamburger = document.querySelector(".hamburger");
 const lexendDecaFont = document.querySelector(".lexend-deca-font");
 const centerHeader = document.querySelector(".centerHeader");
+const sideMenu = document.querySelector(".lexend-side");
 
 /* const darkmodeButton = document.querySelector(".dark-mode-toggle");
 const signature = document.querySelector(".signature"); */
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  lexendDecaFont.classList.toggle("active");
-  centerHeader.classList.toggle("active");
+/*   lexendDecaFont.classList.toggle("active"); */
+/*   centerHeader.classList.toggle("active"); */
+  sideMenu.classList.toggle("active");
 })
 
 /* darkmodeButton.addEventListener("click", () => {
