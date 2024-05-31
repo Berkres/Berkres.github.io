@@ -1136,7 +1136,7 @@ body {
     margin-top: 0px;
     filter: drop-shadow(0px 5px 30px var(--header-shadow));
     z-index: 100;
-    transition: 0.2s;
+    transition: 0.5s;
   }
 
   .centerHeader.active {
