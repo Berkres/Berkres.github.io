@@ -81,10 +81,6 @@ body {
   display: none;
 }
 
-/* .dark-mode-button-mobile:hover {
-  background: rgb(168, 168, 174);
-} */
-
 .centerHeader {
   display: flex;
   flex-direction: column;
@@ -110,7 +106,7 @@ body {
   background-color: var(--header-color);
   right: -100%;
   top: 75px;
-/*   transition: 0.2s ease-in-out; */
+/*   transition: 0.5s ease-in-out; */
   transition-duration: 0.5s;
   text-align: right;
   opacity: 0;
@@ -342,28 +338,6 @@ body {
   margin-top: 50px;
   transition: 0.5s;
 }
-
-/* .go-to-about {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 200px;
-  padding: 10px;
-  color: rgb(19, 17, 18);
-  outline: none;
-  background: transparent;
-  border: 1px solid rgb(19, 17, 18);
-  cursor: pointer;
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 350;
-  font-style: bold;
-  transition: 0.15s;
-} */
-
-/* .go-to-about:hover {
-  background-color: rgb(19, 17, 18);
-  color: #f0f0f0;
-} */
 
 .about-artwork {
   border: none;
@@ -605,10 +579,6 @@ body {
   transition: 0.15s;
 }
 
-/* .signature.active {
-  filter: invert(var(--bool));
-} */
-
 .logo {
   color: var(--logo);
   transition: 0.15s;
@@ -656,10 +626,6 @@ body {
   transition: 0.15s;
   text-decoration: none;
 }
-
-/*.home-on-page:hover {
-  cursor: pointer;
-}*/
 
 .home-on-page:before {
   content: "";
@@ -953,23 +919,6 @@ body {
   transition: 0.15s;
 }
 
-/* .no-orientation {
-  width: 300px;
-  height: 300px;
-  background-color: #555;
-  object-fit: contain;
-  border: 1px rgb(19, 17, 18) solid;
-  
-} */
-
-/* .thankfulness {
-  width: 300px;
-  height: 300px;
-  background-color: #555;
-  object-fit: contain;
-  border: 1px rgb(19, 17, 18) solid;
-} */
-
 .artwork {
   width: 300px;
   height: 300px;
@@ -978,33 +927,6 @@ body {
   margin-bottom: 10px;
   transition: 0.5s;
 }
-
-/* .lavender {
-  width: 300px;
-  height: 300px;
-  background-color: #555;
-  object-fit: contain;
-  border: 1px rgb(19, 17, 18) solid;
-  
-} */
-
-/* .leftover {
-  width: 300px;
-  height: 300px;
-  background-color: #555;
-  object-fit: contain;
-  border: 1px rgb(19, 17, 18) solid;
-  
-} */
-
-/* .silence {
-  width: 300px;
-  height: 300px;
-  background-color: #555;
-  object-fit: contain;
-  border: 1px rgb(19, 17, 18) solid;
-  
-} */
 
 .gallery-grid {
   display: flex;
@@ -1091,8 +1013,6 @@ body {
     font-style: bold;
   }
 
-/*   darkmode above is new and can be deleted if causing problem */
-
   .berkresmusic {
     text-decoration: none;
     padding-left: 4px;
@@ -1155,67 +1075,22 @@ body {
   }
 
   .home-on-page:before {
-/*     content: "";
-    position: absolute;
-    top: 50px;
-    height: 1px;
-    width: 48px;
-    background: rgb(0, 0, 0);
-    transform: scaleX(1);
-    transition: transform 0.06s linear;
-    position: fixed; */
     display: none;
   }
 
   .news-on-page:before {
-/*     content: "";
-    position: absolute;
-    top: 50px;
-    height: 1px;
-    width: 48px;
-    background: rgb(0, 0, 0);
-    transform: scaleX(1);
-    transition: transform 0.06s linear;
-    position: fixed; */
     display: none;
   }
 
   .discography-on-page:before {
-/*     content: "";
-    position: absolute;
-    top: 50px;
-    height: 1px;
-    width: 48px;
-    background: rgb(0, 0, 0);
-    transform: scaleX(1);
-    transition: transform 0.06s linear;
-    position: fixed; */
     display: none;
   }
 
   .about-on-page:before {
-/*     content: "";
-    position: absolute;
-    top: 50px;
-    height: 1px;
-    width: 48px;
-    background: rgb(0, 0, 0);
-    transform: scaleX(1);
-    transition: transform 0.06s linear;
-    position: fixed; */
     display: none;
   }
 
   .contact-on-page:before {
-/*     content: "";
-    position: absolute;
-    top: 50px;
-    height: 1px;
-    width: 48px;
-    background: rgb(0, 0, 0);
-    transform: scaleX(1);
-    transition: transform 0.06s linear;
-    position: fixed; */
     display: none;
   }
 
