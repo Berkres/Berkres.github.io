@@ -18,6 +18,9 @@
 /*   --basic-text-color-inverted: rgb(225, 225, 225); */
   --bool: 0;
   --dark-mode-button-shadow: rgba(36, 36, 36, 0.7);
+  --input-field: #d9d9d9;
+  --input-field-submit: rgb(179, 179, 179);
+  --submit-hover: rgb(110, 110, 110);
 }
 
 .darkmode {
@@ -40,6 +43,9 @@
 /*   --basic-text-color-inverted: #ffffff; */
   --bool: 1;
   --dark-mode-button-shadow: rgba(151, 151, 151, 0.7);
+  --input-field: #202020;
+  --input-field-submit: rgb(52, 52, 52);
+  --submit-hover: rgb(100, 100, 100);
 }
 
 body {
@@ -691,11 +697,12 @@ body {
   width: 96%;
   padding: 10px;
   outline: 0;
-  border: 1px solid #666;
+/*   border: 1px solid #666; */
+  border: none;
 /*   border-radius: 5px; */
   color: var(--basic-text-color);
-  background: transparent;
-  font-size: 14px;
+  background: var(--input-field);
+  font-size: 13px;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 330;
@@ -707,16 +714,18 @@ body {
   width: 96%;
   padding: 10px;
   outline: 0;
-  border: 1px solid #666;
+/*   border: 1px solid #666; */
+  border: none;
   color: var(--basic-text-color);
-  background: transparent;
-  font-size: 14px;
+  background: var(--input-field);
+  font-size: 13px;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 330;
   font-style: bold;
   resize: vertical;
   transition: 0.5s;
+  resize: none;
 }
 
 .label-contact {
@@ -727,19 +736,20 @@ body {
   padding: 10px;
   color: var(--basic-text-color);
   cursor: text;
-  transition: 0.14s;
+  transition: 0.1s;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 330;
   font-style: bold;
+  font-size: 13px;
 }
 
 .submit-button {
   padding: 10px 0;
   color: var(--basic-text-color);
   outline: none;
-  background: transparent;
-  border: 1px solid #666;
+  background: var(--input-field-submit);
+  border: none;
   width: 100%;
   cursor: pointer;
   font-family: "Lexend Deca", sans-serif;
@@ -747,11 +757,11 @@ body {
   font-weight: 330;
   font-style: bold;
   margin-bottom: 80px;
-  transition: 0.15s;
+  transition: 0.4s;
 }
 
 .submit-button:hover {
-  background-color: #666;
+  background-color: var(--submit-hover);
   color: white;
 }
 
@@ -760,7 +770,7 @@ body {
 .textarea-contact:focus~.label-contact,
 .textarea-contact:valid~.label-contact {
   top: -35px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .contact-font {
@@ -1219,8 +1229,7 @@ body {
     padding: 10px 0;
     color: var(--basic-text-color);
     outline: none;
-    background: transparent;
-    border: 1px solid #666;
+    background: var(--input-field-submit);
     width: 100%;
     cursor: pointer;
     font-family: "Lexend Deca", sans-serif;
@@ -1233,59 +1242,20 @@ body {
   
   .input-contact {
     width: 96%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-  /*   border-radius: 5px; */
-    color: var(--basic-text-color);
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
   
   .textarea-contact {
     width: 96%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    color: var(--basic-text-color);
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 }
 
 @media screen and (max-width: 549px) {
   .textarea-contact {
     width: 95.5%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 
   .input-contact {
     width: 95.5%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 }
 
@@ -1312,28 +1282,10 @@ body {
 @media screen and (max-width: 443px) {
   .textarea-contact {
     width: 94.4%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 
   .input-contact {
     width: 94.4%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
   
   .contact-title {
@@ -1402,30 +1354,10 @@ body {
 @media screen and (max-width: 370px) {
   .textarea-contact {
     width: 93%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    color: rgb(19, 17, 18);
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 
   .input-contact {
     width: 93%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    color: rgb(19, 17, 18);
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 
   .copyright {
@@ -1466,30 +1398,10 @@ body {
 @media screen and (max-width: 325px) {
   .textarea-contact {
     width: 92.4%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    color: rgb(19, 17, 18);
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 
   .input-contact {
     width: 92.4%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #555;
-    color: rgb(19, 17, 18);
-    background: transparent;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 330;
-    font-style: bold;
   }
 
   .berkresmusic-side {
