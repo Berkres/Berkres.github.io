@@ -411,6 +411,16 @@ body {
   transition: 0.5s;
 }
 
+.secondary-article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body);
+  transition: 0.5s;
+}
+
 .berkresmusic-side {
   font-family: "Lexend Zetta", sans-serif;
   font-optical-sizing: auto;
@@ -917,6 +927,7 @@ body {
   border: 1px var(--basic-text-color) solid;
   margin-bottom: 15px;
   transition: 0.15s;
+  pointer-events: none;
 }
 
 .artwork {
@@ -926,6 +937,7 @@ body {
   border: 1px var(--basic-text-color) solid;
   margin-bottom: 10px;
   transition: 0.5s;
+  pointer-events: none;
 }
 
 .gallery-grid {
