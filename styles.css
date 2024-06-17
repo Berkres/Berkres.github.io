@@ -949,7 +949,7 @@ body {
   border: 1px var(--basic-text-color) solid;
   margin-bottom: 15px;
   transition: 0.15s;
-  pointer-events: none;
+/*   pointer-events: none; */
 }
 
 .artwork {
@@ -959,7 +959,7 @@ body {
   border: 1px var(--basic-text-color) solid;
   margin-bottom: 10px;
   transition: 0.5s;
-  pointer-events: none;
+/*   pointer-events: none; */
 }
 
 .gallery-grid {
