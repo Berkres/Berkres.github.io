@@ -21,6 +21,9 @@
   --input-field: #d9d9d9;
   --input-field-submit: rgb(179, 179, 179);
   --submit-hover: rgb(110, 110, 110);
+  --table-head: #d2d2d2;
+  --table-odd: #f2f2f2;
+  --table-even: #fff;
 }
 
 .darkmode {
@@ -46,6 +49,9 @@
   --input-field: #202020;
   --input-field-submit: rgb(52, 52, 52);
   --submit-hover: rgb(100, 100, 100);
+  --table-head: rgb(11,11,11);
+  --table-odd: #121212;
+  --table-even: #171717;
 }
 
 body {
@@ -136,6 +142,12 @@ body {
 .lexend-deca-font {
   display: flex;
   margin-right: 77px;
+}
+
+.table-item {
+  list-style-type: none;
+  border-bottom: 1px;
+  border: solid;
 }
 
 .home {

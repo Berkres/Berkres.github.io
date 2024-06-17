@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Berkres Music</title>
+
+    <meta name="description" content="Berkres is an artist who combines piano and other instruments and effects to create a spacey atmosphere around your ears.">
+    <meta name="author" content="Berkres Music">
+    <meta name="keywords" content="Berkres, Music, Berkres Music, ambient music, piano music">
+
+    <link rel="icon" type="image/png" href="Icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+      .lexend-deca-font {
+        font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 460;
+        font-style: bold;
+      }
+      
+      .text {
+        font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 340;
+        font-style: bold;
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+
+      th, td {
+          /* border: 1px solid #000; */
+          padding: 4px;
+          text-align: left;
+      }
+
+      tr {
+            transition: background-color 0.5s ease;
+        }
+
+      tr:nth-child(odd) {
+          background-color: var(--table-odd); /* Light grey */
+      }
+
+      tr:nth-child(even) {
+          background-color: var(--table-even); /* White */
+      }
+
+    </style>
+
+    <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>  
+
+  <body style="margin: 0; background-color: var(--body);">
+    
+    <!-- <a href="news.html">
+      <div style="width: 100%; display: flex; justify-content: center; align-items: center; height: 45px; position: fixed;
+      z-index: 900; background: radial-gradient(#d5d8fb, #9198e5); color: #000; font-family: 'Lexend Deca', sans-serif;
+      font-optical-sizing: auto; font-weight: 460; font-style: bold; transition: 0.5s;">
+
+        News: Upcoming Single - "02:03"
+        
+      </div>
+    </a> -->
+
+    <div class="centerHeader" class="darkmode">
+      <div>
+        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+      </div>
+      
+      <div class="lexend-deca-font">
+
+        <div style="margin-right: 35px;">
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          </button>
+        </div> 
+
+        <a href="./" class="home-on-page">Home</a>
+        <a href="./news" class="news">News</a>
+        <a href="./gallery" class="discography">Gallery</a>
+        <a href="./about" class="about">About</a>
+        <a href="./contact" class="contact">Contact</a>
+      </div>
+
+      <div style="margin-right: 70px;">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile">
+          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
+        </button>
+      </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="lexend-side">
+
+        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-spotify fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 72px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-apple fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 131px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-youtube fa-xl"></i>
+          </div>
+        </a>
+
+        <a class="brands-menu" style="margin-top: 188px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 246px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+          </div>   
+        </a>
+
+        <a style="margin: 15px; margin-right: 35px;" href="./" class="home-on-page">Home</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./news" class="news">News</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./gallery" class="discography">Gallery</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./about" class="about">About</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
+      </div>
+    </div>
+
+    <div class="home-img">
+      
+      <picture>
+        <source type="image/webp" srcset="WEBP/home-banner.webp">
+        <img src="smaller-banners/home-banner.png" class="home-img">
+      </picture>
+        
+      <div class="home-title">TABLE</div>
+    </div>
+
+    <div class="content">
+      <!-- <div class="home-heading">
+        <h1>-</h1>
+      </div> -->
+      <div class="home-text">
+
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+        <table style="margin-bottom: 50px;" class="sortable">
+          <thead>
+              <tr style="background-color: var(--table-head);">
+                  <th>#</th>
+                  <th>Name</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr><td>5</td><td>Lavender</td></tr>
+              <tr><td>4</td><td>Thankfulness</td></tr>
+              <tr><td>3</td><td>No Orientation</td></tr>
+              <tr><td>2</td><td>Leftover</td></tr>
+              <tr><td>1</td><td>Silence</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- <div class="home-text">
+        <p>
+          <br>
+        </p>
+      </div> -->
+
+      <div>
+        <img style="display: none;" class="signature" id="signature-image" src="Signature-Transparent.png">
+      </div>
+
+      <div class="footer">
+        <div class="link-logos">
+          <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-spotify fa-xl"></i>
+            </div>   
+          </a>
+  
+          <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-apple fa-xl"></i>
+            </div>   
+          </a>
+  
+          <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>   
+          </a>
+  
+          <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>   
+          </a>
+  
+          <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-tiktok fa-xl"></i>
+            </div>   
+          </a>
+
+        </div>
+  
+        <div class="copyright">
+          <p>&copy 2024 Berkres Music. All rights reserved.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="darkmode.js"></script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
