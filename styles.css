@@ -19,8 +19,8 @@
   --bool: 0;
   --dark-mode-button-shadow: rgba(36, 36, 36, 0.7);
   --input-field: #d9d9d9;
-  --input-field-submit: rgb(179, 179, 179);
-  --submit-hover: rgb(110, 110, 110);
+  --input-field-submit: rgb(200, 200, 200);
+  --submit-hover: rgb(155, 155, 155);
   --table-head: #d2d2d2;
   --table-odd: #f2f2f2;
   --table-even: #fff;
@@ -720,6 +720,7 @@ body {
   font-weight: 330;
   font-style: bold;
   transition: 0.5s;
+  border-radius: 8px;
 }
 
 .textarea-contact {
@@ -738,6 +739,7 @@ body {
   resize: vertical;
   transition: 0.5s;
   resize: none;
+  border-radius: 8px;
 }
 
 .label-contact {
@@ -766,15 +768,38 @@ body {
   cursor: pointer;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 330;
+  font-weight: 530;
   font-style: bold;
   margin-bottom: 80px;
   transition: 0.4s;
+  border-radius: 8px;
 }
 
 .submit-button:hover {
   background-color: var(--submit-hover);
-  color: white;
+/*   color: white; */
+}
+
+.error-button {
+  padding: 10px;
+  color: var(--basic-text-color);
+  outline: none;
+  background: var(--input-field-submit);
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 530;
+  font-style: bold;
+  margin-bottom: 50px;
+  transition: 0.4s;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.error-button:hover {
+  background-color: var(--submit-hover);
 }
 
 .input-contact:focus~.label-contact,
@@ -885,6 +910,17 @@ body {
   transition: 0.5s;
 }
 
+.footer-error {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--footer);
+  width: 100%;
+  height: 180px;
+  transition: 0.5s;
+}
+
 .link-logos {
   display: flex;
   justify-content: space-evenly;
@@ -967,6 +1003,14 @@ body {
   justify-content: space-evenly;
   max-width: 1200px;
   width: 100%;
+}
+
+@media screen and (max-height: 670px)
+{
+  .footer-error {
+    position: relative;
+    bottom: -80px;
+  }
 }
 
 @media screen and (max-width: 1466px)
@@ -1246,10 +1290,25 @@ body {
     cursor: pointer;
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 330;
+    font-weight: 530;
     font-style: bold;
     margin-bottom: 80px;
-    transition: 0.15s;
+    transition: 0.45s;
+  }
+
+  .error-button {
+    padding: 10px;
+    color: var(--basic-text-color);
+    outline: none;
+    background: var(--input-field-submit);
+    width: 100%;
+    cursor: pointer;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 530;
+    font-style: bold;
+    margin-bottom: 80px;
+    transition: 0.45s;
   }
   
   .input-contact {
@@ -1373,7 +1432,7 @@ body {
   }
 
   .copyright {
-    width: 600px;
+/*     width: 600px;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -1383,7 +1442,7 @@ body {
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-style: bold;
+    font-style: bold; */
     font-size: 13px;
   }
 
@@ -1397,7 +1456,7 @@ body {
     justify-content: center;
     font-size: 17px;
     align-items: center;
-    color: rgb(30, 30, 30);
+    color: var(--header-berkres-color);
     display: flex;
     top: 27px;
     left: 35px;
@@ -1426,7 +1485,7 @@ body {
     justify-content: center;
     font-size: 17px;
     align-items: center;
-    color: rgb(30, 30, 30);
+    color: var(--header-berkres-color);
     display: flex;
     top: 16px;
     left: 35px;
