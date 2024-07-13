@@ -538,10 +538,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Lexend Zetta", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -1397,10 +1398,6 @@ body {
     background: var(--input-field-submit);
     width: 100%;
     cursor: pointer;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 530;
-    font-style: bold;
     margin-bottom: 80px;
     transition: 0.45s;
   }
@@ -1457,10 +1454,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Lexend Zetta", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     font-size: 40px;
     color:#f0f0f0;
     text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -1471,10 +1464,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Lexend Zetta", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     font-size: 40px;
     color:#f0f0f0;
     text-shadow: 2px 2px 15px rgb(19, 17, 18);
