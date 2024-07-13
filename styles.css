@@ -399,7 +399,7 @@ body {
   position: relative;
   z-index: -1;
   object-fit: cover;
-  filter: drop-shadow(0px 5px 13px var(--title-img));
+/*   filter: drop-shadow(0px 5px 13px var(--title-img)); */
   transition: 0.5s;
 }
 
@@ -409,7 +409,7 @@ body {
   position: relative;
   z-index: -1;
   object-fit: cover;
-  filter: drop-shadow(0px 5px 13px var(--title-img));
+/*   filter: drop-shadow(0px 5px 13px var(--title-img)); */
   transition: 0.5s;
 }
 
@@ -740,7 +740,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 57px;
+  width: 53px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -750,7 +750,6 @@ body {
 .contact-form {
   width: 90%;
   max-width: 600px;
-/*   background-color: #555; */
 }
 
 .input-group {
@@ -767,11 +766,12 @@ body {
 /*   border-radius: 5px; */
   color: var(--basic-text-color);
   background: var(--input-field);
-  font-size: 13px;
-  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 330;
-  font-style: bold;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   transition: 0.5s;
   border-radius: 8px;
 }
@@ -784,11 +784,12 @@ body {
   border: none;
   color: var(--basic-text-color);
   background: var(--input-field);
-  font-size: 13px;
-  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 330;
-  font-style: bold;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   resize: vertical;
   transition: 0.5s;
   resize: none;
@@ -914,16 +915,20 @@ body {
 }
 
 .title {
-  /* background-color: #555; */
   width: 300px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Lexend Deca", sans-serif;
+/*   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: bold;
+  font-style: bold; */
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   font-size: 18px;
   margin-bottom: 5px;
   color: var(--basic-text-color);
@@ -964,10 +969,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  font-family: "Lexend Deca", sans-serif;
+/*   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  font-style: normal; */
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   color: var(--basic-text-color);
   transition: 0.5s;
 }
@@ -1177,10 +1187,6 @@ body {
     position: absolute;
     align-items: center;
     margin-top: 112px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: bold;
   }
 
   .berkresmusic {
@@ -1380,10 +1386,6 @@ body {
     background: var(--input-field-submit);
     width: 100%;
     cursor: pointer;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 530;
-    font-style: bold;
     margin-bottom: 80px;
     transition: 0.45s;
   }
