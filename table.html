@@ -32,10 +32,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
     <style>
@@ -57,6 +53,30 @@
         font-weight: 340;
         font-style: bold;
       }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+
+      th, td {
+          /* border: 1px solid #000; */
+          padding: 4px;
+          text-align: left;
+      }
+
+      tr {
+            transition: background-color 0.5s ease;
+        }
+
+      tr:nth-child(odd) {
+          background-color: var(--table-odd); /* Light grey */
+      }
+
+      tr:nth-child(even) {
+          background-color: var(--table-even); /* White */
+      }
+
     </style>
 
     <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
@@ -159,35 +179,43 @@
         <img src="smaller-banners/home-banner.png" class="home-img">
       </picture>
         
-      <div class="home-title"></div>
+      <div class="home-title">TABLE</div>
     </div>
 
     <div class="content">
-      <div>
-        <h1 class="home-heading">Welcome to Berkres' Official Website!</h1>
-      </div>
+      <!-- <div class="home-heading">
+        <h1>-</h1>
+      </div> -->
       <div class="home-text">
-        <p>I'm glad you found my official artist website.
-          Here you'll find everything about my work as an artist, from current projects to sneak peeks.
-          I really enjoy creating music that combines both violin and piano.
-          My work is known for my soft and unique piano sound and my melodic violins.
-          I draw inspiration from abstract paintings that hide the meaning behind it.
-        </p>
+
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+        <table style="margin-bottom: 50px;" class="sortable">
+          <thead>
+              <tr style="background-color: var(--table-head);">
+                  <th>#</th>
+                  <th>Name</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr><td>5</td><td>Lavender</td></tr>
+              <tr><td>4</td><td>Thankfulness</td></tr>
+              <tr><td>3</td><td>No Orientation</td></tr>
+              <tr><td>2</td><td>Leftover</td></tr>
+              <tr><td>1</td><td>Silence</td></tr>
+          </tbody>
+        </table>
+
       </div>
 
-      <div class="home-text">
+      <!-- <div class="home-text">
         <p>
-          If you'd like to learn more about me and my approach to music, then take a look at the "About" page.<br>
-          In the "Gallery" page, you can see all of my works in one place. Take your time to explore my music.<br>
-          Talking about music, the "News" page is where you can stay informed about my latest releases, upcoming videos and sheet music uploads.<br>
-          Lastly, if you have any questions or just want to say hello, don't hesitate to visit the "Contact" page.
-          There, you can reach out to me directly for any inquiries or collaborations.<br><br>
-          Thank you for visiting, and I hope you enjoy exploring my website!<br><br><br>
+          <br>
         </p>
-      </div>
+      </div> -->
 
       <div>
-        <img class="signature" id="signature-image" src="Signature-Transparent.png">
+        <img style="display: none;" class="signature" id="signature-image" src="Signature-Transparent.png">
       </div>
 
       <div class="footer">

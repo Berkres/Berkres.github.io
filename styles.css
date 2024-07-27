@@ -319,7 +319,7 @@ body {
 .home-heading {
   display: flex;
   /* background-color: #f9f9f9; */
-  width: 90%;
+/*   width: 90%; */
   max-width: 800px;
   justify-content: center;
 /*   font-family: "Lexend Deca", sans-serif;
@@ -327,9 +327,14 @@ body {
   font-weight: 700;
   font-style: bold; */
 
+/*   margin-left: 20px; */
+
+  padding-left: 20px;
+  padding-right: 20px;
+
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 1000;
+  font-weight: 780;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 
@@ -350,12 +355,21 @@ body {
   color: var(--basic-text-color);
   transition: 0.5s;
   
+/*   font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-variation-settings: "slnt" 0; */
+
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 370;
+
+  font-weight: 450;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 }
+
+/*   font-weight: 370; for normal text */
 
 .content {
   display: flex;
@@ -421,10 +435,10 @@ body {
 
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 1000;
+  font-weight: 780;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
-  
+
   margin-bottom: 30px;
   transition: 0.5s;
   color: var(--basic-text-color);
@@ -751,10 +765,11 @@ body {
 .contact-form {
   width: 90%;
   max-width: 600px;
+  margin-top: 15px;
 }
 
 .input-group {
-  margin-bottom: 35px;
+  margin-bottom: 48px;
   position: relative;
 }
 
@@ -770,7 +785,7 @@ body {
   font-size: 15px;
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 350;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   transition: 0.5s;
@@ -788,7 +803,7 @@ body {
   font-size: 15px;
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 350;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   resize: vertical;
@@ -812,7 +827,7 @@ body {
   font-style: bold; */
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 350;
+  font-weight: 440;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   font-size: 13px;
@@ -929,7 +944,7 @@ body {
   font-style: bold; */
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 680;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   font-size: 18px;
@@ -978,7 +993,7 @@ body {
   font-style: normal; */
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
   color: var(--basic-text-color);
@@ -1030,7 +1045,7 @@ body {
 
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 550;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 
