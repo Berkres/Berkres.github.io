@@ -54,6 +54,11 @@
   --table-even: #171717;
 }
 
+::selection {
+/*   background: rgba(72, 83, 110, 0.24); */
+  background: rgba(54, 129, 215, 0.24);
+}
+
 body {
   background-color: var(--body);
   transition: 0.5s;
@@ -336,7 +341,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 780;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 
   color: var(--basic-text-color);
   transition: 0.5s;
@@ -360,6 +365,7 @@ body {
   font-weight: 550;
   font-style: normal;
   font-variation-settings: "slnt" 0; */
+
 
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -437,7 +443,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 780;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 
   margin-bottom: 30px;
   transition: 0.5s;
