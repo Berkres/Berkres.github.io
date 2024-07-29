@@ -54,6 +54,21 @@
   --table-even: #171717;
 }
 
+@font-face {
+  font-family: 'MonaSans';
+  src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url(font/GeneralSans-Variable.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url(font/Nohemi-Black.woff2) format('woff2');
+}
+
 ::selection {
 /*   background: rgba(72, 83, 110, 0.24); */
   background: rgba(54, 129, 215, 0.24);
@@ -133,11 +148,14 @@ body {
   font-weight: 460;
   font-style: bold; */
 
-  font-family: "Roboto Flex", sans-serif;
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans';
+  font-weight: 600;
 }
 
 .lexend-side.active {
@@ -181,10 +199,10 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 47px;
+  width: 48px;
   background: var(--hover-line-color);
   transform: scaleX(0);
-  transition: transform 0.06s linear;
+  transition: transform 0.1s ease-out;
   position: fixed;
 }
 
@@ -212,10 +230,10 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 44px;
+  width: 43px;
   background: var(--hover-line-color);
   transform: scaleX(0);
-  transition: transform 0.06s linear;
+  transition: transform 0.1s ease-out;
   position: fixed;
 }
 
@@ -243,10 +261,10 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 53px;
+  width: 55px;
   background: var(--hover-line-color);
   transform: scaleX(0);
-  transition: transform 0.06s linear;
+  transition: transform 0.1s ease-out;
   position: fixed;
 }
 
@@ -273,12 +291,12 @@ body {
   content: "";
   position: absolute;
   top: 46px;
-  right: 183px;
+  right: 186px;
   height: 2px;
   width: 49px;
   background: var(--hover-line-color);
   transform: scaleX(0);
-  transition: transform 0.06s linear;
+  transition: transform 0.1s ease-out;
   position: fixed;
 }
 
@@ -306,10 +324,10 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 61px;
+  width: 63px;
   background: var(--hover-line-color);
   transform: scaleX(0);
-  transition: transform 0.06s linear;
+  transition: transform 0.1s ease-out;
   position: fixed;
 }
 
@@ -337,11 +355,14 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 
-  font-family: "Roboto Flex", sans-serif;
+  font-family: 'MonaSans';
+  font-weight: 780;
+
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 780;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
   color: var(--basic-text-color);
   transition: 0.5s;
@@ -366,13 +387,15 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0; */
 
+  font-family: 'MonaSans';
+  font-weight: 550; 
 
-  font-family: "Roboto Flex", sans-serif;
+  /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
 
   font-weight: 450;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 }
 
 /*   font-weight: 370; for normal text */
@@ -439,11 +462,14 @@ body {
   font-weight: 700;
   font-style: bold; */
 
-  font-family: "Roboto Flex", sans-serif;
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 780;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans';
+  font-weight: 780;
 
   margin-bottom: 30px;
   transition: 0.5s;
@@ -494,23 +520,28 @@ body {
   font-weight: 650;
   font-style: normal; */
 
-  font-family: "Roboto Flex", sans-serif;
+  /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 1000;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
+/*   font-family: 'MonaSans';
+  font-weight: 1000;
+  font-variation-settings: "wdth" 150; */
 
+  font-family: 'Nohemi';
+  font-weight: 1000;
 
   position: absolute;
   text-decoration: none;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
   align-items: center;
   color: var(--header-berkres-color);
   display: flex;
   left: 77px;
-  top: 26px;
+  top: 28px;
   margin-right: 77px;
   -webkit-user-select: none; 
   -ms-user-select: none;
@@ -542,11 +573,15 @@ body {
   font-weight: 700;
   font-style: normal; */
 
-  font-family: "Roboto Flex", sans-serif;
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans';
+  font-weight: 1000;
+  font-variation-settings: "wdth" 150;
 
   font-size: 50px;
   color:#f0f0f0;
@@ -558,11 +593,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Roboto Flex", sans-serif;
+  
+  font-family: 'MonaSans';
+  font-weight: 1000;
+  font-variation-settings: "wdth" 150;
+  
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -579,11 +621,15 @@ body {
   font-weight: 700;
   font-style: normal; */
 
-  font-family: "Roboto Flex", sans-serif;
+  font-family: 'MonaSans';
+  font-weight: 1000;
+  font-variation-settings: "wdth" 150;
+
+  /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
   font-size: 50px;
   color:#f0f0f0;
@@ -610,7 +656,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 61px;
+  width: 63px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -638,7 +684,7 @@ body {
   top: 46px;
   height: 2px;
   width: 49px;
-  right: 183px;
+  right: 186px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -665,7 +711,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 44px;
+  width: 43px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -734,7 +780,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 47px;
+  width: 48px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -761,7 +807,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 53px;
+  width: 55px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -789,11 +835,15 @@ body {
   color: var(--basic-text-color);
   background: var(--input-field);
   font-size: 15px;
-  font-family: "Roboto Flex", sans-serif;
+  
+  font-family: 'MonaSans';
+  font-weight: 560;
+
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
   transition: 0.5s;
   border-radius: 8px;
 }
@@ -807,11 +857,16 @@ body {
   color: var(--basic-text-color);
   background: var(--input-field);
   font-size: 15px;
-  font-family: "Roboto Flex", sans-serif;
+
+  font-family: 'MonaSans';
+  font-weight: 560;
+
+  /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
   resize: vertical;
   transition: 0.5s;
   resize: none;
@@ -831,11 +886,16 @@ body {
   font-optical-sizing: auto;
   font-weight: 330;
   font-style: bold; */
-  font-family: "Roboto Flex", sans-serif;
+  
+  font-family: 'MonaSans';
+  font-weight: 560;
+
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 440;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
   font-size: 13px;
 }
 
@@ -851,11 +911,16 @@ body {
   font-optical-sizing: auto;
   font-weight: 530;
   font-style: bold; */
-  font-family: "Roboto Flex", sans-serif;
+  
+  font-family: 'MonaSans';
+  font-weight: 650;
+
+  /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
   font-size: 15px;
   margin-bottom: 80px;
   transition: 0.4s;
@@ -948,11 +1013,16 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: bold; */
-  font-family: "Roboto Flex", sans-serif;
+  
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 680;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans';
+  font-weight: 700;
+
   font-size: 18px;
   margin-bottom: 5px;
   color: var(--basic-text-color);
@@ -997,11 +1067,16 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal; */
-  font-family: "Roboto Flex", sans-serif;
+  
+ /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans';
+  font-weight: 450;
+
   color: var(--basic-text-color);
   transition: 0.5s;
 }
@@ -1049,11 +1124,14 @@ body {
   font-weight: 300;
   font-style: bold; */
 
-  font-family: "Roboto Flex", sans-serif;
+  /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 550;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans';
+  font-weight: 550;
 
   transition: 0.5s;
   color: var(--logo);
@@ -1135,7 +1213,7 @@ body {
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-    top: 25px;
+    top: 28px;
   }
 }
 
@@ -1366,11 +1444,11 @@ body {
     font-style: normal;
     text-decoration: none;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-    top: 26px;
+    top: 28px;
     left: 25px;
     -webkit-user-select: none; 
     -ms-user-select: none;
@@ -1386,7 +1464,7 @@ body {
     background: transparent;
     border: none;
     border-width: 1px;
-    top: 24px;
+    top: 23px;
     color: var(--basic-text-color);
     transition: 0.15s;
   }
@@ -1571,8 +1649,8 @@ body {
 @media screen and (max-width: 350px)
 {
   .berkresmusic-side {
-    font-size: 18px;
-    top: 27px;
+    font-size: 20px;
+    top: 28px;
   }
 }
 
@@ -1586,8 +1664,8 @@ body {
   }
 
   .berkresmusic-side {
-    font-size: 17px;
-    top: 28px;
+    font-size: 19px;
+    top: 30px;
   }
 
   .about-artwork {
