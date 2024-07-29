@@ -66,7 +66,7 @@
 
 @font-face {
   font-family: 'Nohemi';
-  src: url(font/Berkres-Music.ttf) format('truetype');
+  src: url(font/Nohemi-Black.woff2) format('woff2');
 }
 
 ::selection {
@@ -356,7 +356,7 @@ body {
   padding-right: 20px;
 
   font-family: 'MonaSans';
-  font-weight: 780;
+  font-weight: 800;
 
  /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -373,19 +373,10 @@ body {
   width: 90%;
   max-width: 800px;
   justify-content: center;
-/*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 330;
-  font-style: bold; */
+
   line-height: 2.1;
   color: var(--basic-text-color);
   transition: 0.5s;
-  
-/*   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 550;
-  font-style: normal;
-  font-variation-settings: "slnt" 0; */
 
   font-family: 'MonaSans';
   font-weight: 550; 
@@ -531,7 +522,7 @@ body {
   font-variation-settings: "wdth" 150; */
 
   font-family: 'Nohemi';
-/*   font-weight: 1000; */
+  font-weight: 1000;
 
   position: absolute;
   text-decoration: none;
