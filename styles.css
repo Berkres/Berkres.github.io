@@ -367,6 +367,7 @@ body {
   color: var(--basic-text-color);
   transition: 0.5s;
   -webkit-text-stroke-width: 0!important;
+  -webkit-font-smoothing: antialiased;
 }
 
 .home-text {
