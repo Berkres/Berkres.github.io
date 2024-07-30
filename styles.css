@@ -59,9 +59,14 @@
   src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Nohemi-Bold';
   src: url(font/Nohemi-Bold.woff2) format('woff2');
+} */
+
+@font-face {
+  font-family: 'Nohemi-SemiBold';
+  src: url(font/Nohemi-Regular.woff2) format('woff2');
 }
 
 /* @font-face {
@@ -72,6 +77,11 @@
 @font-face {
   font-family: 'Nohemi';
   src: url(font/Berkres-Branding.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nohemi-ExtraBold';
+  src: url(font/Nohemi-ExtraBold.ttf) format('truetype');
 }
 
 ::selection {
@@ -360,7 +370,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 
-  font-family: 'Nohemi-Bold';
+  font-family: 'Nohemi-ExtraBold';
 /*   font-weight: 780; */
 
  /*  font-family: "Roboto Flex", sans-serif;
@@ -466,8 +476,8 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans';
-  font-weight: 780;
+  font-family: 'Nohemi-ExtraBold';
+/*   font-weight: 780; */
 
   margin-bottom: 30px;
   transition: 0.5s;
