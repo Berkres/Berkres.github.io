@@ -59,13 +59,18 @@
   src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'MonaSans-SemiBold';
+  src: url(font/MonaSans-SemiBold.ttf) format('truetype');
+}
+
 /* @font-face {
   font-family: 'Nohemi-Bold';
   src: url(font/Nohemi-Bold.woff2) format('woff2');
 } */
 
 @font-face {
-  font-family: 'Nohemi-SemiBold';
+  font-family: 'Nohemi-Regular';
   src: url(font/Nohemi-Regular.woff2) format('woff2');
 }
 
@@ -479,6 +484,8 @@ body {
   font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
   font-family: 'Nohemi-ExtraBold';
+  font-style: normal;
+  font-weight: normal!important;
 /*   font-weight: 780; */
 
   margin-bottom: 30px;
