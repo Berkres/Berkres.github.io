@@ -59,6 +59,11 @@
   src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'Nohemi-Bold';
+  src: url(font/Nohemi-Bold.woff2) format('woff2');
+}
+
 /* @font-face {
   font-family: 'GeneralSans';
   src: url(font/GeneralSans-Variable.woff2) format('woff2');
@@ -355,8 +360,8 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 
-  font-family: 'MonaSans';
-  font-weight: 780;
+  font-family: 'Nohemi-Bold';
+/*   font-weight: 780; */
 
  /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
