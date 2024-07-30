@@ -64,6 +64,11 @@
   src: url(font/MonaSans-SemiBold.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'MonaSans-Expanded-Black';
+  src: url(font/MonaSansExpanded-Black.ttf) format('truetype');
+}
+
 /* @font-face {
   font-family: 'Nohemi-Bold';
   src: url(font/Nohemi-Bold.woff2) format('woff2');
@@ -599,9 +604,9 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans';
-  font-weight: 1000;
-  font-variation-settings: "wdth" 150;
+  font-family: 'MonaSans-Expanded-Black';
+/*   font-weight: 1000;
+  font-variation-settings: "wdth" 150; */
 
   font-size: 50px;
   color:#f0f0f0;
@@ -614,9 +619,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   
-  font-family: 'MonaSans';
-  font-weight: 1000;
-  font-variation-settings: "wdth" 150;
+  font-family: 'MonaSans-Expanded-Black';
+/*   font-weight: 1000;
+  font-variation-settings: "wdth" 150; */
   
  /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -641,9 +646,9 @@ body {
   font-weight: 700;
   font-style: normal; */
 
-  font-family: 'MonaSans';
-  font-weight: 1000;
-  font-variation-settings: "wdth" 150;
+  font-family: 'MonaSans-Expanded-Black';
+/*   font-weight: 1000;
+  font-variation-settings: "wdth" 150; */
 
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
