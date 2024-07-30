@@ -59,14 +59,14 @@
   src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'GeneralSans';
   src: url(font/GeneralSans-Variable.woff2) format('woff2');
-}
+} */
 
 @font-face {
   font-family: 'Nohemi';
-  src: url(font/Nohemi-Black.woff2) format('woff2');
+  src: url(font/Berkres-Branding.ttf) format('truetype');
 }
 
 ::selection {
@@ -524,7 +524,7 @@ body {
   font-variation-settings: "wdth" 150; */
 
   font-family: 'Nohemi';
-  font-weight: 1000;
+/*   font-weight: 1000; */
 
   position: absolute;
   text-decoration: none;
