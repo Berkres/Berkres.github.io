@@ -65,6 +65,16 @@
 }
 
 @font-face {
+  font-family: 'MonaSans-Heavy';
+  src: url(font/MonaSans-Heavy.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MonaSans-Bold';
+  src: url(font/MonaSans-Bolder.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'MonaSans-Expanded-Black';
   src: url(font/MonaSansExpanded-Black.ttf) format('truetype');
 }
@@ -937,8 +947,8 @@ body {
   font-weight: 530;
   font-style: bold; */
   
-  font-family: 'MonaSans';
-  font-weight: 650;
+  font-family: 'MonaSans-Heavy';
+/*   font-weight: 650; */
 
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -972,11 +982,13 @@ body {
   font-weight: 530;
   font-style: bold; */
 
-  font-family: "Roboto Flex", sans-serif;
+/*   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+  font-family: 'MonaSans-Heavy';
 
   margin-bottom: 50px;
   transition: 0.4s;
@@ -1045,8 +1057,8 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans';
-  font-weight: 700;
+  font-family: 'MonaSans-Bold';
+/*   font-weight: 700; */
 
   font-size: 18px;
   margin-bottom: 5px;
