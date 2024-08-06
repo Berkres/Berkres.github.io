@@ -24,6 +24,10 @@
   --table-head: #d2d2d2;
   --table-odd: #f2f2f2;
   --table-even: #fff;
+  --sheet-music-item: rgba(255, 255, 255, 0.2);
+  --sheet-music-item-border: rgba(255, 255, 255, 0.3);
+  --download-button: rgb(49, 110, 180);
+  --download-button-hover: rgb(38, 85, 139);
 }
 
 .darkmode {
@@ -52,6 +56,10 @@
   --table-head: rgb(11,11,11);
   --table-odd: #121212;
   --table-even: #171717;
+  --sheet-music-item: rgba(0, 0, 0, 0.2);
+  --sheet-music-item-border: rgba(66, 66, 66, 0.3);
+  --download-button: rgb(67, 102, 143);
+  --download-button-hover: #2c4e70;
 }
 
 @font-face {
@@ -1219,12 +1227,145 @@ body {
 .artwork {
   width: 300px;
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
   border: 1px var(--basic-text-color) solid;
   margin-bottom: 10px;
   transition: 0.5s;
 /*   pointer-events: none; */
 }
+
+.gallery-artwork {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: 0.75s;
+/*   pointer-events: none; */
+}
+
+.gallery-artwork:hover {
+  transform: scale(1.15);
+  transition: 0.75s;
+/*   pointer-events: none; */
+}
+
+.gallery-artwork-container {
+  max-height: 300px;
+  margin-bottom: 13px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow: hidden;
+  transition: 0.75s;
+/*   border: 1px var(--basic-text-color) solid; */
+/*   box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.5); */
+  box-shadow: inset 0 0 .5px 1px rgba(255, 255, 255, 0.075), 
+  0 0 0 1px rgba(0, 0, 0, 0.05), 
+  0 .3px .4px rgba(0, 0, 0, 0.02), 
+  0 .9px 1.5px rgba(0, 0, 0, 0.045), 
+  0 3.5px 6px rgba(0, 0, 0, 0.09);
+}
+
+.sheet-music-row {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  width: 70%;
+  height: 230px;
+  /* height: 1000px; */
+  flex-wrap: wrap;
+  row-gap: 60px;
+  background-color: #171717;
+  margin-bottom: 50px;
+}
+
+.sheet-music-main {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  /* height: 1000px; */
+  flex-wrap: wrap;
+  column-gap: 60px;
+  background-color: #ac2e2e;
+}
+
+.sheet-music-artwork {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  transition: 0.75s;
+/*   pointer-events: none; */
+}
+
+.sheet-music-artwork-container {
+  max-height: 230px;
+  max-width: 230px;
+  margin-bottom: 13px;
+  transition: 0.75s;
+/*   border: 1px var(--basic-text-color) solid; */
+/*   box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.5); */
+  box-shadow: inset 0 0 .5px 1px rgba(255, 255, 255, 0.075), 
+  0 0 0 1px rgba(0, 0, 0, 0.05), 
+  0 .3px .4px rgba(0, 0, 0, 0.02), 
+  0 .9px 1.5px rgba(0, 0, 0, 0.045), 
+  0 3.5px 6px rgba(0, 0, 0, 0.09);
+}
+
+/* .sheet-music-title {
+  height: 30px;
+  width: 65%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 15px;
+  font-family: 'MonaSans-Bold';
+
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: var(--basic-text-color);
+  transition: 0.5s;
+} */
+
+.sheet-music-info {
+  background-color: #d9d9d9;
+  width: 65%;
+  height: 50px;
+}
+
+.sheet-music-date {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  font-family: 'MonaSans-Bold';
+
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: var(--basic-text-color);
+  transition: 0.5s;
+}
+
+/* .click-to-listen {
+  font-family: 'MonaSans-Bold';
+  font-size: 27px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+} */
+
+/* .click-to-listen:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
 
 .gallery-grid {
   display: flex;

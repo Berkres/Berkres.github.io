@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Gallery | Berkres Music</title>
+
+    <meta name="description" content="Take your time and enjoy exploring the works of Berkres from A to Z. 
+    If you'd like to listen to a piece, simply click on the artwork.">
+    <meta name="author" content="Berkres Music">
+    <meta name="keywords" content="Berkres, Music, Berkres Music, ambient music, piano music">
+    
+    <link rel="icon" type="image/png" href="Icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <style>
+      .lexend-deca-font {
+/*         font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 460;
+        font-style: bold; */
+        
+        /* font-family: "Roboto Flex", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+
+        font-family: 'MonaSans-SemiBold';
+        font-weight: 600;
+        font-style: normal;
+        font-weight: normal!important;
+      }
+      
+      .text {
+        font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 340;
+        font-style: bold;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .container {
+        width: 70%;
+        margin: 0px auto;
+      }
+
+      .grid-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+      }
+
+      .item {
+        display: flex;
+        flex: 1;
+        width: calc(50% - 37.5px); /* Account for the margin between the items */
+        margin-bottom: 20px;
+        margin-right: 75px;
+        width: 100%;
+        margin-bottom: 20px;
+        background: var(--sheet-music-item);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid var(--sheet-music-item-border);
+        transition: 0.5s;
+      }
+
+      .cover {
+        width: 230px;
+        height: 230px;
+        background-color: #ccc; /* Placeholder for album cover */
+        margin-right: 20px;
+        flex-shrink: 0;
+        border-radius: 10px;
+      }
+
+      .cover img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+      }
+
+      .sheet-music-title {
+        font-size: 28px;
+        margin: 0;
+        font-family: 'MonaSans-Bold';
+        color: var(--basic-text-color);
+        transition: 0.5s;
+      }
+
+      .date {
+        font-size: 18px;
+        font-weight: lighter;
+        margin: 5px 0;
+        font-family: 'MonaSans';
+        font-weight: 450;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+      }
+
+      .button {
+        padding: 10px 20px;
+/*         background-color: rgb(0, 123, 255); */
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        align-self: flex-start;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+        appearance: none;
+        background-color: var(--download-button);
+        border: 1px solid rgba(27, 31, 35, .15);
+        border-radius: 6px;
+        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'MonaSans';
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+/*               padding: 6px 16px; */
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: nowrap;
+        transition: 0.2s;
+      }
+
+      .button:hover {
+        background-color: var(--download-button-hover);
+      }
+
+      @media (max-width: 1820px) {
+        .container {
+          width: 90%;
+        }
+
+        .item {
+          width: calc(50% - 10px); /* Adjusted to fit two items in a row */
+          margin-right: 10px;
+        }
+
+        .cover {
+          width: 180px;
+          height: 180px;
+        }
+
+        .sheet-music-title {
+          font-size: 22px;
+        }
+
+        .date {
+          font-size: 16px;
+        }
+
+        .button {
+          padding: 8px 16px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .container {
+          width: 90%;
+        }
+
+        .item {
+          width: calc(50% - 10px); /* Adjusted to fit two items in a row */
+          margin-right: 10px;
+        }
+
+        .cover {
+          width: 150px;
+          height: 150px;
+        }
+
+        .details {
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .sheet-music-title {
+          font-size: 21px;
+        }
+
+        .date {
+          font-size: 15px;
+        }
+
+        .button {
+          padding: 8px 16px;
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 950px) {
+        .grid-row {
+          flex-direction: column;
+          align-items: center; /* Center the content */
+        }
+
+        .item {
+          width: 100%;
+          margin-right: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        .cover {
+          width: 300px;
+          height: 300px;
+          margin-right: 20px;
+          margin-bottom: 0px; /* Space between cover and details */
+          border-radius: 10px;
+        }
+
+        .details {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: left;
+          margin-right: 20px; /* Space between details and button */
+          margin-top: 10px;
+        }
+
+        .sheet-music-title {
+          font-size: 24px;
+        }
+
+        .date {
+          font-size: 19px;
+          margin: 5px 0;
+        }
+
+        .button {
+          font-size: 17px;
+          padding: 10px 12px;
+          margin-top: 10px; /* Space between text and button */
+          align-self: flex-start; /* Center button under details */
+        }
+      }
+
+      @media (max-width: 781px) {
+        .gallery-title {
+/*           font-size: 12px; */
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+
+      @media (max-width: 383px) {
+        .gallery-title {
+          font-size: 34px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .grid-row {
+          flex-direction: column;
+        }
+
+        .item {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px;
+          transition: 0.5s;
+        }
+
+        .cover {
+          width: 135px;
+          height: 135px;
+          margin: 5px;
+          margin-right: 20px;
+        }
+
+        .details {
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .sheet-music-title {
+          font-size: 20px;
+        }
+
+        .date {
+          font-size: 14px;
+        }
+
+        .button {
+          padding: 6px 12px;
+          font-size: 12px;
+          appearance: none;
+          box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          font-family: 'MonaSans';
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          vertical-align: middle;
+          white-space: nowrap;
+        }
+      }
+
+    </style>
+    <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>  
+
+  <body style="margin: 0; background-color: var(--body);">
+
+    <div class="centerHeader">
+      <div>
+        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+      </div>
+      <div class="lexend-deca-font">
+
+        <div style="margin-right: 71px;">
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          </button>
+        </div> 
+
+        <a href="./" class="home">News</a>
+        <a href="./news" class="news">Works</a>
+        <a href="./gallery" class="discography-on-page">Sheet Music</a>
+        <a href="./about" class="about">About</a>
+        <a href="./contact" class="contact">Contact</a>
+      </div>
+
+      <div style="margin-right: 70px;">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile">
+          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
+        </button>
+      </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="lexend-side">
+
+        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-spotify fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 71px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-apple fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 129px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-youtube fa-xl"></i>
+          </div>
+        </a>
+
+        <a class="brands-menu" style="margin-top: 186px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 243px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+          </div>   
+        </a>
+
+        <a style="margin: 15px; margin-right: 35px;" href="./" class="home-on-page">News</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./news" class="news">Works</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./gallery" class="discography">Sheet Music</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./about" class="about">About</a>
+        <a style="margin: 15px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
+      </div>
+    </div>
+
+    <div class="home-img">
+    
+      <picture>
+        <source type="image/webp" srcset="WEBP/gallery-banner.webp">
+        <img src="smaller-banners/banner-noise.png" class="home-img">
+      </picture>
+      
+      <div class="gallery-title">SHEET MUSIC</div>
+    </div>
+
+
+    <div class="content">
+      <div>
+        <h1 class="home-heading">Sheet Music</h1>
+      </div>
+      <div class="home-text" style="margin-top: 5px;">
+        <p style="text-align: center;">
+          For a complete list of my all works, click <a style="color: rgb(54, 129, 215);" href="./list">here</a>.<br><br>
+        </p>
+      </div>
+
+
+      <div class="container">
+        <div class="grid-row">
+            <div class="item">
+                <div class="cover">
+                  <img style="object-fit: cover;" src="JPG_Lavender.jpg">
+                </div>
+                <div class="details">
+                    <p class="sheet-music-title">Lavender</p>
+                    <p class="date">April 17, 2024</p>
+                    <button class="button">Download</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cover"></div>
+                <div class="details">
+                    <p class="sheet-music-title">Thankfulness</p>
+                    <p class="date">Release Date 2</p>
+                    <button class="button">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional rows can be added similarly -->
+        <div class="grid-row">
+            <div class="item">
+                <div class="cover"></div>
+                <div class="details">
+                    <p class="sheet-music-title">Release Title 3</p>
+                    <p class="date">Release Date 3</p>
+                    <button class="button">Download</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cover"></div>
+                <div class="details">
+                    <p class="sheet-music-title">Release Title 4</p>
+                    <p class="date">Release Date 4</p>
+                    <button class="button">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div style="display: none;">
+      <img class="signature" id="signature-image" src="Signature-Transparent.png">
+    </div>
+    
+    <div class="footer" style="margin-top: 60px;">
+      <div class="link-logos">
+        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-spotify fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-apple fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-youtube fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+          </div>   
+        </a>
+
+      </div>
+
+      <div class="copyright">
+        <p>&copy 2024 Berkres Music. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="darkmode.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
