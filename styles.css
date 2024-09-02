@@ -57,7 +57,7 @@
   --table-odd: #121212;
   --table-even: #171717;
   --sheet-music-item: rgba(0, 0, 0, 0.2);
-  --sheet-music-item-border: rgba(66, 66, 66, 0.3);
+  --sheet-music-item-border: rgba(0, 0, 0, 0);
   --download-button: rgb(67, 102, 143);
   --download-button-hover: #2c4e70;
 }
@@ -87,20 +87,10 @@
   src: url(font/MonaSansExpanded-Black.ttf) format('truetype');
 }
 
-/* @font-face {
-  font-family: 'Nohemi-Bold';
-  src: url(font/Nohemi-Bold.woff2) format('woff2');
-} */
-
 @font-face {
   font-family: 'Nohemi-Regular';
   src: url(font/Nohemi-Regular.woff2) format('woff2');
 }
-
-/* @font-face {
-  font-family: 'GeneralSans';
-  src: url(font/GeneralSans-Variable.woff2) format('woff2');
-} */
 
 @font-face {
   font-family: 'Nohemi';
@@ -111,6 +101,17 @@
   font-family: 'Nohemi-ExtraBold';
   src: url(font/Nohemi-ExtraBold.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Nohemi-SemiBold';
+  src: url(font/Nohemi-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nohemi-Bold';
+  src: url(font/Nohemi-Bold.ttf) format('truetype');
+}
+
 
 ::selection {
 /*   background: rgba(72, 83, 110, 0.24); */
@@ -244,7 +245,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 48px;
+  width: 43px;
   background: var(--hover-line-color);
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
@@ -275,7 +276,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 43px;
+  width: 49px;
   background: var(--hover-line-color);
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
@@ -306,7 +307,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 55px;
+  width: 95px;
   background: var(--hover-line-color);
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
@@ -400,7 +401,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 
-  font-family: 'Nohemi-ExtraBold', sans-serif;
+  font-family: 'Nohemi-Bold', sans-serif;
 /*   font-weight: 780; */
   font-style: normal;
   font-weight: normal!important;
@@ -423,12 +424,12 @@ body {
   max-width: 800px;
   justify-content: center;
 
-  line-height: 2.1;
+  line-height: 1.8;
   color: var(--basic-text-color);
   transition: 0.5s;
 
   font-family: 'MonaSans';
-  font-weight: 550; 
+  font-weight: 470; 
 
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -508,7 +509,7 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'Nohemi-ExtraBold';
+  font-family: 'Nohemi-Bold', sans-serif;
   font-style: normal;
   font-weight: normal!important;
 /*   font-weight: 780; */
@@ -754,7 +755,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 43px;
+  width: 49px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -823,7 +824,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 48px;
+  width: 43px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -850,7 +851,7 @@ body {
   position: absolute;
   top: 46px;
   height: 2px;
-  width: 55px;
+  width: 95px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -1753,7 +1754,6 @@ body {
     border: none;
     margin-top: 15px;
     margin-bottom: 65px;
-    filter: drop-shadow(0px 5px 13px rgba(44, 42, 42, 0.400));
     width: 300px;
     height: 300px;
   }
@@ -1851,7 +1851,6 @@ body {
     border: none;
     margin-top: 15px;
     margin-bottom: 65px;
-    filter: drop-shadow(0px 5px 13px rgba(44, 42, 42, 0.400));
     width: 250px;
     height: 250px;
   }

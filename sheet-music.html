@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Gallery | Berkres Music</title>
+    <title>Sheet Music | Berkres Music</title>
 
     <meta name="description" content="Take your time and enjoy exploring the works of Berkres from A to Z. 
     If you'd like to listen to a piece, simply click on the artwork.">
@@ -37,17 +37,6 @@
 
     <style>
       .lexend-deca-font {
-/*         font-family: "Lexend Deca", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 460;
-        font-style: bold; */
-        
-        /* font-family: "Roboto Flex", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-        font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
         font-family: 'MonaSans-SemiBold';
         font-weight: 600;
         font-style: normal;
@@ -60,19 +49,6 @@
         font-weight: 340;
         font-style: bold;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       .container {
         width: 70%;
@@ -88,7 +64,7 @@
       .item {
         display: flex;
         flex: 1;
-        width: calc(50% - 37.5px); /* Account for the margin between the items */
+        width: calc(50% - 37.5px);
         margin-bottom: 20px;
         margin-right: 75px;
         width: 100%;
@@ -105,10 +81,12 @@
       .cover {
         width: 230px;
         height: 230px;
-        background-color: #ccc; /* Placeholder for album cover */
+        background-color: #ccc;
         margin-right: 20px;
         flex-shrink: 0;
         border-radius: 10px;
+        margin: 5px;
+        margin-right: 20px;
       }
 
       .cover img {
@@ -144,7 +122,6 @@
 
       .button {
         padding: 10px 20px;
-/*         background-color: rgb(0, 123, 255); */
         color: white;
         border: none;
         cursor: pointer;
@@ -163,11 +140,10 @@
         color: #fff;
         cursor: pointer;
         display: inline-block;
-        font-family: 'MonaSans';
+        font-family: 'MonaSans-SemiBold';
         font-size: 14px;
         font-weight: 600;
         line-height: 20px;
-/*               padding: 6px 16px; */
         position: relative;
         text-align: center;
         text-decoration: none;
@@ -189,7 +165,7 @@
         }
 
         .item {
-          width: calc(50% - 10px); /* Adjusted to fit two items in a row */
+          width: calc(50% - 10px);
           margin-right: 10px;
         }
 
@@ -218,7 +194,7 @@
         }
 
         .item {
-          width: calc(50% - 10px); /* Adjusted to fit two items in a row */
+          width: calc(50% - 10px);
           margin-right: 10px;
         }
 
@@ -249,7 +225,7 @@
       @media (max-width: 950px) {
         .grid-row {
           flex-direction: column;
-          align-items: center; /* Center the content */
+          align-items: center;
         }
 
         .item {
@@ -264,7 +240,6 @@
           width: 300px;
           height: 300px;
           margin-right: 20px;
-          margin-bottom: 0px; /* Space between cover and details */
           border-radius: 10px;
         }
 
@@ -274,7 +249,7 @@
           flex-direction: column;
           justify-content: center;
           text-align: left;
-          margin-right: 20px; /* Space between details and button */
+          margin-right: 20px;
           margin-top: 10px;
         }
 
@@ -290,8 +265,8 @@
         .button {
           font-size: 17px;
           padding: 10px 12px;
-          margin-top: 10px; /* Space between text and button */
-          align-self: flex-start; /* Center button under details */
+          margin-top: 10px;
+          align-self: flex-start;
         }
       }
 
@@ -350,7 +325,7 @@
           color: #fff;
           cursor: pointer;
           display: inline-block;
-          font-family: 'MonaSans';
+          font-family: 'MonaSans-SemiBold';
           font-size: 14px;
           font-weight: 600;
           line-height: 20px;
@@ -450,9 +425,9 @@
 
     <div class="home-img">
     
-      <picture>
-        <source type="image/webp" srcset="WEBP/gallery-banner.webp">
-        <img src="smaller-banners/banner-noise.png" class="home-img">
+      <picture style="filter: brightness(80%)">
+        <source type="image/webp" srcset="WEBP/sheet-music-banner.webp">
+        <img src="smaller-banners/sheet-music-banner.png" class="home-img">
       </picture>
       
       <div class="gallery-title">SHEET MUSIC</div>
@@ -474,20 +449,22 @@
         <div class="grid-row">
             <div class="item">
                 <div class="cover">
-                  <img style="object-fit: cover;" src="JPG_Lavender.jpg">
+                  <img style="object-fit: cover;" src="artwork/Different Place.jpg">
+                </div>
+                <div class="details">
+                    <p class="sheet-music-title">Different Place</p>
+                    <p class="date">August 26, 2024</p>
+                    <button class="button">Coming Soon</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cover">
+                  <img style="object-fit: cover;" src="artwork/Lavender.jpg">
                 </div>
                 <div class="details">
                     <p class="sheet-music-title">Lavender</p>
                     <p class="date">April 17, 2024</p>
-                    <button class="button">Download</button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="cover"></div>
-                <div class="details">
-                    <p class="sheet-music-title">Thankfulness</p>
-                    <p class="date">Release Date 2</p>
-                    <button class="button">Download</button>
+                    <button class="button">Coming Soon</button>
                 </div>
             </div>
         </div>
@@ -495,19 +472,23 @@
         <!-- Additional rows can be added similarly -->
         <div class="grid-row">
             <div class="item">
-                <div class="cover"></div>
+                <div class="cover">
+                  <img style="object-fit: cover;" src="artwork/Thankfulness.jpg">
+                </div>
                 <div class="details">
-                    <p class="sheet-music-title">Release Title 3</p>
-                    <p class="date">Release Date 3</p>
-                    <button class="button">Download</button>
+                    <p class="sheet-music-title">Thankfulness</p>
+                    <p class="date">March 24, 2024</p>
+                    <button class="button">Coming Soon</button>
                 </div>
             </div>
             <div class="item">
-                <div class="cover"></div>
+                <div class="cover">
+                  <img style="object-fit: cover;" src="artwork/No Orientation.jpg">
+                </div>
                 <div class="details">
-                    <p class="sheet-music-title">Release Title 4</p>
-                    <p class="date">Release Date 4</p>
-                    <button class="button">Download</button>
+                    <p class="sheet-music-title">No Orientation</p>
+                    <p class="date">January 2, 2024</p>
+                    <button class="button">Coming Soon</button>
                 </div>
             </div>
         </div>
