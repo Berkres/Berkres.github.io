@@ -28,6 +28,7 @@
   --sheet-music-item-border: rgba(255, 255, 255, 0.3);
   --download-button: rgb(49, 110, 180);
   --download-button-hover: rgb(38, 85, 139);
+  --switzer: 'Switzer';
 }
 
 .darkmode {
@@ -60,6 +61,7 @@
   --sheet-music-item-border: rgba(0, 0, 0, 0);
   --download-button: rgb(67, 102, 143);
   --download-button-hover: #2c4e70;
+  --switzer: 'Switzer-Light';
 }
 
 @font-face {
@@ -112,6 +114,32 @@
   src: url(font/Nohemi-Bold.ttf) format('truetype');
 }
 
+/* SWITZER */
+
+@font-face {
+  font-family: 'Switzer';
+  src: url(font/Switzer-Regular.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'Switzer-Light';
+  src: url(font/Switzer-Light.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'Switzer-Bold';
+  src: url(font/Switzer-Bold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'Switzer-SemiBold';
+  src: url(font/Switzer-Semibold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'Switzer-Medium';
+  src: url(font/Switzer-Medium.otf) format('opentype'); 
+}
 
 ::selection {
 /*   background: rgba(72, 83, 110, 0.24); */
@@ -140,7 +168,6 @@ body {
   border-radius: 5px;
   transition: 0.15s;
   color: var(--basic-text-color);
-/*   filter: drop-shadow(0px 0px 15px var(--dark-mode-button-shadow)); */
 }
 
 .dark-mode-button:hover {
@@ -430,6 +457,12 @@ body {
 
   font-family: 'MonaSans';
   font-weight: 470; 
+
+  font-family: var(--switzer);
+
+/*   font-family: 'Satoshi-Medium';
+  font-optical-sizing: auto;
+  font-style: normal; */
 
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -880,14 +913,10 @@ body {
   background: var(--input-field);
   font-size: 15px;
   
-  font-family: 'MonaSans';
+/*   font-family: 'MonaSans'; */
   font-weight: 560;
+  font-family: 'Switzer-SemiBold';
 
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
   transition: 0.5s;
   border-radius: 8px;
 }
@@ -902,8 +931,9 @@ body {
   background: var(--input-field);
   font-size: 15px;
 
-  font-family: 'MonaSans';
+/*   font-family: 'MonaSans'; */
   font-weight: 560;
+  font-family: 'Switzer-SemiBold';
 
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -931,8 +961,9 @@ body {
   font-weight: 330;
   font-style: bold; */
   
-  font-family: 'MonaSans';
+/*   font-family: 'MonaSans'; */
   font-weight: 560;
+  font-family: 'Switzer';
 
  /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -956,8 +987,9 @@ body {
   font-weight: 530;
   font-style: bold; */
   
-  font-family: 'MonaSans-Heavy';
+/*   font-family: 'MonaSans-Heavy'; */
   font-weight: normal;
+  font-family: 'Switzer-Bold';
 /*   font-weight: 650; */
 
   /* font-family: "Roboto Flex", sans-serif;
@@ -998,7 +1030,8 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans-Heavy';
+/*   font-family: 'MonaSans-Heavy'; */
+  font-family: 'Switzer-SemiBold';
 
   margin-bottom: 50px;
   transition: 0.4s;
@@ -1067,8 +1100,9 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans-Bold';
+/*   font-family: 'MonaSans-Bold'; */
 /*   font-weight: 700; */
+  font-family: 'Switzer-SemiBold';
 
   font-size: 18px;
   margin-bottom: 5px;
@@ -1177,8 +1211,10 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans';
+/*   font-family: 'MonaSans'; */
   font-weight: 550;
+
+  font-family: 'Switzer';
 
   transition: 0.5s;
   color: var(--logo);
