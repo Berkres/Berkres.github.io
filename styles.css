@@ -32,13 +32,13 @@
 }
 
 .darkmode {
-  --header-color: rgb(23,23,23);
+  --header-color: rgb(16,16,16);
   --header-berkres-color: rgb(230, 230, 230);
   --header-options-color: rgb(230, 230, 230);
-  --page-content-color: rgb(23,23,23);
+  --page-content-color: rgb(16,16,16);
   --basic-text-color: rgb(225, 225, 225);
   --hover-line-color: rgb(230, 230, 230);
-  --body: rgb(23,23,23);
+  --body: rgb(16,16,16);
   --footer: rgb(8, 8, 8);
   --logo: rgb(100, 100, 100);
   --news-article-secondary: rgb(17,17,17);
@@ -141,6 +141,31 @@
   src: url(font/Switzer-Medium.otf) format('opentype'); 
 }
 
+@font-face {
+  font-family: 'General-Variable';
+  src: url(font/GeneralSans-Variable.woff2) format('woff2'); 
+}
+
+@font-face {
+  font-family: 'General-Medium';
+  src: url(font/GeneralSans-Medium.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'General-SemiBold';
+  src: url(font/GeneralSans-Semibold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'General-Bold';
+  src: url(font/GeneralSans-Bold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'General-Regular';
+  src: url(font/GeneralSans-Regular.otf) format('opentype'); 
+}
+
 ::selection {
 /*   background: rgba(72, 83, 110, 0.24); */
   background: rgba(54, 129, 215, 0.24);
@@ -214,18 +239,8 @@ body {
   transition-duration: 0.5s;
   text-align: right;
   opacity: 0;
-/*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 460;
-  font-style: bold; */
 
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
-  font-family: 'MonaSans-SemiBold';
+  font-family: 'General-SemiBold';
   font-weight: 600;
   font-style: normal;
   font-weight: normal!important;
@@ -455,10 +470,10 @@ body {
   color: var(--basic-text-color);
   transition: 0.5s;
 
-  font-family: 'MonaSans';
+/*   font-family: 'MonaSans'; */
   font-weight: 470; 
 
-  font-family: var(--switzer);
+  font-family: 'General-Variable';
 
 /*   font-family: 'Satoshi-Medium';
   font-optical-sizing: auto;
@@ -915,7 +930,7 @@ body {
   
 /*   font-family: 'MonaSans'; */
   font-weight: 560;
-  font-family: 'Switzer-SemiBold';
+  font-family: 'General-SemiBold';
 
   transition: 0.5s;
   border-radius: 8px;
@@ -933,7 +948,7 @@ body {
 
 /*   font-family: 'MonaSans'; */
   font-weight: 560;
-  font-family: 'Switzer-SemiBold';
+  font-family: 'General-SemiBold';
 
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -963,7 +978,7 @@ body {
   
 /*   font-family: 'MonaSans'; */
   font-weight: 560;
-  font-family: 'Switzer';
+  font-family: 'General-Medium';
 
  /*  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -989,7 +1004,7 @@ body {
   
 /*   font-family: 'MonaSans-Heavy'; */
   font-weight: normal;
-  font-family: 'Switzer-Bold';
+  font-family: 'General-SemiBold';
 /*   font-weight: 650; */
 
   /* font-family: "Roboto Flex", sans-serif;
@@ -1031,7 +1046,7 @@ body {
   font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
 /*   font-family: 'MonaSans-Heavy'; */
-  font-family: 'Switzer-SemiBold';
+  font-family: 'General-SemiBold';
 
   margin-bottom: 50px;
   transition: 0.4s;
@@ -1093,16 +1108,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: bold; */
-  
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 680;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-/*   font-family: 'MonaSans-Bold'; */
-/*   font-weight: 700; */
-  font-family: 'Switzer-SemiBold';
+/*   font-family: 'MonaSans-Bold';
+  font-weight: 700; */
+  font-family: 'General-SemiBold';
 
   font-size: 18px;
   margin-bottom: 5px;
@@ -1148,15 +1157,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal; */
-  
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
 
-  font-family: 'MonaSans';
+/*   font-family: 'MonaSans'; */
   font-weight: 450;
+  font-family: 'MonaSans';
 
   color: var(--basic-text-color);
   transition: 0.5s;
@@ -1213,8 +1217,8 @@ body {
 
 /*   font-family: 'MonaSans'; */
   font-weight: 550;
-
-  font-family: 'Switzer';
+  font-family: 'General-Variable';
+/*   font-family: 'Switzer'; */
 
   transition: 0.5s;
   color: var(--logo);
@@ -1643,6 +1647,19 @@ body {
   .hamburger.active {
     margin-top: 25px;
   }
+
+  .artwork {
+    width: 325px;
+    height: 325px;
+  }
+
+  .title {
+    width: 325px;
+  }
+
+  .year {
+    width: 325px;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1823,6 +1840,19 @@ body {
 @media screen and (max-width: 370px) {
   .textarea-contact {
     width: 93%;
+  }
+  
+  .title {
+    width: 300px;
+  }
+
+  .year {
+    width: 300px;
+  }
+
+  .artwork {
+    width: 300px;
+    height: 300px;
   }
 
   .input-contact {
