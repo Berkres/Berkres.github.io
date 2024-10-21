@@ -384,7 +384,7 @@ body {
   content: "";
   position: absolute;
   top: 46px;
-  right: 186px;
+  right: 187px;
   height: 2px;
   width: 49px;
   background: var(--hover-line-color);
@@ -781,7 +781,7 @@ body {
   top: 46px;
   height: 2px;
   width: 49px;
-  right: 186px;
+  right: 187px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
