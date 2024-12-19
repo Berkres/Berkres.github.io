@@ -37,10 +37,12 @@
 
     <style>
       .lexend-deca-font {
-        font-family: 'General-SemiBold';
+        font-family: 'BDO-Bold';
+        letter-spacing: -1px;
         font-weight: 600;
         font-style: normal;
         font-weight: normal!important;
+        margin-top: 0px;
       }
       
       .text {
@@ -69,13 +71,14 @@
         margin-right: 75px;
         width: 100%;
         margin-bottom: 20px;
-        background: var(--sheet-music-item);
-        border-radius: 10px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        background: var(--imagegroup);
+        border-radius: 8px;
+/*         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid var(--sheet-music-item-border);
         transition: 0.5s;
+        padding: 15px;
       }
 
       .cover {
@@ -84,7 +87,7 @@
         background-color: #ccc;
         margin-right: 20px;
         flex-shrink: 0;
-        border-radius: 10px;
+/*         border-radius: 10px; */
         margin: 5px;
         margin-right: 20px;
       }
@@ -92,7 +95,8 @@
       .cover img {
         max-width: 100%;
         max-height: 100%;
-        border-radius: 10px;
+        border: 1px var(--catalogue) solid;
+/*         border-radius: 10px; */
       }
 
       .details {
@@ -105,7 +109,7 @@
       .sheet-music-title {
         font-size: 28px;
         margin: 0;
-        font-family: 'General-SemiBold';
+        font-family: 'Nohemi-SemiBold';
         color: var(--basic-text-color);
         transition: 0.5s;
       }
@@ -115,7 +119,8 @@
         font-weight: lighter;
         margin: 5px 0;
         margin-top: 2px;
-        font-family: 'General-Medium';
+        font-family: 'BDO-Regular';
+        letter-spacing: -0.9px;
         font-weight: 450;
         color: var(--basic-text-color);
         transition: 0.5s;
@@ -136,7 +141,8 @@
         box-sizing: border-box;
         cursor: pointer;
         display: inline-block;
-        font-family: 'General-SemiBold';
+        font-family: 'BDO-Bold';
+        letter-spacing: -0.5px;
         font-style: normal;
         font-size: 14px;
         line-height: 20px;
@@ -156,7 +162,7 @@
         background-color: var(--download-button-hover);
       }
 
-      @media (max-width: 1820px) {
+      @media (max-width: 6820px) {
         .container {
           width: 90%;
         }
@@ -356,7 +362,7 @@
       <div class="lexend-deca-font">
 
         <div style="margin-right: 71px;">
-          <button id="dark-mode-toggle" class="dark-mode-button">
+          <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 2px;">
             <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
           </button>
         </div> 
@@ -369,12 +375,12 @@
       </div>
 
       <div style="margin-right: 70px;">
-        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
           <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
         </button>
       </div>
 
-      <div class="hamburger">
+      <div class="hamburger" style="margin-top: 21px;">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>

@@ -29,6 +29,8 @@
   --download-button: rgb(49, 110, 180);
   --download-button-hover: rgb(38, 85, 139);
   --switzer: 'Switzer';
+  --imagegroup: rgb(247, 247, 247);
+  --catalogue: rgb(156, 156, 156);
 }
 
 .darkmode {
@@ -62,6 +64,8 @@
   --download-button: rgb(67, 102, 143);
   --download-button-hover: #2c4e70;
   --switzer: 'Switzer-Light';
+  --imagegroup: rgb(20, 20, 20);
+  --catalogue: rgb(65, 65, 65);
 }
 
 @font-face {
@@ -112,6 +116,16 @@
 @font-face {
   font-family: 'Nohemi-Bold';
   src: url(font/Nohemi-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'standard-bold';
+  src: url(font/standard-bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'standard-book';
+  src: url(font/standard-book.otf) format('opentype');
 }
 
 /* SWITZER */
@@ -171,6 +185,41 @@
   src: url(font/General-470.ttf) format('truetype'); 
 }
 
+@font-face {
+  font-family: 'BDO-Light';
+  src: url(BDOGrotesk/BDOGrotesk-Light.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'BDO-Bold';
+  src: url(BDOGrotesk/BDOGrotesk-Bold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'BDO-Regular';
+  src: url(BDOGrotesk/BDOGrotesk-Regular.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'BDO-ExtraBold';
+  src: url(BDOGrotesk/BDOGrotesk-ExtraBold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'BDO-Medium';
+  src: url(BDOGrotesk/BDOGrotesk-Medium.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'BDO-DemiBold';
+  src: url(BDOGrotesk/BDOGrotesk-DemiBold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: 'BDO-350';
+  src: url(BDOGrotesk/BDOGrotesk-350.ttf) format('truetype'); 
+}
+
 ::selection {
 /*   background: rgba(72, 83, 110, 0.24); */
   background: rgba(54, 129, 215, 0.24);
@@ -179,15 +228,6 @@
 body {
   background-color: var(--body);
   transition: 0.5s;
-/*   zoom: 0.9;
-  transform: scale(0.9);
-  transform-origin: 0 0;
-  -webkit-transform: scale(0.9);
-  -webkit-transform-origin: 0 0;
-  -moz-transform: scale(0.9);
-  -moz-transform-origin: 0 0;
-  -o-transform: scale(0.9);
-  -o-transform-origin: 0 0; */
 }
 
 .darkmode {
@@ -228,12 +268,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  height: 75px;
+  height: 65px;
   background-color: var(--header-color);
   position: fixed;
   width: 100%;
 /*   filter: drop-shadow(0px 5px 30px var(--header-shadow)); */
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.294);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
 /*   margin-top: 45px; */
 /*   margin top only when news banner on top is on. If not, then comment it out.*/
@@ -248,16 +288,19 @@ body {
   height: 315px;
   background-color: var(--header-color);
   right: -100%;
-  top: 75px;
+  top: 65px;
 /*   transition: 0.5s ease-in-out; */
   transition-duration: 0.5s;
   text-align: right;
   opacity: 0;
 
-  font-family: 'General-SemiBold';
+/*   font-family: 'General-SemiBold'; */
+  font-family: 'BDO-Bold';
+  letter-spacing: -1px;
   font-weight: 600;
   font-style: normal;
   font-weight: normal!important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .lexend-side.active {
@@ -294,9 +337,10 @@ body {
 
 .home:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
-.home:before {
+/* .home:before {
   content: "";
   position: absolute;
   top: 46px;
@@ -306,7 +350,7 @@ body {
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
   position: fixed;
-}
+} */
 
 .home:hover:before {
   transform: scaleX(1);
@@ -325,9 +369,10 @@ body {
 
 .news:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
-.news:before {
+/* .news:before {
   content: "";
   position: absolute;
   top: 46px;
@@ -337,7 +382,7 @@ body {
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
   position: fixed;
-}
+} */
 
 .news:hover:before {
   transform: scaleX(1);
@@ -356,9 +401,10 @@ body {
 
 .discography:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
-.discography:before {
+/* .discography:before {
   content: "";
   position: absolute;
   top: 46px;
@@ -368,7 +414,7 @@ body {
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
   position: fixed;
-}
+} */
 
 .discography:hover:before {
   transform: scaleX(1);
@@ -387,9 +433,10 @@ body {
 
 .about:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
-.about:before {
+/* .about:before {
   content: "";
   position: absolute;
   top: 46px;
@@ -400,7 +447,7 @@ body {
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
   position: fixed;
-}
+} */
 
 .about:hover:before {
   transform: scaleX(1);
@@ -419,9 +466,10 @@ body {
 
 .contact:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
-.contact:before {
+/* .contact:before {
   content: "";
   position: absolute;
   top: 46px;
@@ -431,7 +479,7 @@ body {
   transform: scaleX(0);
   transition: transform 0.1s ease-out;
   position: fixed;
-}
+} */
 
 .contact:hover:before {
   transform: scaleX(1);
@@ -476,9 +524,15 @@ body {
 
 .home-text {
   display: flex;
-  width: 90%;
+  width: 80%;
   max-width: 800px;
   justify-content: center;
+
+  font-family: "BDO-Regular";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
 
   line-height: 1.8;
   color: var(--basic-text-color);
@@ -487,7 +541,8 @@ body {
 /*   font-family: 'MonaSans'; */
 /*   font-weight: 470;  */
 
-  font-family: 'General-470';
+/*   font-family: 'General-470'; */
+  font-size: 14px;
 
 /*   font-family: 'Satoshi-Medium';
   font-optical-sizing: auto;
@@ -620,21 +675,6 @@ body {
 
 .berkresmusic-side {
 
-  /*   font-family: "Lexend Zetta", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 650;
-  font-style: normal; */
-
-  /* font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 1000;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
-/*   font-family: 'MonaSans';
-  font-weight: 1000;
-  font-variation-settings: "wdth" 150; */
-
   font-family: 'Nohemi';
 /*   font-weight: 1000; */
   font-weight: normal !important;
@@ -642,12 +682,12 @@ body {
   position: absolute;
   text-decoration: none;
   justify-content: center;
-  font-size: 22px;
+  font-size: 21px;
   align-items: center;
   color: var(--header-berkres-color);
   display: flex;
   left: 77px;
-  top: 28px;
+  top: 23px;
   margin-right: 77px;
   -webkit-user-select: none; 
   -ms-user-select: none;
@@ -674,21 +714,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-/*   font-family: "Lexend Zetta", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal; */
-
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
-  font-family: 'MonaSans-Expanded-Black';
-/*   font-weight: 1000;
-  font-variation-settings: "wdth" 150; */
-
+  font-family: 'Nohemi-Bold';
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -699,18 +725,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  font-family: 'MonaSans-Expanded-Black';
-/*   font-weight: 1000;
-  font-variation-settings: "wdth" 150; */
-  
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
-
+  font-family: 'Nohemi-Bold';
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -722,21 +737,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-/*   font-family: "Lexend Zetta", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal; */
-
-  font-family: 'MonaSans-Expanded-Black';
-/*   font-weight: 1000;
-  font-variation-settings: "wdth" 150; */
-
-  /* font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 150, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
+  font-family: 'Nohemi-Bold';
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -760,9 +761,10 @@ body {
 .contact-on-page:before {
   content: "";
   position: absolute;
-  top: 46px;
+  top: 42px;
   height: 2px;
-  width: 63px;
+  width: 58px;
+  right: 79px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -787,10 +789,10 @@ body {
 .about-on-page:before {
   content: "";
   position: absolute;
-  top: 46px;
+  top: 42px;
   height: 2px;
-  width: 49px;
-  right: 187px;
+  width: 48px;
+  right: 179px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -815,9 +817,10 @@ body {
 .news-on-page:before {
   content: "";
   position: absolute;
-  top: 46px;
+  top: 42px;
   height: 2px;
-  width: 49px;
+  width: 48px;
+  right: 400px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -867,7 +870,7 @@ body {
   transition: all 0.3 ease-in-out;
   background-color: var(--header-berkres-color);
   transition: 0.15s;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 .home-on-page {
@@ -884,9 +887,10 @@ body {
 .home-on-page:before {
   content: "";
   position: absolute;
-  top: 46px;
+  top: 42px;
   height: 2px;
   width: 43px;
+  right: 491px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -911,9 +915,9 @@ body {
 .discography-on-page:before {
   content: "";
   position: absolute;
-  top: 46px;
+  top: 42px;
   height: 2px;
-  width: 95px;
+  width: 90px;
   background: var(--hover-line-color);
   transform: scaleX(1);
   transition: transform 0.06s linear;
@@ -944,7 +948,7 @@ body {
   
 /*   font-family: 'MonaSans'; */
   font-weight: 560;
-  font-family: 'General-SemiBold';
+  font-family: 'BDO-Medium';
 
   transition: 0.5s;
   border-radius: 8px;
@@ -962,13 +966,7 @@ body {
 
 /*   font-family: 'MonaSans'; */
   font-weight: 560;
-  font-family: 'General-SemiBold';
-
-  /* font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+  font-family: 'BDO-Medium';
 
   resize: vertical;
   transition: 0.5s;
@@ -985,20 +983,10 @@ body {
   color: var(--basic-text-color);
   cursor: text;
   transition: 0.1s;
-/*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 330;
-  font-style: bold; */
   
 /*   font-family: 'MonaSans'; */
   font-weight: 560;
-  font-family: 'General-Medium';
-
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 440;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+  font-family: 'BDO-Regular';
 
   font-size: 13px;
 }
@@ -1011,21 +999,10 @@ body {
   border: none;
   width: 100%;
   cursor: pointer;
-/*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 530;
-  font-style: bold; */
-  
-/*   font-family: 'MonaSans-Heavy'; */
   font-weight: normal;
-  font-family: 'General-SemiBold';
-/*   font-weight: 650; */
-
-  /* font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+  
+  font-family: 'BDO-Bold';
+  letter-spacing: -0.5px;
 
   font-size: 15px;
   margin-bottom: 80px;
@@ -1048,19 +1025,8 @@ body {
   cursor: pointer;
   font-size: 15px;
 
-  /*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 530;
-  font-style: bold; */
-
-/*   font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
-/*   font-family: 'MonaSans-Heavy'; */
-  font-family: 'General-SemiBold';
+  font-family: 'BDO-Bold';
+  letter-spacing: -0.5px;
 
   margin-bottom: 50px;
   transition: 0.4s;
@@ -1116,7 +1082,7 @@ body {
   width: 300px;
   height: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 /*   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
@@ -1125,7 +1091,9 @@ body {
 
 /*   font-family: 'MonaSans-Bold';
   font-weight: 700; */
-  font-family: 'General-SemiBold';
+  
+/*   font-family: 'General-SemiBold'; */
+  font-family: "Nohemi-Bold";
 
   font-size: 18px;
   margin-bottom: 0px;
@@ -1143,8 +1111,13 @@ body {
 }
 
 .image-group {
-  height: 390px;
+  height: 402px;
   margin-top: 40px;
+/*   width: 450px; */
+  background-color: var(--imagegroup);
+  padding: 15px;
+  transition: 0.5s;
+  border-radius: 8px;
 }
 
 .year-row {
@@ -1165,7 +1138,7 @@ body {
   width: 300px;
   height: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
 /*   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
@@ -1174,7 +1147,7 @@ body {
 
 /*   font-family: 'MonaSans'; */
   font-weight: 450;
-  font-family: 'General-Medium';
+  font-family: 'Nohemi-Regular';
 
   color: var(--basic-text-color);
   transition: 0.5s;
@@ -1185,7 +1158,7 @@ body {
   justify-content: center;
   background-color: var(--footer);
   width: 100%;
-  height: 180px;
+  height: 160px;
   transition: 0.5s;
 }
 
@@ -1196,7 +1169,7 @@ body {
   justify-content: center;
   background-color: var(--footer);
   width: 100%;
-  height: 180px;
+  height: 160px;
   transition: 0.5s;
 }
 
@@ -1204,7 +1177,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 33px;
+  margin-top: 25px;
   height: 50px;
   width: 600px;
   /* background-color: aquamarine; */
@@ -1217,23 +1190,10 @@ body {
   justify-content: center;
   position: absolute;
   align-items: center;
-  margin-top: 112px;
-/*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: bold; */
-
-  /* font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 550;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 115, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
-
-/*   font-family: 'MonaSans'; */
-/*   font-weight: 550; */
-  font-family: 'General-Medium';
+  margin-top: 100px;
+  font-family: 'BDO-Regular';
 /*   font-family: 'Switzer'; */
-
+  font-size: 14px;
   transition: 0.5s;
   color: var(--logo);
 }
@@ -1283,7 +1243,7 @@ body {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border: 1px var(--basic-text-color) solid;
+  border: 1px var(--catalogue) solid;
   margin-bottom: 10px;
   transition: 0.5s;
 /*   pointer-events: none; */
@@ -1443,7 +1403,7 @@ body {
     position: absolute;
 /*     font-style: normal; */
     justify-content: center;
-    font-size: 20px;
+    font-size: 19px;
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
@@ -1503,14 +1463,14 @@ body {
     justify-content: center;
     background-color: var(--footer);
     width: 100%;
-    height: 180px;
+    height: 160px;
   }
   
   .link-logos {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 33px;
+    margin-top: 25px;
     height: 50px;
     width: 300px;
   }
@@ -1522,7 +1482,6 @@ body {
     justify-content: center;
     position: absolute;
     align-items: center;
-    margin-top: 112px;
   }
 
   .berkresmusic {
@@ -1562,12 +1521,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    height: 75px;
+    height: 65px;
     background-color: var(--header-color);
     position: fixed;
     width: 100%;
     margin-top: 0px;
-    filter: drop-shadow(0px 5px 30px var(--header-shadow));
+/*     filter: drop-shadow(0px 5px 30px var(--header-shadow)); */
     z-index: 100;
     transition: 0.5s;
   }
@@ -1582,7 +1541,7 @@ body {
     position: fixed;
     width: 100%;
     margin-top: 0px;
-    filter: drop-shadow(0px 5px 30px var(--header-shadow));
+/*     filter: drop-shadow(0px 5px 30px var(--header-shadow)); */
     z-index: 100;
   }
 
@@ -1684,18 +1643,15 @@ body {
   }
 
   .berkresmusic-side {
-/*     font-family: "Lexend Zetta", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 650; */
     position: absolute;
 /*     font-style: normal; */
     text-decoration: none;
     justify-content: center;
-    font-size: 22px;
+    font-size: 21px;
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-    top: 28px;
+    top: 23px;
     left: 25px;
     -webkit-user-select: none; 
     -ms-user-select: none;
@@ -1874,17 +1830,6 @@ body {
   }
 
   .copyright {
-/*     width: 600px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    align-items: center;
-    margin-top: 112px;
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: bold; */
     font-size: 13px;
   }
 
@@ -1909,7 +1854,7 @@ body {
 {
   .berkresmusic-side {
     font-size: 20px;
-    top: 28px;
+    top: 23px;
   }
 }
 
@@ -1924,7 +1869,7 @@ body {
 
   .berkresmusic-side {
     font-size: 19px;
-    top: 30px;
+    top: 24px;
   }
 
   .about-artwork {
