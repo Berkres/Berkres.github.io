@@ -29,7 +29,7 @@
   --download-button: rgb(49, 110, 180);
   --download-button-hover: rgb(38, 85, 139);
   --switzer: 'Switzer';
-  --imagegroup: rgb(247, 247, 247);
+  --imagegroup: rgb(242, 242, 242);
   --catalogue: rgb(156, 156, 156);
 }
 
@@ -43,7 +43,7 @@
   --body: rgb(16,16,16);
   --footer: rgb(8, 8, 8);
   --logo: rgb(100, 100, 100);
-  --news-article-secondary: rgb(21,21,21);
+  --news-article-secondary: rgb(23,23,23);
   --darkmode-button: rgb(51, 51, 51);
   --darkmode-button-text: rgb(225, 225, 225);
   --header-shadow: rgb(0, 0, 0);
@@ -64,7 +64,7 @@
   --download-button: rgb(67, 102, 143);
   --download-button-hover: #2c4e70;
   --switzer: 'Switzer-Light';
-  --imagegroup: rgb(20, 20, 20);
+  --imagegroup: rgb(22, 22, 22);
   --catalogue: rgb(65, 65, 65);
 }
 
@@ -1760,7 +1760,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 45px;
     color:#f0f0f0;
     text-shadow: 2px 2px 15px rgb(19, 17, 18);
   }
@@ -1770,7 +1770,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 45px;
     color:#f0f0f0;
     text-shadow: 2px 2px 15px rgb(19, 17, 18);
   }
