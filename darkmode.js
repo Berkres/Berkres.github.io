@@ -16,7 +16,7 @@ const enableDarkMode = () => {
 
   signatureImg.style.opacity = "0";
   setTimeout(() => {
-    signatureImg.src = "Signature-Transparent-dark-mode.png";
+    signatureImg.src = "LOGO-WHITE.png";
     signatureImg.style.opacity = "1";
   }, 150);
 
@@ -42,7 +42,7 @@ const disableDarkMode = () => {
 
   signatureImg.style.opacity = "0";
   setTimeout(() => {
-    signatureImg.src = "Signature-Transparent.png";
+    signatureImg.src = "LOGO-BLACK.png";
     signatureImg.style.opacity = "1";
   }, 150);
 
