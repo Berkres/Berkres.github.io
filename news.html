@@ -43,13 +43,161 @@
         font-weight: normal!important;
         margin-top: 0px;
       }
-      
-      .text {
-        font-family: "Lexend Deca", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 340;
-        font-style: bold;
+
+      body {
+        background-color: var(--body);
+        color: var(--basic-text-color);
+        margin: 0;
+        padding: 0;
       }
+
+      .container {
+        width: 80%;
+        margin: auto;
+        max-width: 900px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .news-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .news-item {
+        background: var(--news-article);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        transition: 0.5s;
+      }
+
+      .news-item .placeholder {
+        width: 100%;
+        height: 200px;
+        background: #ccc;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 18px;
+        font-weight: bold;
+        object-fit: contain;
+      }
+
+      .news-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .news-item h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-family: "Nohemi-Bold";
+        font-style: normal;
+        font-weight: normal!important;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .news-item small {
+        color: #777;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 13px;
+        font-family: "BDO-Regular";
+      }
+
+      .news-item p {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        font-family: "BDO-Regular";
+        font-style: normal;
+        line-height: 1.8;
+        color: var(--news-article-text);
+        transition: 0.5s;
+      }
+
+      .news-archive {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .news-archive h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .news-archive table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      .news-archive th,
+      .news-archive td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      .news-archive th {
+        background-color: var(--archive-header);
+        color: white;
+        font-family: "Nohemi-Bold";
+        font-style: normal;
+        font-weight: normal!important;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+      }
+
+      .news-archive td {
+        background-color: var(--archive-row);
+        border-bottom: 1px solid var(--row-border);
+        font-family: "BDO-Regular";
+        font-style: normal;
+        font-weight: normal!important;
+        color: var(--archive-text);
+        transition: 0.5s;
+        font-size: 14px;
+      }
+
+      .news-archive td a {
+        color: var(--archive-text);
+        text-decoration: none;
+        font-weight: 500;
+        font-family: "BDO-Regular";
+        font-style: normal;
+        font-weight: normal!important;
+        transition: 0.5s;
+      }
+
+      .news-archive td a:hover {
+        color: rgb(110, 164, 226);
+        text-decoration: none;
+      }
+
     </style>
 
     <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
@@ -151,127 +299,90 @@
       </div>
 
       <div class="home-text" style="margin-bottom: 30px;">
-        <p style="text-align: center;">Stay up to date with the latest happenings, projects, and announcements!
-          This is the place to find all the recent news and updates about my work and projects.
+        <p style="text-align: center;">Stay updated with my latest releases, announcements, and projects.
         </p>
       </div>
 
       <div style="font-size: 18px; margin-bottom: 30px;">
-        <h2 class="home-heading">December 2024</h2>
+        <h2 class="home-heading">February 2025</h2>
       </div>
 
-      <div class="home-heading">
-        <h2 class="home-heading">New music</h2>
+      <div class="news-section">
+          <div class="news-item">
+              <div class="placeholder">
+                <img src="news-images/02Feb25.png">
+              </div>
+              <h2>Upcoming Album</h2>
+              <small>February 2, 2025</small>
+              <p>Berkres is currently working on an Album with tracks ranging from solo piano to synthesizer.</p>
+          </div>
+<!--        <div class="news-item">
+              <div class="placeholder">
+                <img src="news-images/02Feb25.png">
+              </div>
+              <h2>Live Concert in Berlin</h2>
+              <small>February 10, 2025</small>
+              <p>Join me for a magical evening of piano music at the Philharmonie.</p>
+            </div> -->
+      </div>
+    </div>
+
+    <div class="news-archive">
+      <h2 style="margin-top: 70px; font-family: 'Nohemi-Bold'; color: var(--basic-text-color); transition: 0.5s; font-style: normal; font-weight: normal!important;">Archive</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th>Month</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><a href="archive/february-2025.html">February, 2025</a></td>
+                  <td style="text-align: right;">1 Article</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div class="footer" style="margin-top: 35px;">
+      <div class="link-logos">
+        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-spotify fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-apple fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-youtube fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+          </div>   
+        </a>
+
       </div>
 
-      <div>
-        <picture>
-          <source type="image/webp" srcset="news-images/WEBP/traces.webp">
-          <img class="news-artwork" src="news-images/traces.png">
-        </picture>
+      <div class="copyright">
+        <p>&copy 2024-2025 Berkres Music. All rights reserved.</p>
       </div>
 
-      <div>
-        <picture>
-          <source type="image/webp" srcset="news-images/WEBP/traces-SE.webp">
-          <img class="news-artwork" src="news-images/traces-SE.png">
-        </picture>
-      </div>
-      
-      <div class="home-text">
-        <p>Berkres decided to change things up a bit. First of all, the cover art looks different now, no release title, just his name.
-          But why is there another image with a black frame? The one with the white frame will be just pure piano (in most cases).
-          After Berkres was experimenting with different effects, he couldn't decide whether he should release the pure piano or the more experimental 
-          one and because Berkres - to this day - still couldn't decide, he came up with the idea of simply uploading both versions. 
-          Berkres calls the experimental version <span style="font-family: 'Nohemi-Bold';">Special Edition</span>.
-          <br>If you have trouble understanding this new concept, then you can scroll further down.<br><br>
-        </p>
-      </div>
-
-      <div class="next-article" style="background-color: var(--news-article-secondary);">
-        
-        <div class="home-heading" style="margin-top: 30px;">
-          <h2 class="home-heading">Upcoming Release - Traces</h2>
-        </div>
-
-        <div>
-          <picture>
-            <source type="image/webp" srcset="news-images/WEBP/traces.webp">
-            <img class="news-artwork" src="news-images/traces.png">
-          </picture>
-        </div>
-        
-        <div class="home-text">
-          <p>02:03 - that was the night when Berkres experimented with different effects. 
-            With this name, Berkres wants to highlight the beginning of something new. This will be the soft and pure piano version.<br><br>
-          </p>
-        </div>
-
-      </div>
-
-      <div class="secondary-article" style="display: flex;">
-        
-        <div class="home-heading" style="margin-top: 30px;">
-          <h2 class="home-heading">Upcoming Release - Traces (Special Edition)</h2>
-        </div>
-
-        <div>
-          <picture>
-            <source type="image/webp" srcset="news-images/WEBP/traces-SE.webp">
-            <img class="news-artwork" src="news-images/traces-SE.png">
-          </picture>
-        </div>
-        
-        <div class="home-text">
-          <p>Since this release is experimental, Berkres calls it <span style="font-family: 'Nohemi-Bold';">Traces (Special Edition)</span> as explained in the very first article.
-            What exactly does experimental mean? Well, you'll have to find out when the Special Edition is out...<br><br>
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- ^^^^ NEW ARTICLES ABOVE ^^^^ -->
-
-      <div class="footer">
-        <div class="link-logos">
-          <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-            <div class="logo">
-              <i class="fa-brands fa-spotify fa-xl"></i>
-            </div>   
-          </a>
-  
-          <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-            <div class="logo">
-              <i class="fa-brands fa-apple fa-xl"></i>
-            </div>   
-          </a>
-  
-          <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-            <div class="logo">
-              <i class="fa-brands fa-youtube fa-xl"></i>
-            </div>   
-          </a>
-  
-          <a href="https://www.instagram.com/berkresmusic/" target="_blank">
-            <div class="logo">
-              <i class="fa-brands fa-instagram fa-xl"></i>
-            </div>   
-          </a>
-  
-          <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
-            <div class="logo">
-              <i class="fa-brands fa-tiktok fa-xl"></i>
-            </div>   
-          </a>
-  
-        </div>
-  
-        <div class="copyright">
-          <p>&copy 2024 Berkres Music. All rights reserved.</p>
-        </div>
-
-      </div>
     </div>
       
     <script src="darkmode.js"></script>
