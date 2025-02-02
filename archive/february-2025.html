@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html translate="no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>News | Berkres Music</title>
+    
+    <meta name="description" content="Stay updated with the latest news and releases from Berkres.">
+    <meta name="author" content="Berkres Music">
+    <meta name="keywords" content="Berkres, Music, Berkres Music, ambient music, piano music">
+
+    <link rel="icon" type="image/png" href="Icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <style>
+      .lexend-deca-font {
+        font-family: 'BDO-Bold';
+        letter-spacing: -1px;
+        font-weight: 600;
+        font-style: normal;
+        font-weight: normal!important;
+        margin-top: 0px;
+      }
+
+      body {
+        background-color: var(--body);
+        color: var(--basic-text-color);
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+        max-width: 900px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .news-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .news-item {
+        background: var(--news-article);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        transition: 0.5s;
+      }
+
+      .news-item .placeholder {
+        width: 100%;
+        height: 200px;
+        background: #ccc;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 18px;
+        font-weight: bold;
+        object-fit: contain;
+      }
+
+      .news-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .news-item h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-family: "Nohemi-Bold";
+        font-style: normal;
+        font-weight: normal!important;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .news-item small {
+        color: #777;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 13px;
+        font-family: "BDO-Regular";
+      }
+
+      .news-item p {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        font-family: "BDO-Regular";
+        font-style: normal;
+        line-height: 1.8;
+        color: var(--news-article-text);
+        transition: 0.5s;
+      }
+
+      .news-archive {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .news-archive h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .news-archive table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      .news-archive th,
+      .news-archive td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      .news-archive th {
+        background-color: var(--footer);
+        color: white;
+        font-family: "Nohemi-Bold";
+        font-style: normal;
+        font-weight: normal!important;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+      }
+
+      .news-archive td {
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ddd;
+        font-family: "BDO-Regular";
+        font-style: normal;
+        font-weight: normal!important;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+        font-size: 14px;
+      }
+
+      .news-archive td a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .news-archive td a:hover {
+        color: #007bff;
+        text-decoration: underline;
+      }
+
+    </style>
+
+    <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>  
+
+  <body style="margin: 0; background-color: var(--body);">
+
+    <div class="centerHeader">
+      <div>
+        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+      </div>
+      <div class="lexend-deca-font">
+
+        <div style="margin-right: 35px;">
+          <button id="dark-mode-toggle" name="darkmode-button" class="dark-mode-button" style="margin-top: 2px;">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon" name="icon-dark"></i>
+          </button>
+        </div>
+
+        <a href="./news" class="home-on-page">News</a>
+        <a href="./works" class="news">Works</a>
+        <a href="./sheet-music" class="discography">Sheet Music</a>
+        <a href="./about" class="about">About</a>
+        <a href="./contact" class="contact">Contact</a>
+      </div>
+
+      <div style="margin-right: 70px;">
+        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" name="darkmode-button-mobile" style="margin-top: -5px;">
+          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile" name="icon-dark"></i>
+        </button>
+      </div>
+      
+      <div class="hamburger" style="margin-top: 21px;">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="lexend-side">
+
+        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-spotify fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 72px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-apple fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 131px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-youtube fa-xl"></i>
+          </div>
+        </a>
+
+        <a class="brands-menu" style="margin-top: 188px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </div>   
+        </a>
+
+        <a class="brands-menu" style="margin-top: 246px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <div style="color: var(--basic-text-color)" class="logo">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+          </div>   
+        </a>
+
+        <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
+        <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
+        <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
+        <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
+        <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
+      </div>
+    </div>
+
+    <div class="home-img">
+    
+      <picture>
+        <source type="image/webp" srcset="WEBP/news-banner.webp">
+        <img src="smaller-banners/news-banner.png" class="home-img">
+      </picture>
+      
+      <div class="home-title">NEWS</div>
+    </div>
+
+    <div class="content">
+      
+      <div>
+        <h1 class="home-heading">Latest News</h1>
+      </div>
+
+      <div class="home-text" style="margin-bottom: 30px;">
+        <p style="text-align: center;">Stay updated with my latest releases, announcements, and projects.
+        </p>
+      </div>
+
+      <div style="font-size: 18px; margin-bottom: 30px;">
+        <h2 class="home-heading">February 2025</h2>
+      </div>
+
+      <div class="news-section">
+          <div class="news-item">
+              <div class="placeholder">
+                <img src="news-images/02Feb25.png">
+              </div>
+              <h2>Upcoming Album</h2>
+              <small>February 2, 2025</small>
+              <p>Berkres is currently working on an Album with tracks ranging from solo piano to synthesizer.</p>
+          </div>
+<!--        <div class="news-item">
+              <div class="placeholder">
+                <img src="news-images/02Feb25.png">
+              </div>
+              <h2>Live Concert in Berlin</h2>
+              <small>February 10, 2025</small>
+              <p>Join me for a magical evening of piano music at the Philharmonie.</p>
+            </div> -->
+      </div>
+    </div>
+
+    <div class="news-archive">
+      <h2 style="margin-top: 70px; font-family: 'Nohemi-Bold'; color: var(--basic-text-color); transition: 0.5s; font-style: normal; font-weight: normal!important;">Archive</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th>Month</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>February, 2025</td>
+                  <td style="text-align: right;">1 Article</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  
+
+    <div class="footer" style="margin-top: 35px;">
+      <div class="link-logos">
+        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-spotify fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-apple fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-youtube fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </div>   
+        </a>
+
+        <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+          <div class="logo">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+          </div>   
+        </a>
+
+      </div>
+
+      <div class="copyright">
+        <p>&copy 2024-2025 Berkres Music. All rights reserved.</p>
+      </div>
+
+    </div>
+      
+    <script src="darkmode.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
