@@ -205,9 +205,14 @@
   src: url(BDOGrotesk/BDOGrotesk-Bold.otf) format('opentype'); 
 }
 
-@font-face {
+/* @font-face {
   font-family: 'BDO-Regular';
   src: url(BDOGrotesk/BDOGrotesk-Regular.otf) format('opentype'); 
+} */
+
+@font-face {
+  font-family: 'BDO-Regular';
+  src: url(font/OverusedGrotesk-SemiBold.ttf) format('truetype'); 
 }
 
 @font-face {
@@ -239,7 +244,91 @@ body {
   background-color: var(--body);
   transition: 0.5s;
   overflow-x: hidden;
+/*   padding-top: 65px; */
 }
+
+/* #page-wrapper {
+  opacity: 0;  
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+} */
+
+/* Page starts invisible */
+/* #page-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+} */
+
+/* Fade-in effect when body is loaded */
+body.loaded #page-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fade-in effect on page load */
+#page-wrapper {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Overlay for smooth fade-out */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--body); /* Dark overlay for smooth transitions */
+  opacity: 0;
+  pointer-events: none;
+/*   transition: opacity 0.8s ease-in-out; */
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1); /* Fast start, slow end */
+}
+
+/* When fading out */
+body.fade-out #overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+  opacity: 1;
+  background-color: var(--bg-color);
+  transition: opacity 0.8s ease-in-out, background-color 0s ease-in-out;
+} */
+
+
+/* body.fade-in {
+  opacity: 1;
+  transition-delay: 0.2s;
+} */
 
 .darkmode {
   padding-top: env(safe-area-inset-top);
@@ -258,6 +347,7 @@ body {
   border-radius: 5px;
   transition: 0.15s;
   color: var(--basic-text-color);
+/*   margin-right: -10px; */
 }
 
 .dark-mode-button:hover {
@@ -274,21 +364,41 @@ body {
   display: none;
 }
 
+.navbar-wrapper {
+  width: 100%;
+  background-color: var(--header-color); /* Change if needed */
+  display: flex;
+  justify-content: center;
+  height: 65px;
+  position: fixed;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+
 .centerHeader {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+/*   justify-content: center; */
+  align-items: center;
+  justify-content: space-between; 
+  align-items:flex-end;
   height: 65px;
   background-color: var(--header-color);
   position: fixed;
-  width: 100%;
+/*   width: 100%; */
 /*   filter: drop-shadow(0px 5px 30px var(--header-shadow)); */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
   z-index: 100;
 /*   margin-top: 45px; */
 /*   margin top only when news banner on top is on. If not, then comment it out.*/
   transition: 0.5s;
+  width: calc(100% - 50px);
+  max-width: 1160px;
+  margin: 0 auto;
+
+
+
 }
 
 .lexend-side {
@@ -296,7 +406,7 @@ body {
   flex-direction: column;
   position: fixed;
   width: 100%;
-  height: 315px;
+  height: 290px;
   background-color: var(--header-color);
   right: -100%;
   top: 64px;
@@ -306,12 +416,14 @@ body {
   opacity: 0;
 
 /*   font-family: 'General-SemiBold'; */
-  font-family: 'BDO-Bold';
-  letter-spacing: -1px;
-  font-weight: 600;
+/*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
   font-style: normal;
-  font-weight: normal!important;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-variation-settings: "wdth" 94;
+  letter-spacing: -0.5px;
 }
 
 .lexend-side.active {
@@ -327,7 +439,7 @@ body {
 
 .lexend-deca-font {
   display: flex;
-  margin-right: 77px;
+  margin-right: 0;
 }
 
 .table-item {
@@ -342,13 +454,15 @@ body {
   padding-bottom: 4px;
   padding-top: 4px;
   color: var(--header-options-color);
-  transition: 0.15s;
+  transition: 0.3s;
   text-decoration: none;
+  opacity: 0.6;
+/*   margin-right: -10px; */
 }
 
 .home:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* .home:before {
@@ -363,12 +477,12 @@ body {
   position: fixed;
 } */
 
-.home:hover:before {
+/* .home:hover:before {
   transform: scaleX(1);
-}
+} */
 
 .news {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -376,11 +490,12 @@ body {
   color: var(--header-options-color);
   transition: 0.15s;
   text-decoration: none;
+  opacity: 0.6;
 }
 
 .news:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* .news:before {
@@ -395,12 +510,12 @@ body {
   position: fixed;
 } */
 
-.news:hover:before {
+/* .news:hover:before {
   transform: scaleX(1);
-}
+} */
 
 .discography {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -408,11 +523,12 @@ body {
   color: var(--header-options-color);
   transition: 0.15s;
   text-decoration: none;
+  opacity: 0.6;
 }
 
 .discography:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* .discography:before {
@@ -427,12 +543,12 @@ body {
   position: fixed;
 } */
 
-.discography:hover:before {
+/* .discography:hover:before {
   transform: scaleX(1);
-}
+} */
 
 .about {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -440,11 +556,12 @@ body {
   color: var(--header-options-color);
   transition: 0.15s;
   text-decoration: none;
+  opacity: 0.6;
 }
 
 .about:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* .about:before {
@@ -460,61 +577,81 @@ body {
   position: fixed;
 } */
 
-.about:hover:before {
+/* .about:hover:before {
   transform: scaleX(1);
-}
+} */
 
 .contact {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
-  padding-right: 4px;
+  padding-right: 0px;
   padding-bottom: 4px;
   padding-top: 4px;
   color: var(--header-options-color);
   transition: 0.15s;
   text-decoration: none;
+  opacity: 0.6;
 }
 
 .contact:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
 }
 
-.contact:hover:before {
+/* .contact:hover:before {
   transform: scaleX(1);
-}
+} */
 
 .start-img {
   width: 102%;
+}
+
+.clickable {
+  color: var(--basic-text-color);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.clickable:hover {
+  opacity: 0.6;
 }
 
 .home-heading {
   display: flex;
   /* background-color: #f9f9f9; */
 /*   width: 90%; */
-  max-width: 800px;
+  max-width: 750px;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 25px;
+  margin-right: 25px;
   font-family: 'Nohemi-Bold', sans-serif;
   font-style: normal;
-  font-weight: normal!important;
+/*   font-weight: normal!important; */
   color: var(--basic-text-color);
   transition: 0.5s;
 /*   -webkit-text-stroke-width: 0!important;
   -webkit-font-smoothing: antialiased; */
+
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth"  94;
+  letter-spacing: -0.5px;
 }
 
 .home-text {
   display: flex;
-  width: 88.5%;
-  max-width: 800px;
+/*   width: 88.5%; */
+  max-width: 750px;
   justify-content: center;
+  padding-left: 25px;
+  margin-right: 25px;
 
-  font-family: "BDO-Regular";
+/*   font-family: "BDO-Regular";
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal; */
 
 
   line-height: 1.8;
@@ -525,18 +662,14 @@ body {
 /*   font-weight: 470;  */
 
 /*   font-family: 'General-470'; */
-  font-size: 14px;
+  font-size: 16px;
 
-/*   font-family: 'Satoshi-Medium';
+  font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal; */
-
-  /* font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-
-  font-weight: 450;
+  font-weight: 530;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+  font-variation-settings: "wdth" 94;
+  letter-spacing: -0.4px;
 }
 
 /*   font-weight: 370; for normal text */
@@ -598,25 +731,24 @@ body {
 }
 
 .contact-heading {
-/*   font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: bold; */
-
- /*  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 780;
+/*   font-family: 'Nohemi-Bold', sans-serif;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 110, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712; */
+  font-weight: normal!important; */
 
-  font-family: 'Nohemi-Bold', sans-serif;
-  font-style: normal;
-  font-weight: normal!important;
-/*   font-weight: 780; */
 
   margin-bottom: 30px;
   transition: 0.5s;
   color: var(--basic-text-color);
+
+  padding-left: 25px;
+  margin-right: 25px;
+
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth"  94;
+  letter-spacing: -0.5px;
 }
 
 .lexend-zetta-font {
@@ -669,13 +801,26 @@ body {
   align-items: center;
   color: var(--header-berkres-color);
   display: flex;
-  left: 77px;
+/*   left: -400px; */
   top: 23px;
-  margin-right: 77px;
+/*   margin-right: 77px; */
   -webkit-user-select: none; 
   -ms-user-select: none;
   user-select: none;
   transition: 0.5s;
+/*   margin-left: calc(100vw - 500px); */
+  position: absolute;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--header-berkres-color);
+  display: flex;
+  top: 23px;
+  left: 25px;
+  -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
+  left: 0px;
 }
 
 .berkresmusic {
@@ -727,9 +872,9 @@ body {
 }
 
 .contact-on-page {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
-  padding-right: 4px;
+  padding-right: 0px;
   padding-bottom: 4px;
   padding-top: 4px;
   color: var(--header-options-color);
@@ -741,7 +886,7 @@ body {
   cursor: pointer;
 }
 
-.contact-on-page:before {
+/* .contact-on-page:before {
   content: "";
   position: absolute;
   top: 42px;
@@ -752,10 +897,10 @@ body {
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
-}
+} */
 
 .about-on-page {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -769,7 +914,7 @@ body {
   cursor: pointer;
 }
 
-.about-on-page:before {
+/* .about-on-page:before {
   content: "";
   position: absolute;
   top: 42px;
@@ -780,10 +925,10 @@ body {
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
-}
+} */
 
 .news-on-page {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -797,7 +942,7 @@ body {
   cursor: pointer;
 }
 
-.news-on-page:before {
+/* .news-on-page:before {
   content: "";
   position: absolute;
   top: 42px;
@@ -808,7 +953,7 @@ body {
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
-}
+} */
 
 .signature {
   width: 200px;
@@ -823,6 +968,7 @@ body {
   color: var(--logo);
   transition: 0.15s;
   padding: 5px;
+  z-index: 100;
 }
 
 .logo:hover {
@@ -853,11 +999,11 @@ body {
   transition: all 0.3 ease-in-out;
   background-color: var(--header-berkres-color);
   transition: 0.15s;
-  border-radius: 0px;
+  border-radius: 8px;
 }
 
 .home-on-page {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -867,7 +1013,7 @@ body {
   text-decoration: none;
 }
 
-.home-on-page:before {
+/* .home-on-page:before {
   content: "";
   position: absolute;
   top: 42px;
@@ -878,10 +1024,10 @@ body {
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
-}
+} */
 
 .discography-on-page {
-  margin-left: 36px;
+  margin-left: 22px;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -895,7 +1041,7 @@ body {
   cursor: pointer;
 }
 
-.discography-on-page:before {
+/* .discography-on-page:before {
   content: "";
   position: absolute;
   top: 42px;
@@ -905,12 +1051,15 @@ body {
   transform: scaleX(1);
   transition: transform 0.06s linear;
   position: fixed;
-}
+} */
 
 .contact-form {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   margin-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
 }
 
 .input-group {
@@ -919,7 +1068,8 @@ body {
 }
 
 .input-contact {
-  width: 96%;
+  width: 100%;
+/*   height */
   padding: 10px;
   outline: 0;
 /*   border: 1px solid #666; */
@@ -927,51 +1077,64 @@ body {
 /*   border-radius: 5px; */
   color: var(--basic-text-color);
   background: var(--input-field);
-  font-size: 15px;
+  font-size: 16px;
   
 /*   font-family: 'MonaSans'; */
-  font-weight: 560;
-  font-family: 'BDO-Medium';
+  font-family: 'Instrument Sans';
+  font-weight: 550;
+  font-variation-settings: "wdth" 94;
+  letter-spacing: -0.4px;
 
   transition: 0.5s;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .textarea-contact {
-  width: 96%;
+  width: 100%;
   padding: 10px;
   outline: 0;
-/*   border: 1px solid #666; */
+/*   border: 1px solid #b43f3f; */
   border: none;
   color: var(--basic-text-color);
   background: var(--input-field);
-  font-size: 15px;
+  font-size: 16px;
 
 /*   font-family: 'MonaSans'; */
-  font-weight: 560;
-  font-family: 'BDO-Medium';
+
+  font-family: 'Instrument Sans';
+  font-weight: 550;
+  font-variation-settings: "wdth" 94;
+  letter-spacing: -0.4px;
 
   resize: vertical;
   transition: 0.5s;
   resize: none;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .label-contact {
-  height: 100%;
+/*   height: 100%; */
   position: absolute;
   left: 0;
   top: 0;
   padding: 10px;
   color: var(--basic-text-color);
   cursor: text;
-  transition: 0.1s;
+  transition: 0.15s;
   
 /*   font-family: 'MonaSans'; */
-  font-weight: 560;
-  font-family: 'BDO-Regular';
+
+  font-family: 'Instrument Sans';
 
   font-size: 13px;
+
+  font-weight: 550;
+  font-style: normal;
+  font-variation-settings: "wdth" 96;
+  letter-spacing: -0.4px;
+  margin-top: 2px;
 }
 
 .submit-button {
@@ -982,12 +1145,15 @@ body {
   border: none;
   width: 100%;
   cursor: pointer;
-  font-weight: normal;
-  
-  font-family: 'BDO-Bold';
+
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+  font-variation-settings: "wdth" 94;
   letter-spacing: -0.5px;
 
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 80px;
   transition: 0.4s;
   border-radius: 8px;
@@ -1008,7 +1174,11 @@ body {
   cursor: pointer;
   font-size: 15px;
 
-  font-family: 'BDO-Bold';
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+  font-variation-settings: "wdth" 94;
   letter-spacing: -0.5px;
 
   margin-bottom: 50px;
@@ -1149,6 +1319,7 @@ body {
   width: 100%;
   height: 160px;
   transition: 0.5s;
+  bottom: 0;
 }
 
 .footer-error {
@@ -1160,6 +1331,7 @@ body {
   width: 100%;
   height: 160px;
   transition: 0.5s;
+  bottom: 0;
 }
 
 .link-logos {
@@ -1180,11 +1352,18 @@ body {
   position: absolute;
   align-items: center;
   margin-top: 100px;
-  font-family: 'BDO-Regular';
-/*   font-family: 'Switzer'; */
-  font-size: 14px;
+/*   font-family: 'BDO-Regular'; */
+  font-size: 15px;
   transition: 0.5s;
   color: var(--logo);
+
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+
+  font-weight: 550;
+  font-style: normal;
+  font-variation-settings: "wdth" 95;
+  letter-spacing: -0.4px;
 }
 
 .dark-mode-toggle {
@@ -1397,7 +1576,37 @@ body {
     color: var(--header-berkres-color);
     display: flex;
     top: 28px;
+
   }
+}
+
+@media screen and (max-width: 1570px)
+{
+  .lexend-deca-font {
+    display: flex;
+    margin-right: 0;
+  }
+
+  .berkresmusic-side {
+    position: absolute;
+/*     font-style: normal; */
+    text-decoration: none;
+    justify-content: center;
+    font-size: 21px;
+    align-items: center;
+    color: var(--header-berkres-color);
+    display: flex;
+    top: 23px;
+    left: 25px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+/*     margin-left: calc(100vw + 100px); */
+    margin-left: 0px;
+    left: 0px;
+  }
+
+  
 }
 
 @media screen and (max-width: 1466px)
@@ -1425,26 +1634,43 @@ body {
     padding-top: 4px;
     transition: 0.15s;
     text-decoration: none;
+
   }
 
-  .home:before {
-    display: none;
+  .home-on-page {
+    margin-left: 100px;
   }
 
-  .news:before {
-    display: none;
+  .news {
+    margin-left: 100px;
   }
 
-  .discography:before {
-    display: none;
+  .news-on-page {
+    margin-left: 100px;
   }
 
-  .about:before {
-    display: none;
+  .discography {
+    margin-left: 100px;
   }
 
-  .contact:before {
-    display: none;
+  .discography-on-page {
+    margin-left: 100px;
+  }
+
+  .about {
+    margin-left: 100px;
+  }
+
+  .about-on-page {
+    margin-left: 100px;
+  }
+
+  .contact {
+    margin-left: 100px;
+  }
+
+  .contact-on-page {
+    margin-left: 100px;
   }
 
   .footer {
@@ -1479,8 +1705,8 @@ body {
     padding-right: 4px;
     padding-top: 4px;
     padding-bottom: 4px;
-    color: rgb(0, 0, 0);
     top: 50px;
+    margin-left: 25px;
   }
   
   .berkresmusic:hover {
@@ -1590,7 +1816,7 @@ body {
 
   .hamburger {
     display: block;
-    margin-right: 77px;
+    margin-right: 25px;
     margin-top: 25px;
   }
 
@@ -1645,6 +1871,8 @@ body {
     -webkit-user-select: none; 
     -ms-user-select: none;
     user-select: none;
+/*     margin-left: calc(100vw + 100px); */
+    margin-left: 0px;
   }
 
   .dark-mode-button-mobile {
@@ -1667,11 +1895,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .contact-form {
+/*   .contact-form {
     width: 90%;
     max-width: 600px;
-  /*   background-color: #555; */
-  }
+  } */
 
   .submit-button {
     padding: 10px 0;
@@ -1695,29 +1922,29 @@ body {
     transition: 0.45s;
   }
   
-  .input-contact {
+/*   .input-contact {
     width: 96%;
   }
   
   .textarea-contact {
     width: 96%;
-  }
+  } */
 }
 
 @media screen and (max-width: 549px) {
-  .textarea-contact {
+/*   .textarea-contact {
     width: 95.5%;
   }
 
   .input-contact {
     width: 95.5%;
-  }
+  } */
 }
 
 @media screen and (max-width: 460px) {
-  .berkresmusic-side {
+/*   .berkresmusic-side {
     left: 20px;
-  }
+  } */
 }
 
 @media screen and (max-width: 420px) {
@@ -1734,13 +1961,13 @@ body {
 } */
 
 @media screen and (max-width: 443px) {
-  .textarea-contact {
+/*   .textarea-contact {
     width: 94.4%;
   }
 
   .input-contact {
     width: 94.4%;
-  }
+  } */
   
   .contact-title {
     position: absolute;
@@ -1797,9 +2024,9 @@ body {
 }
 
 @media screen and (max-width: 370px) {
-  .textarea-contact {
+/*   .textarea-contact {
     width: 93%;
-  }
+  } */
   
   .title {
     width: 300px;
@@ -1814,9 +2041,9 @@ body {
     height: 300px;
   }
 
-  .input-contact {
+/*   .input-contact {
     width: 93%;
-  }
+  } */
 
   .copyright {
     font-size: 13px;
@@ -1843,18 +2070,18 @@ body {
 {
   .berkresmusic-side {
     font-size: 20px;
-    top: 23px;
+    top: 24px;
   }
 }
 
 @media screen and (max-width: 325px) {
-  .textarea-contact {
+/*   .textarea-contact {
     width: 92.4%;
   }
 
   .input-contact {
     width: 92.4%;
-  }
+  } */
 
   .berkresmusic-side {
     font-size: 19px;

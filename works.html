@@ -19,268 +19,495 @@
     
     <link rel="stylesheet" href="styles.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-
-    <style>
-      .lexend-deca-font {
-        font-family: 'BDO-Bold';
-        letter-spacing: -1px;
-        font-weight: 600;
-        font-style: normal;
-        font-weight: normal!important;
-        margin-top: 0px;
-      }
-      
-      .text {
-        font-family: "Lexend Deca", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 340;
-        font-style: bold;
-      }
-    </style>
     <script src="https://kit.fontawesome.com/ffa65e4e5b.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+
+    <style>
+      .lexend-deca-font {
+/*           font-family: 'BDO-Bold'; */
+          margin-top: 0px;
+
+          font-family: "Instrument Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 650;
+          font-style: normal;
+          font-variation-settings: "wdth" 94;
+          letter-spacing: -0.5px;
+      }
+      /* Grid container for the albums */
+      .album-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 25px;
+          padding: 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      /* Album item */
+      .album-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          max-width: 270px;
+          margin: 0 auto;
+      }
+
+      /* Album artwork */
+      .album-artwork {
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          background-color: #ddd;
+          max-width: 270px;
+          width: 300px;
+      }
+
+      /* Album title */
+      .album-title {
+        font-size: 1.2em;
+        margin-top: 15px;
+        width: 300px;
+        height: 30px;
+/*         font-family: "Nohemi-SemiBold"; */
+        font-size: 18px;
+        margin-bottom: 0px;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 650;
+        font-style: normal;
+        font-variation-settings: "wdth" 90;
+
+/*         font-family: 'BDO-Regular'; */
+      }
+
+      /* Album subtitle */
+      .album-subtitle {
+        font-size: 0.9em;
+        width: 300px;
+        height: 30px;
+        font-weight: 450;
+/*         font-family: 'BDO-Regular'; */
+        letter-spacing: -0.5px;
+        color: var(--basic-text-color);
+        transition: 0.5s;
+        margin-top: -6px;
+
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 480;
+        font-style: normal;
+        font-variation-settings: "wdth" 90;
+
+/*         font-family: 'BDO-Regular'; */
+      }
+
+      /* Responsive behavior */
+      @media (max-width: 1199px) {
+          .album-grid {
+/*               grid-template-columns: repeat(3, 1fr); */
+              grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+          }
+
+          .album-artwork {
+/*             width: calc(500vw - 300px); */
+            max-width: calc(100vw - 800px);
+          }
+
+          .album-item {
+            max-width: calc(100vw - 800px);
+          }
+      }
+
+      @media (max-width: 765px) {
+          .album-grid {
+              grid-template-columns: repeat(2, 1fr);
+          }
+          .album-artwork {
+/*             width: calc(100vw - 10px); */
+            max-width: 264px;
+            width: calc(100vw - 20px); /* Adjust width for 20px padding */
+          }
+      }
+
+      @media (max-width: 614px) {
+          .album-grid {
+              grid-template-columns: 1fr;
+          }
+
+          .album-artwork {
+            width: calc(100vw - 50px);
+            max-width: 540px;
+          }
+      }
+
+
+
+    .grid-container {
+      display: grid;
+      grid-gap: 24px; /* Adjust the gap between grid items */
+      grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+      max-width: 1160px; /* Limits the total width */
+      width: calc(100% - 50px); /* Ensures spacing on both sides */
+      margin: 0 auto; /* Centers the grid */
+      padding: 0 20px; /* Adds space to the left and right edges */
+    }
+
+    /* Grid items (the squares holding the artworks) */
+    .grid-item {
+      display: flex;
+      flex-direction: column; /* Stack image and text vertically */
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* The image part, ensuring the square shape */
+    .image-container {
+      width: 100%;
+      padding-bottom: 100%; /* Maintains the square aspect ratio */
+      position: relative;
+    }
+
+    .grid-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image covers the entire container */
+    }
+
+    /* Title and subtitle styles */
+    .text-container {
+      width: 100%; /* Ensure the text container is as wide as the grid item */
+      background-color: rgba(0, 0, 0, 0); /* Optional: Slight background for text for readability */
+      color: white;
+      padding: 10px;
+      box-sizing: border-box; /* Ensure padding doesn't make the container overflow */
+      text-align: center;
+    }
+
+    .works-title {
+      font-size: 1.2em;
+      margin: 0;
+      font-family: "Instrument Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 650;
+      font-style: normal;
+      font-variation-settings: "wdth" 94;
+      color: var(--basic-text-color);
+      transition: 0.5s;
+      margin-top: 10px;
+      letter-spacing: -0.4px;
+    }
+
+    .subtitle {
+      font-size: 1em;
+      font-weight: 600;
+      margin: 5px 0 0;
+      font-family: "Instrument Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: "wdth" 94;
+/*       color: var(--basic-text-color); */
+      color: #777;
+      transition: 0.5s;
+      letter-spacing: -0.4px;
+    }
+
+    /* Responsive design: Adjust the number of columns based on screen size */
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+      }
+    }
+
+    @media (max-width: 767px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+      }
+    }
+
+    @media (max-width: 567px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+    </style>
     
   </head>  
 
   <body style="margin: 0; background-color: var(--body);">
+    <div class="navbar-wrapper">
 
-    <div class="centerHeader">
-      <div>
-        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
-      </div>
-      <div class="lexend-deca-font">
+      <div class="centerHeader">
+        <div style="width: 700px;">
+          <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+        </div>
+        <div class="lexend-deca-font" style="left: 10;">
 
-        <div style="margin-right: 71px;">
-          <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 2px;">
-            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          <div style="margin-right: 60px;">
+            <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 0px;">
+              <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+            </button>
+          </div> 
+
+          <a href="./news" class="home">News</a>
+          <a href="./works" class="news-on-page">Works</a>
+          <a href="./sheet-music" class="discography">Sheet Music</a>
+          <a href="./about" class="about">About</a>
+          <a href="./contact" class="contact">Contact</a>
+        </div>
+
+        <div style="margin-right: 70px;">
+          <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
           </button>
-        </div> 
+        </div>
 
-        <a href="./news" class="home">News</a>
-        <a href="./works" class="news-on-page">Works</a>
-        <a href="./sheet-music" class="discography">Sheet Music</a>
-        <a href="./about" class="about">About</a>
-        <a href="./contact" class="contact">Contact</a>
-      </div>
+        <div class="hamburger" style="margin-top: 21px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
 
-      <div style="margin-right: 70px;">
-        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
-          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
-        </button>
-      </div>
+        <div class="lexend-side">
 
-      <div class="hamburger" style="margin-top: 21px;">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-
-      <div class="lexend-side">
-
-        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-spotify fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 71px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-apple fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 129px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-youtube fa-xl"></i>
-          </div>
-        </a>
-
-        <a class="brands-menu" style="margin-top: 186px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 243px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-tiktok fa-xl"></i>
-          </div>   
-        </a>
-
-        <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
-        <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
-        <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
-
-      </div>
-    </div>
-
-    <div class="home-img">
-    
-      <picture>
-        <source type="image/webp" srcset="WEBP/gallery-banner.webp">
-        <img src="smaller-banners/banner-noise.png" class="home-img">
-      </picture>
-      
-      <div class="home-title">WORKS</div>
-    </div>
-
-    <div class="content">
-      <div>
-        <h1 class="home-heading">Works</h1>
-      </div>
-      <div class="home-text" style="margin-top: 5px;">
-        <p style="text-align: center;">To listen to a piece, simply click on the artwork, and you'll be redirected to another page 
-          where you can select your preferred streaming service. 
-          For a complete list of my all works, click <a style="color: rgb(54, 129, 215);" href="./list">here</a>.
-        </p>
-      </div>
-
-      <div class="gallery-main">
-        
-<!--         <div class="image-group">
-          <a href="https://push.fm/fl/bk-different-place" target="_blank">
-            <img class="artwork" src="artwork-big/JPG_Finally.jpg">
+          <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-spotify fa-xl"></i>
+            </div>   
           </a>
-          <div class="title">
-            Finally
-            <div style="justify-content: end; margin-left: 40px; text-align: end;">
-              <div style="font-family: 'Nohemi-Bold';text-align: end; margin-right: 66px; color:var(--catalogue)">BKR001</div>
+
+          <a class="brands-menu" style="margin-top: 69px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-apple fa-xl"></i>
+            </div>   
+          </a>
+
+          <a class="brands-menu" style="margin-top: 127px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>
+          </a>
+
+          <a class="brands-menu" style="margin-top: 182px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>   
+          </a>
+
+          <a class="brands-menu" style="margin-top: 237px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-tiktok fa-xl"></i>
+            </div>   
+          </a>
+
+          <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
+          <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
+          <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="overlay"></div>
+    <div id="page-wrapper">
+
+      <div class="home-img">
+      
+        <picture>
+          <source type="image/webp" srcset="WEBP/gallery-banner.webp">
+          <img src="smaller-banners/banner-noise.png" class="home-img">
+        </picture>
+        
+        <div class="home-title">WORKS</div>
+      </div>
+
+      <div class="content">
+        <div>
+          <h1 class="home-heading">Works</h1>
+        </div>
+        <div class="home-text" style="margin-top: 5px; margin-bottom: 20px;">
+          <p style="text-align: center;">To listen to a piece, simply click on the artwork, and you'll be redirected to another page 
+            where you can select your preferred streaming service. 
+            For a complete list of my all works, click <a class="clickable" style="color: rgb(54, 129, 215);" href="./list">here</a>.
+          </p>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="artwork-big/JPG_Finally.jpg" alt="Artwork 1">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Finally</div>
+              <div class="subtitle">2024</div>
             </div>
           </div>
-          <div class="year">
-            2024
-          </div>
-        </div> -->
-
-        <div class="image-group" style="position: relative; display: flex; flex-direction: column; align-items: flex-start;">
-          <a href="https://push.fm/fl/bk-different-place" target="_blank">
-            <img class="artwork" src="artwork-big/JPG_Finally.jpg">
-          </a>
-          <div class="title" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <span>Finally</span>
-            <div style="transition: 0.5s; font-family: 'Nohemi-Bold'; color: var(--catalogue);">
-              BKR001
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="artwork-big/JPG_Lavender.jpg" alt="Artwork 2">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Different Place</div>
+              <div class="subtitle">2024</div>
             </div>
           </div>
-          <div class="year">
-            2024
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="artwork-big/JPG_No Orientation.jpg" alt="Artwork 3">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Lavender</div>
+              <div class="subtitle">2024</div>
+            </div>
           </div>
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="artwork-big/JPG_Different Place.jpg" alt="Artwork 4">
+            </div>
+            <div class="text-container">
+              <div class="works-title">No Orientation</div>
+              <div class="subtitle">2024</div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="https://via.placeholder.com/300" alt="Artwork 5">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Thankfulness</div>
+              <div class="subtitle">2024</div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="https://via.placeholder.com/300" alt="Artwork 6">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Artwork Title 6</div>
+              <div class="subtitle">Subtitle 6</div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="https://via.placeholder.com/300" alt="Artwork 7">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Artwork Title 7</div>
+              <div class="subtitle">Subtitle 7</div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container">
+              <img src="https://via.placeholder.com/300" alt="Artwork 8">
+            </div>
+            <div class="text-container">
+              <div class="works-title">Artwork Title 8</div>
+              <div class="subtitle">Subtitle 8</div>
+            </div>
+          </div>
+          <!-- Add more grid items as needed -->
         </div>
 
-        <div class="image-group">
-          <a href="https://push.fm/fl/bk-different-place" target="_blank">
-            <img class="artwork" src="artwork-big/JPG_Different Place.jpg">
-          </a>
-          <div class="title">
-            Different Place
-          </div>
-          <div class="year">
-            2024
-          </div>
-        </div>
-
-        <div class="image-group">
-          <a href="https://push.fm/fl/bk-lavender" target="_blank">
-            <img class="artwork" src="artwork-big/JPG_Lavender.jpg">
-          </a>
-          <div class="title">
-            Lavender
-          </div>
-          <div class="year">
-            2024
-          </div>
-        </div>
-
-        <div class="image-group">
-          <a href="https://push.fm/fl/bk-thankfulness" target="_blank">
-            <img class="artwork" src="artwork-big/JPG_Thankfulness.jpg">
-          </a>
-          <div class="title">
-            Thankfulness
-          </div>
-          <div class="year">
-            2024
-          </div>
-        </div>
+      </div>
         
-        <div class="image-group">
-          <a href="https://push.fm/fl/bk-no-orientation" target="_blank">
-            <img class="artwork" src="artwork-big/JPG_No Orientation.jpg">
+      <div class="footer" style="margin-top: 60px;">
+        <div class="link-logos">
+          <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-spotify fa-xl"></i>
+            </div>   
           </a>
-          <div class="title">
-            No Orientation
-          </div>
-          <div class="year">
-            2024
-          </div>
+
+          <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-apple fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-tiktok fa-xl"></i>
+            </div>   
+          </a>
+
+        </div>
+
+        <div class="copyright">
+          <p>&copy 2025 Berkres Music. All rights reserved.</p>
         </div>
       </div>
-    </div>
-      
-    <div style="display: none;">
-      <img class="signature" id="signature-image" src="Signature-Transparent.png">
-    </div>
-    
-    <div class="footer" style="margin-top: 60px;">
-      <div class="link-logos">
-        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-spotify fa-xl"></i>
-          </div>   
-        </a>
 
-        <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-apple fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-youtube fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://www.instagram.com/berkresmusic/" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-tiktok fa-xl"></i>
-          </div>   
-        </a>
-
-      </div>
-
-      <div class="copyright">
-        <p>&copy 2024-2025 Berkres Music. All rights reserved.</p>
-      </div>
     </div>
 
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+    </script>
+
   </body>
 </html>
