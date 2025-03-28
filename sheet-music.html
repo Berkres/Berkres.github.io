@@ -35,14 +35,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+
+    <script>
+      (function() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.documentElement.classList.add("darkmode");
+        }
+      })();
+    </script>
+
     <style>
       .lexend-deca-font {
-        font-family: 'BDO-Bold';
-        letter-spacing: -1px;
-        font-weight: 600;
-        font-style: normal;
-        font-weight: normal!important;
         margin-top: 0px;
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 650;
+        font-style: normal;
+        font-variation-settings: "wdth" 94;
+        letter-spacing: -0.5px;
       }
       
       .text {
@@ -359,202 +372,244 @@
   </head>  
 
   <body style="margin: 0; background-color: var(--body);">
+    <div class="navbar-wrapper">
 
-    <div class="centerHeader">
-      <div>
-        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
-      </div>
-      <div class="lexend-deca-font">
+      <div class="centerHeader">
+        <div>
+          <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+        </div>
+        <div class="lexend-deca-font">
 
-        <div style="margin-right: 71px;">
-          <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 2px;">
-            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          <div style="margin-right: 60px;">
+            <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 0px;">
+              <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+            </button>
+          </div> 
+
+          <a href="./news" class="home">News</a>
+          <a href="./works" class="news">Works</a>
+          <a href="./sheet-music" class="discography-on-page">Sheet Music</a>
+          <a href="./about" class="about">About</a>
+          <a href="./contact" class="contact">Contact</a>
+        </div>
+
+        <div style="margin-right: 70px;">
+          <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
           </button>
-        </div> 
+        </div>
 
-        <a href="./news" class="home">News</a>
-        <a href="./works" class="news">Works</a>
-        <a href="./sheet-music" class="discography-on-page">Sheet Music</a>
-        <a href="./about" class="about">About</a>
-        <a href="./contact" class="contact">Contact</a>
-      </div>
+        <div class="hamburger" style="margin-top: 19px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
 
-      <div style="margin-right: 70px;">
-        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
-          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
-        </button>
-      </div>
+        <div class="lexend-side">
 
-      <div class="hamburger" style="margin-top: 21px;">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+          <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-spotify fa-xl"></i>
+            </div>   
+          </a>
 
-      <div class="lexend-side">
+          <a class="brands-menu" style="margin-top: 69px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-apple fa-xl"></i>
+            </div>   
+          </a>
 
-        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-spotify fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 73px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-apple fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 134px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-youtube fa-xl"></i>
-          </div>
-        </a>
-
-        <a class="brands-menu" style="margin-top: 194px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 253px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-tiktok fa-xl"></i>
-          </div>   
-        </a>
-
-        <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
-        <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
-        <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
-
-      </div>
-    </div>
-
-    <div class="home-img">
-    
-      <picture style="filter: saturate(90%);">
-        <source type="image/webp" srcset="WEBP/sheets-banner.webp">
-        <img src="smaller-banners/sheets-banner.png" class="home-img">
-      </picture>
-      
-      <div class="gallery-title">SHEET MUSIC</div>
-    </div>
-
-
-    <div class="content">
-      <div>
-        <h1 class="home-heading">Sheet Music</h1>
-      </div>
-      <div class="home-text" style="margin-top: 5px;">
-        <p style="text-align: center;">
-          For a complete list of my all works, click <a style="color: rgb(54, 129, 215);" href="./list">here</a>.<br><br>
-        </p>
-      </div>
-
-
-      <div class="container">
-        
-<!--         <div class="grid-row">
-          <div class="item">
-            <div class="cover">
-              <img style="object-fit: cover;" src="artwork/Thankfulness.jpg">
+          <a class="brands-menu" style="margin-top: 127px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-youtube fa-xl"></i>
             </div>
-            <div class="details">
-                <p class="sheet-music-title">Thankfulness</p>
-                <p class="date">March 24, 2024</p>
-                <button class="button">Coming Soon</button>
-            </div>
-          </div>
-          <div class="item">
-            <div class="cover">
-              <img style="object-fit: cover;" src="artwork/No Orientation.jpg">
-            </div>
-            <div class="details">
-                <p class="sheet-music-title">No Orientation</p>
-                <p class="date">January 2, 2024</p>
-                <button class="button">Coming Soon</button>
-            </div>
-          </div>
-        </div> -->
+          </a>
 
-        <div class="grid-row">
-            <div class="item">
-                <div class="cover">
-                  <img style="object-fit: cover;" src="artwork/Finally.jpg">
-                </div>
-                <div class="details">
-                    <p class="sheet-music-title">Finally</p>
-                    <p class="date">November 12, 2024</p>
-                    <a href="sheet-music/Berkres - Different Place.pdf" download="Berkres - Finally (Sheets)">
-                      <button class="button">Coming Soon</button>
-                    </a>
-                </div>
-            </div>
+          <a class="brands-menu" style="margin-top: 182px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>   
+          </a>
 
-            <div class="item">
-                <div class="cover">
-                  <img style="object-fit: cover;" src="artwork/Different Place.jpg">
-                </div>
-                <div class="details">
-                    <p class="sheet-music-title">Different Place</p>
-                    <p class="date">August 26, 2024</p>
-                    <a href="sheet-music/Berkres - Different Place.pdf" download="Berkres - Different Place (Sheets)">
-                      <button class="button">Free</button>
-                    </a>
-                </div>
-            </div>
+          <a class="brands-menu" style="margin-top: 237px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
+              <i class="fa-brands fa-tiktok fa-xl"></i>
+            </div>   
+          </a>
+
+          <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
+          <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
+          <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
         </div>
       </div>
-
-        <!-- Additional rows can be added similarly -->
     </div>
+
+    <div id="overlay"></div>
+    <div id="page-wrapper">
+
+      <div class="home-img">
       
-    <div style="display: none;">
-      <img class="signature" id="signature-image" src="Signature-Transparent.png">
-    </div>
-    
-    <div class="footer" style="margin-top: 60px;">
-      <div class="link-logos">
-        <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-spotify fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-apple fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-youtube fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://www.instagram.com/berkresmusic/" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </div>   
-        </a>
-
-        <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
-          <div class="logo">
-            <i class="fa-brands fa-tiktok fa-xl"></i>
-          </div>   
-        </a>
-
+        <picture style="filter: saturate(90%);">
+          <source type="image/webp" srcset="WEBP/sheets-banner.webp">
+          <img src="smaller-banners/sheets-banner.png" class="home-img">
+        </picture>
+        
+        <div class="gallery-title">SHEET MUSIC</div>
       </div>
 
-      <div class="copyright">
-        <p>&copy 2024-2025 Berkres Music. All rights reserved.</p>
+
+      <div class="content">
+        <div>
+          <h1 class="home-heading">Sheet Music</h1>
+        </div>
+        <div class="home-text" style="margin-top: 5px;">
+          <p style="text-align: center;">
+            For a complete list of my all works, click <a style="color: rgb(54, 129, 215);" href="./list">here</a>.<br><br>
+          </p>
+        </div>
+
+
+        <div class="container">
+          
+  <!--         <div class="grid-row">
+            <div class="item">
+              <div class="cover">
+                <img style="object-fit: cover;" src="artwork/Thankfulness.jpg">
+              </div>
+              <div class="details">
+                  <p class="sheet-music-title">Thankfulness</p>
+                  <p class="date">March 24, 2024</p>
+                  <button class="button">Coming Soon</button>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover">
+                <img style="object-fit: cover;" src="artwork/No Orientation.jpg">
+              </div>
+              <div class="details">
+                  <p class="sheet-music-title">No Orientation</p>
+                  <p class="date">January 2, 2024</p>
+                  <button class="button">Coming Soon</button>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="grid-row">
+              <div class="item">
+                  <div class="cover">
+                    <img style="object-fit: cover;" src="artwork/Finally.jpg">
+                  </div>
+                  <div class="details">
+                      <p class="sheet-music-title">Finally</p>
+                      <p class="date">November 12, 2024</p>
+                      <a href="sheet-music/Berkres - Different Place.pdf" download="Berkres - Finally (Sheets)">
+                        <button class="button">Coming Soon</button>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="item">
+                  <div class="cover">
+                    <img style="object-fit: cover;" src="artwork/Different Place.jpg">
+                  </div>
+                  <div class="details">
+                      <p class="sheet-music-title">Different Place</p>
+                      <p class="date">August 26, 2024</p>
+                      <a href="sheet-music/Berkres - Different Place.pdf" download="Berkres - Different Place (Sheets)">
+                        <button class="button">Free</button>
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+          <!-- Additional rows can be added similarly -->
+      </div>
+        
+      <div style="display: none;">
+        <img class="signature" id="signature-image" src="Signature-Transparent.png">
+      </div>
+      
+      <div class="footer" style="margin-top: 60px;">
+        <div class="link-logos">
+          <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-spotify fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-apple fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>   
+          </a>
+
+          <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div class="logo">
+              <i class="fa-brands fa-tiktok fa-xl"></i>
+            </div>   
+          </a>
+
+        </div>
+
+        <div class="copyright">
+          <p>&copy 2025 Berkres Music. All rights reserved.</p>
+        </div>
       </div>
     </div>
 
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+
+      window.addEventListener("pageshow", (event) => {
+          if (event.persisted) { // Page was restored from the browser cache
+              const overlay = document.getElementById("overlay");
+              if (overlay) {
+                  overlay.style.opacity = "0"; // Hide overlay on back navigation
+              }
+          }
+      });
+    </script>
+
   </body>
 </html>

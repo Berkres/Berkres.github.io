@@ -29,6 +29,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
 
+    <script>
+      (function() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.documentElement.classList.add("darkmode");
+        }
+      })();
+    </script>
+
     <style>
       .lexend-deca-font {
 /*           font-family: 'BDO-Bold'; */
@@ -247,15 +255,6 @@
       }
     }
 
-
-
-
-
-
-
-
-
-
     </style>
     
   </head>  
@@ -288,7 +287,7 @@
           </button>
         </div>
 
-        <div class="hamburger" style="margin-top: 21px;">
+        <div class="hamburger" style="margin-top: 19px;">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -507,7 +506,15 @@
               });
           });
       });
-    </script>
 
+      window.addEventListener("pageshow", (event) => {
+          if (event.persisted) { // Page was restored from the browser cache
+              const overlay = document.getElementById("overlay");
+              if (overlay) {
+                  overlay.style.opacity = "0"; // Hide overlay on back navigation
+              }
+          }
+      });
+    </script>
   </body>
 </html>

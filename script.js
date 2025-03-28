@@ -1,21 +1,24 @@
-const hamburger = document.querySelector(".hamburger");
 const lexendDecaFont = document.querySelector(".lexend-deca-font");
 const centerHeader = document.querySelector(".centerHeader");
-const sideMenu = document.querySelector(".lexend-side");
 
-/* const darkmodeButton = document.querySelector(".dark-mode-toggle");
-const signature = document.querySelector(".signature"); */
+const sideMenu = document.querySelector(".lexend-side");
+const hamburger = document.querySelector(".hamburger");
+
+const menuItems = sideMenu.querySelectorAll("a");
+
+menuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+  });
+});
+
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-/*   lexendDecaFont.classList.toggle("active"); */
-/*   centerHeader.classList.toggle("active"); */
   sideMenu.classList.toggle("active");
-})
+});
 
-/* darkmodeButton.addEventListener("click", () => {
-  signature.classList.toggle("active");
-}); */
 
 const form = document.getElementById("form");
 form.addEventListener("submit", SendMail);
@@ -29,3 +32,5 @@ function SendMail() {
 
   emailjs.send("service_tlz8uzl", "template_vrttl0i", params).then(alert("Message was sent successfully!"))
 }
+
+

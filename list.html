@@ -34,50 +34,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+
+    <script>
+      (function() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.documentElement.classList.add("darkmode");
+        }
+      })();
+    </script>
+
     <style>
       .lexend-deca-font {
-        font-family: 'BDO-Bold';
-        font-weight: 600;
-        font-style: normal;
-        font-weight: normal!important;
         margin-top: 0px;
-        letter-spacing: -1px;
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 650;
+        font-style: normal;
+        font-variation-settings: "wdth" 94;
+        letter-spacing: -0.5px;
       }
       
-      .text {
+/*       .text {
         font-family: "Lexend Deca", sans-serif;
         font-optical-sizing: auto;
         font-weight: 340;
         font-style: bold;
       }
 
+      .number {
+        font-family: 'Instrument Sans';
+        font-weight: 650;
+        font-style: normal;
+        font-variation-settings: 'wdth' 94;
+        letter-spacing: -0.5px;
+      }
+
       table {
-          width: 100%;
+          max-width: calc(100% - 50px); 
+          margin: 0 auto; 
           border-collapse: collapse;
+          width: auto;
       }
 
       th, td {
-          /* border: 1px solid #000; */
           padding: 4px;
           text-align: left;
-/*           border-bottom: 1px solid #ddd; */
-      }
+      }*/
 
-      th {
+/*       th {
         font-weight: normal;
-      }
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 650;
+        font-style: normal;
+        font-variation-settings: "wdth" 94;
+        letter-spacing: -0.5px;
+      } */
 
       tr {
-            transition: background-color 0.5s ease;
-        }
+        transition: background-color 0.5s ease;
+        font-weight: normal;
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "wdth" 94;
+        letter-spacing: -0.5px;
+        color: var(--basic-text-color);
+        transition: color 0.5s;
+      }
 
-      tr:nth-child(odd) {
-          background-color: var(--table-odd); /* Light grey */
+/*       tr:nth-child(odd) {
+        background-color: var(--table-odd);
       }
 
       tr:nth-child(even) {
-          background-color: var(--table-even); /* White */
-      }
+        background-color: var(--table-even);
+      } */
 
     </style>
 
@@ -101,170 +137,231 @@
       </div>
     </a> -->
 
-    <div class="centerHeader" class="darkmode">
-      <div>
-        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
-      </div>
-      
-      <div class="lexend-deca-font">
+    <div class="navbar-wrapper">
 
-        <div style="margin-right: 71px;">
-          <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 2px;">
-            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
-          </button>
-        </div> 
-
-        <a href="./news" class="home">News</a>
-        <a href="./works" class="news-on-page">Works</a>
-        <a href="./sheet-music" class="discography">Sheet Music</a>
-        <a href="./about" class="about">About</a>
-        <a href="./contact" class="contact">Contact</a>
-      </div>
-
-      <div style="margin-right: 70px;">
-        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
-          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
-        </button>
-      </div>
-
-      <div class="hamburger" style="margin-top: 21px;">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-
-      <div class="lexend-side">
-
-        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-spotify fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 72px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-apple fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 131px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-youtube fa-xl"></i>
-          </div>
-        </a>
-
-        <a class="brands-menu" style="margin-top: 188px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 246px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-tiktok fa-xl"></i>
-          </div>   
-        </a>
-
-        <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
-        <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
-        <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
-
-      </div>
-    </div>
-
-    <div class="home-img">
-      
-      <picture>
-        <source type="image/webp" srcset="WEBP/list-banner.webp">
-        <img src="smaller-banners/list-banner.png" class="home-img">
-      </picture>
+      <div class="centerHeader" class="darkmode">
+        <div>
+          <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+        </div>
         
-      <div class="home-title" style="text-align: center;">LIST OF ALL WORKS</div>
-    </div>
+        <div class="lexend-deca-font">
 
-    <div class="content">
-      <!-- <div class="home-heading">
-        <h1>-</h1>
-      </div> -->
-      <div class="home-text">
+          <div style="margin-right: 60px;">
+            <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 0px;">
+              <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+            </button>
+          </div> 
 
-        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+          <a href="./news" class="home">News</a>
+          <a href="./works" class="news-on-page">Works</a>
+          <a href="./sheet-music" class="discography">Sheet Music</a>
+          <a href="./about" class="about">About</a>
+          <a href="./contact" class="contact">Contact</a>
+        </div>
 
-        <table style="margin-bottom: 50px;" class="sortable">
-          <thead>
-              <tr style="background-color: var(--table-head); font-family: 'BDO-Bold'">
-                  <th>#</th>
-                  <th>Name</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr><td style="font-family: 'BDO-Bold';">6</td><td>Different Place</td></tr>
-              <tr><td style="font-family: 'BDO-Bold';">5</td><td>Lavender</td></tr>
-              <tr><td style="font-family: 'BDO-Bold';">4</td><td>Thankfulness</td></tr>
-              <tr><td style="font-family: 'BDO-Bold';">3</td><td>No Orientation</td></tr>
-              <tr><td style="font-family: 'BDO-Bold';">2</td><td>Leftover</td></tr>
-              <tr><td style="font-family: 'BDO-Bold';">1</td><td>Silence</td></tr>
-          </tbody>
-        </table>
+        <div style="margin-right: 70px;">
+          <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
+          </button>
+        </div>
 
-      </div>
+        <div class="hamburger" style="margin-top: 19px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
 
-      <!-- <div class="home-text">
-        <p>
-          <br>
-        </p>
-      </div> -->
+        <div class="lexend-side">
 
-      <div>
-        <img style="display: none;" class="signature" id="signature-image" src="Signature-Transparent.png">
-      </div>
-
-      <div class="footer">
-        <div class="link-logos">
-          <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-            <div class="logo">
+          <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-spotify fa-xl"></i>
             </div>   
           </a>
-  
-          <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 69px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-apple fa-xl"></i>
             </div>   
           </a>
-  
-          <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 127px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-youtube fa-xl"></i>
-            </div>   
+            </div>
           </a>
-  
-          <a href="https://www.instagram.com/berkresmusic/" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 182px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-instagram fa-xl"></i>
             </div>   
           </a>
-  
-          <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 237px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-tiktok fa-xl"></i>
             </div>   
           </a>
 
+          <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
+          <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
+          <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
         </div>
-  
-        <div class="copyright">
-          <p>&copy 2024-2025 Berkres Music. All rights reserved.</p>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="page-wrapper">
+
+      <div class="home-img">
+        
+        <picture>
+          <source type="image/webp" srcset="WEBP/list-banner.webp">
+          <img src="smaller-banners/list-banner.png" class="home-img">
+        </picture>
+          
+        <div class="home-title" style="text-align: center;">LIST OF ALL WORKS</div>
+      </div>
+
+      <div class="content">
+        <div class="home-text">
+
+  <!--         <table style="margin-bottom: 50px; width: 500px;" class="sortable">
+            <thead>
+                <tr style="background-color: var(--table-head); font-family: 'Instrument Sans'; font-weight: 650; font-style: normal; font-variation-settings: 'wdth' 94; letter-spacing: -0.5px;">
+                    <th>#</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr><td class="number">7</td><td>Finally</td></tr>
+              <tr><td class="number">6</td><td>Different Place</td></tr>
+              <tr><td class="number">5</td><td>Lavender</td></tr>
+              <tr><td class="number">4</td><td>Thankfulness</td></tr>
+              <tr><td class="number">3</td><td>No Orientation</td></tr>
+              <tr><td class="number">2</td><td>Leftover</td></tr>
+              <tr><td class="number">1</td><td>Silence</td></tr>
+            </tbody>
+          </table> -->
+
         </div>
 
+        <div>
+          <h1 class="home-heading">Complete Works</h1>
+        </div>
+
+        <div style="max-width: 500px; width: calc(100% - 50px); margin: 0 auto; overflow-x: auto; margin-top: 30px; margin-bottom: 40px;">
+          <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                  <tr>
+                      <th style="transition: 0.5s; border-bottom: 1px solid var(--list-line); width: 26%; padding: 4px; text-align: left; opacity: 0.85;">Cat. No.</th>
+                      <th style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding: 4px; text-align: left;">Release Title</th>
+                  </tr>
+              </thead>
+              <tbody>
+  <!--                 <tr>
+                      <td style="border-bottom: 1px solid rgb(214, 214, 214); padding: 4px;">003</td>
+                      <td style="border-bottom: 1px solid rgb(214, 214, 214); padding: 4px;">Finally</td>
+                  </tr>
+                  <tr>
+                      <td style="border-bottom: 1px solid rgb(214, 214, 214); padding: 4px;">002</td>
+                      <td style="border-bottom: 1px solid rgb(214, 214, 214); padding: 4px;">Different Place</td>
+                  </tr> -->
+                  <tr>
+                      <td style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding: 4px; opacity: 0.6;">BKR001</td>
+                      <td style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding: 4px;">Finally</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      
+
+        <div>
+          <img style="display: none;" class="signature" id="signature-image" src="Signature-Transparent.png">
+        </div>
+
+        <div class="footer">
+          <div class="link-logos">
+            <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-spotify fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-apple fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-youtube fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-tiktok fa-xl"></i>
+              </div>   
+            </a>
+
+          </div>
+    
+          <div class="copyright">
+            <p>&copy 2025 Berkres Music. All rights reserved.</p>
+          </div>
+
+        </div>
       </div>
     </div>
 
     <script src="darkmode.js"></script>
-
     <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+
+      window.addEventListener("pageshow", (event) => {
+          if (event.persisted) { // Page was restored from the browser cache
+              const overlay = document.getElementById("overlay");
+              if (overlay) {
+                  overlay.style.opacity = "0"; // Hide overlay on back navigation
+              }
+          }
+      });
+    </script>
 
   </body>
 </html>

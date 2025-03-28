@@ -39,15 +39,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+
+    <script>
+      (function() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.documentElement.classList.add("darkmode");
+        }
+      })();
+    </script>
 
     <style>
       .lexend-deca-font {
-        font-weight: 600;
-        font-style: normal;
-        font-weight: normal!important;
-        font-family: 'BDO-Bold';
         margin-top: 0px;
-        letter-spacing: -1px;
+
+        font-family: "Instrument Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 650;
+        font-style: normal;
+        font-variation-settings: "wdth" 94;
+        letter-spacing: -0.5px;
       }
       
       .text {
@@ -66,162 +79,203 @@
   </head>  
 
   <body style="margin: 0; background-color: var(--body);">
+    <div class="navbar-wrapper">
+      <div class="centerHeader">
+        <div>
+          <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
+        </div>
+        <div class="lexend-deca-font">
 
-    <div class="centerHeader">
-      <div>
-        <a href="./" class="berkresmusic-side">BERKRES MUSIC</a>
-      </div>
-      <div class="lexend-deca-font">
+          <div style="margin-right: 60px;">
+            <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 0px;">
+              <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+            </button>
+          </div> 
 
-        <div style="margin-right: 71px;">
-          <button id="dark-mode-toggle" class="dark-mode-button" style="margin-top: 2px;">
-            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon"></i>
+          <a href="./news" class="home">News</a>
+          <a href="./works" class="news">Works</a>
+          <a href="./sheet-music" class="discography">Sheet Music</a>
+          <a href="./about" class="about-on-page">About</a>
+          <a href="./contact" class="contact">Contact</a>
+        </div>
+
+        <div style="margin-right: 70px;">
+          <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
+            <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
           </button>
-        </div> 
+        </div>
+        
+        <div class="hamburger" style="margin-top: 19px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
 
-        <a href="./news" class="home">News</a>
-        <a href="./works" class="news">Works</a>
-        <a href="./sheet-music" class="discography">Sheet Music</a>
-        <a href="./about" class="about-on-page">About</a>
-        <a href="./contact" class="contact">Contact</a>
-      </div>
+        <div class="lexend-side">
 
-      <div style="margin-right: 70px;">
-        <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
-          <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
-        </button>
-      </div>
-      
-      <div class="hamburger" style="margin-top: 21px;">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-
-      <div class="lexend-side">
-
-        <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-spotify fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 72px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-apple fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 131px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-youtube fa-xl"></i>
-          </div>
-        </a>
-
-        <a class="brands-menu" style="margin-top: 188px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </div>   
-        </a>
-
-        <a class="brands-menu" style="margin-top: 246px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
-          <div style="color: var(--basic-text-color)" class="logo">
-            <i class="fa-brands fa-tiktok fa-xl"></i>
-          </div>   
-        </a>
-
-        <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
-        <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
-        <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
-        <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
-
-      </div>
-    </div>
-
-    <div class="home-img">
-    
-      <picture>
-        <source type="image/webp" srcset="WEBP/about-banner.webp">
-        <img src="smaller-banners/about-banner-noise.png" class="home-img">
-      </picture>
-      
-      <div class="home-title">ABOUT</div>
-    </div>
-
-
-    <div class="content">
-      <div>
-        <h1 class="home-heading">All About Me and My Love for Piano</h1>
-      </div>
-      <div class="home-text">
-        <p>
-          When people ask me what instrument I play, I proudly reply with "Piano". But who am I?<br>
-          I am Berkres, a person whose life is all about playing his instrument without ever getting bored. I could never get bored.
-          These night sessions, sitting in front of the piano looking out the window and playing whatever my soul wants to.<br><br>
-          My piano journey started when I was 7 years old, a little boy who started to learn how to write.
-          Over the years, the piano became a crucial part of my life. One day, I found a really nice sounding chord, it was a D&#9837maj7
-          chord to be more specific. That inspired me to make my own piece - "Hope?".<!--hier evtl. audio von hope hinmachen-->
-          And from that day, I started creating my own music.<br><br>
-          Music isn't just about writing a melody. Music is a language. A language that everyone understands.<br>
-          A language that everyone can speak. A language that can speak words no other language can.
-          Music always tells a story. A story than can also be represented with a specific color and mood.
-          How many colors are there? Many, more than 10 million. Each of those 10 million colors belongs to a piece of music and a type of mood.
-          That's why abstract art inspires me so much, because you can interpret everything. I want my listeners to make their own music
-          listening experience, and not being dependant on the artwork or the music itself. The music just helps to draw your imagination in your mind
-          and that's why I prefer to write music that is <em>open</em> and provides room for inspiration.
-        </p>
-      </div>
-      
-      <div class="about-artwork"> 
-        <img class="about-artwork" src="abstract-art-2.png">
-      </div>
-
-      <div style="display: none;">
-        <img class="signature" id="signature-image" src="Signature-Transparent.png">
-      </div>
-
-      <div class="footer">
-        <div class="link-logos">
-          <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
-            <div class="logo">
+          <a class="brands-menu" href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-spotify fa-xl"></i>
             </div>   
           </a>
-  
-          <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 69px; margin-left: 37px;" href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-apple fa-xl"></i>
             </div>   
           </a>
-  
-          <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 127px; margin-left: 33px;" href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-youtube fa-xl"></i>
-            </div>   
+            </div>
           </a>
-  
-          <a href="https://www.instagram.com/berkresmusic/" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 182px;" href="https://www.instagram.com/berkresmusic/" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-instagram fa-xl"></i>
             </div>   
           </a>
-  
-          <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
-            <div class="logo">
+
+          <a class="brands-menu" style="margin-top: 237px; margin-left: 36px;" href="https://www.tiktok.com/@berkresmusic" target="_blank">
+            <div style="color: var(--basic-text-color)" class="logo">
               <i class="fa-brands fa-tiktok fa-xl"></i>
             </div>   
           </a>
 
+          <a style="margin-top: 15px; margin-right: 35px;" href="./news" class="home-on-page">News</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./works" class="news">Works</a>
+          <a style="margin-top: 29px; margin-right: 35px;" href="./sheet-music" class="discography">Sheet Music</a>
+          <a style="margin-top: 27px; margin-right: 35px;" href="./about" class="about">About</a>
+          <a style="margin-top: 28px; margin-right: 35px;" href="./contact" class="contact">Contact</a>
+
         </div>
-  
-        <div class="copyright">
-          <p>&copy 2024-2025 Berkres Music. All rights reserved.</p>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="page-wrapper">
+
+      <div class="home-img">
+      
+        <picture>
+          <source type="image/webp" srcset="WEBP/about-banner.webp">
+          <img src="smaller-banners/about-banner-noise.png" class="home-img">
+        </picture>
+        
+        <div class="home-title">ABOUT</div>
+      </div>
+
+
+      <div class="content">
+        <div>
+          <h1 class="home-heading">All About Me and My Love for Piano</h1>
+        </div>
+        <div class="home-text">
+          <p>
+            When people ask me what instrument I play, I proudly reply with "Piano". But who am I?<br>
+            I am Berkres, a person whose life is all about playing his instrument without ever getting bored. I could never get bored.
+            These night sessions, sitting in front of the piano looking out the window and playing whatever my soul wants to.<br><br>
+            My piano journey started when I was 7 years old, a little boy who started to learn how to write.
+            Over the years, the piano became a crucial part of my life. One day, I found a really nice sounding chord, it was a D&#9837maj7
+            chord to be more specific. That inspired me to make my own piece - "Hope?".<!--hier evtl. audio von hope hinmachen-->
+            And from that day, I started creating my own music.<br><br>
+            Music isn't just about writing a melody. Music is a language. A language that everyone understands.<br>
+            A language that everyone can speak. A language that can speak words no other language can.
+            Music always tells a story. A story than can also be represented with a specific color and mood.
+            How many colors are there? Many, more than 10 million. Each of those 10 million colors belongs to a piece of music and a type of mood.
+            That's why abstract art inspires me so much, because you can interpret everything. I want my listeners to make their own music
+            listening experience, and not being dependant on the artwork or the music itself. The music just helps to draw your imagination in your mind
+            and that's why I prefer to write music that is <em>open</em> and provides room for inspiration.
+          </p>
+        </div>
+        
+        <div class="about-artwork"> 
+          <img class="about-artwork" src="abstract-art-2.png">
+        </div>
+
+        <div style="display: none;">
+          <img class="signature" id="signature-image" src="Signature-Transparent.png">
+        </div>
+
+        <div class="footer">
+          <div class="link-logos">
+            <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-spotify fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://music.apple.com/de/artist/berkres/1692165650" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-apple fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://www.youtube.com/channel/UCrybB4FG47hYvs1_8-Qw7rA/" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-youtube fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://www.instagram.com/berkresmusic/" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </div>   
+            </a>
+    
+            <a href="https://www.tiktok.com/@berkresmusic" target="_blank">
+              <div class="logo">
+                <i class="fa-brands fa-tiktok fa-xl"></i>
+              </div>   
+            </a>
+
+          </div>
+    
+          <div class="copyright">
+            <p>&copy 2025 Berkres Music. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </div>
 
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+
+      window.addEventListener("pageshow", (event) => {
+          if (event.persisted) { // Page was restored from the browser cache
+              const overlay = document.getElementById("overlay");
+              if (overlay) {
+                  overlay.style.opacity = "0"; // Hide overlay on back navigation
+              }
+          }
+      });
+    </script>
+
   </body>
 </html>

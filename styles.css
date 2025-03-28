@@ -36,6 +36,7 @@
   --archive-row: #f9f9f9;
   --archive-text: #333;
   --row-border: #ddd;
+  --list-line: rgb(214, 214, 214);
 }
 
 .darkmode {
@@ -76,6 +77,7 @@
   --archive-row: #252525;
   --archive-text: #d4d4d4;
   --row-border: #424242;
+  --list-line: rgb(31, 31, 31);
 }
 
 @font-face {
@@ -267,14 +269,13 @@ body.loaded #page-wrapper {
 }
 
 
-
-
-
-
-
-
-
-
+.spotify-container {
+  max-width: 750px;  /* Ensures the embed doesn’t exceed 750px */
+  width: calc(100% - 50px);  /* Subtracts 50px (25px margin on each side) from total width */
+  margin: 0 auto;  /* Centers the embed */
+  padding: 0 25px; /* Adds 25px margin to left and right */
+  margin-bottom: 47px;
+}
 
 
 /* Fade-in effect on page load */
@@ -373,6 +374,9 @@ body.fade-out #overlay {
   position: fixed;
   z-index: 10;
   transition: 0.5s;
+/*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+
+/*   box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 6px; */
 }
 
 
@@ -424,6 +428,7 @@ body.fade-out #overlay {
   font-style: normal;
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.5px;
+  z-index: 10;
 }
 
 .lexend-side.active {
@@ -440,6 +445,7 @@ body.fade-out #overlay {
 .lexend-deca-font {
   display: flex;
   margin-right: 0;
+  margin-top: -2px;
 }
 
 .table-item {
@@ -647,32 +653,18 @@ body.fade-out #overlay {
   justify-content: center;
   padding-left: 25px;
   margin-right: 25px;
-
-/*   font-family: "BDO-Regular";
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal; */
-
-
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--basic-text-color);
   transition: 0.5s;
-
-/*   font-family: 'MonaSans'; */
-/*   font-weight: 470;  */
-
-/*   font-family: 'General-470'; */
   font-size: 16px;
-
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 530;
+  font-weight: 500;
+/*   font-weight: 530; */
   font-style: normal;
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.4px;
 }
-
-/*   font-weight: 370; for normal text */
 
 .content {
   display: flex;
@@ -791,7 +783,6 @@ body.fade-out #overlay {
 .berkresmusic-side {
 
   font-family: 'Nohemi';
-/*   font-weight: 1000; */
   font-weight: normal !important;
 
   position: absolute;
@@ -802,7 +793,7 @@ body.fade-out #overlay {
   color: var(--header-berkres-color);
   display: flex;
 /*   left: -400px; */
-  top: 23px;
+  margin-top: -1px;
 /*   margin-right: 77px; */
   -webkit-user-select: none; 
   -ms-user-select: none;
@@ -815,12 +806,12 @@ body.fade-out #overlay {
   align-items: center;
   color: var(--header-berkres-color);
   display: flex;
-  top: 23px;
   left: 25px;
   -webkit-user-select: none; 
   -ms-user-select: none;
   user-select: none;
   left: 0px;
+  top: 23px;
 }
 
 .berkresmusic {
@@ -1575,7 +1566,7 @@ body.fade-out #overlay {
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-    top: 28px;
+/*     top: 28px; */
 
   }
 }
@@ -1596,7 +1587,7 @@ body.fade-out #overlay {
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-    top: 23px;
+/*     top: 23px; */
     left: 25px;
     -webkit-user-select: none; 
     -ms-user-select: none;
@@ -1817,7 +1808,6 @@ body.fade-out #overlay {
   .hamburger {
     display: block;
     margin-right: 25px;
-    margin-top: 25px;
   }
 
   .hamburger.active .bar:nth-child(2){
@@ -1866,7 +1856,7 @@ body.fade-out #overlay {
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-    top: 23px;
+/*     top: 23px; */
     left: 25px;
     -webkit-user-select: none; 
     -ms-user-select: none;
@@ -1884,7 +1874,7 @@ body.fade-out #overlay {
     background: transparent;
     border: none;
     border-width: 1px;
-    top: 23px;
+    top: 21px;
     color: var(--basic-text-color);
     transition: 0.15s;
   }
@@ -1952,13 +1942,6 @@ body.fade-out #overlay {
     right: 80px;
   }
 }
-
-/* @media screen and (max-width: 390px) {
-  .berkresmusic-side {
-    font-size: 16px;
-    top: 28px;
-  }
-} */
 
 @media screen and (max-width: 443px) {
 /*   .textarea-contact {
@@ -2041,29 +2024,9 @@ body.fade-out #overlay {
     height: 300px;
   }
 
-/*   .input-contact {
-    width: 93%;
-  } */
-
   .copyright {
     font-size: 13px;
   }
-
-/*   .berkresmusic-side {
-    position: absolute;
-    font-style: normal;
-    text-decoration: none;
-    justify-content: center;
-    font-size: 18px;
-    align-items: center;
-    color: var(--header-berkres-color);
-    display: flex;
-    top: 27px;
-    left: 35px;
-    -webkit-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
-  } */
 }
 
 @media screen and (max-width: 350px)
@@ -2074,15 +2037,8 @@ body.fade-out #overlay {
   }
 }
 
-@media screen and (max-width: 325px) {
-/*   .textarea-contact {
-    width: 92.4%;
-  }
-
-  .input-contact {
-    width: 92.4%;
-  } */
-
+@media screen and (max-width: 325px) 
+{
   .berkresmusic-side {
     font-size: 19px;
     top: 24px;
