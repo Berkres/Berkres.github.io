@@ -96,15 +96,32 @@
 
       tr {
         transition: background-color 0.5s ease;
-        font-weight: normal;
+/*         font-weight: normal;
         font-family: "Instrument Sans", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
         font-variation-settings: "wdth" 94;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.5px; */
         color: var(--basic-text-color);
         transition: color 0.5s;
+
+        font-family: "BD", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-variation-settings: "wght" 550;
+        line-height: 150%;
+        font-feature-settings: "ss03";
+        letter-spacing: -0.24px;
+/*         margin-bottom: 23px;
+        padding-top: 10px; */
+      }
+
+      .info {
+        padding-bottom: 2px;
+        transition: 0.5s;
+        border-bottom: 1px solid var(--list-line);
+        padding-top: 5px;
       }
 
 /*       tr:nth-child(odd) {
@@ -160,7 +177,7 @@
         </div>
 
         <div style="margin-right: 70px;">
-          <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -5px;">
+          <button id="dark-mode-toggle-mobile" class="dark-mode-button-mobile" style="margin-top: -4px;">
             <i class="fa-solid fa-moon fa-xl" id="dark-mode-icon-mobile"></i>
           </button>
         </div>
@@ -257,8 +274,8 @@
           <table style="width: 100%; border-collapse: collapse;">
               <thead>
                   <tr>
-                      <th style="transition: 0.5s; border-bottom: 1px solid var(--list-line); width: 26%; padding: 4px; text-align: left; opacity: 0.85;">Cat. No.</th>
-                      <th style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding: 4px; text-align: left;">Release Title</th>
+                      <th style="transition: 0.5s; border-bottom: 1px solid var(--list-line); width: 26%; padding-bottom: 0px; text-align: left; opacity: 0.85;">Cat. No.</th>
+                      <th style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding-bottom: 0px; text-align: left;">Release Title</th>
                   </tr>
               </thead>
               <tbody>
@@ -271,8 +288,8 @@
                       <td style="border-bottom: 1px solid rgb(214, 214, 214); padding: 4px;">Different Place</td>
                   </tr> -->
                   <tr>
-                      <td style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding: 4px; opacity: 0.6;">BKR001</td>
-                      <td style="transition: 0.5s; border-bottom: 1px solid var(--list-line); padding: 4px;">Finally</td>
+                      <td class="info" style=" opacity: 0.6;">BKR001</td>
+                      <td class="info">Finally</td>
                   </tr>
               </tbody>
           </table>

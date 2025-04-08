@@ -3,7 +3,8 @@
   --header-berkres-color: rgb(30, 30, 30);
   --header-options-color: rgb(0,0,0);
   --page-content-color: #ffffff;
-  --basic-text-color: #000000;
+  --basic-text-color: rgb(27, 27, 27);
+  --basic-header-color: rgb(27, 27, 27);
   --hover-line-color: rgb(40, 40, 40);
   --body: #ffffff;
   --footer: rgb(185, 185, 185);
@@ -44,7 +45,9 @@
   --header-berkres-color: rgb(230, 230, 230);
   --header-options-color: rgb(230, 230, 230);
   --page-content-color: rgb(16,16,16);
-  --basic-text-color: rgb(225, 225, 225);
+/*   --basic-text-color: rgb(225, 225, 225); */
+--basic-text-color: rgb(201, 201, 201);
+--basic-header-color: rgb(224, 224, 224);
   --hover-line-color: rgb(230, 230, 230);
   --body: rgb(16,16,16);
   --footer: rgb(8, 8, 8);
@@ -55,7 +58,6 @@
   --title-img: rgb(10, 10, 10);
   --darkmode-button-hover: rgb(230, 230, 230);
   --darkmode-button-text-hover: #000000;
-/*   --basic-text-color-inverted: #ffffff; */
   --bool: 1;
   --dark-mode-button-shadow: rgba(151, 151, 151, 0.7);
   --input-field: #202020;
@@ -84,6 +86,38 @@
   font-family: 'MonaSans';
   src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
 }
+
+@font-face {
+  font-family: 'Instrument SanAAs';
+  src: url(font/Aspekta-500.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('font/BDLifelessGrotesk-Medium.otf') format('opentype');
+}
+
+
+
+@font-face {
+  font-family: 'BD';
+  src: url('font/BDLifelessGrotesk_Variable.ttf') format('truetype');
+}
+
+/* @font-face {
+  font-family: 'BD-SemiBold';
+  src: url('font/BDLifelessGrotesk-SemiBold.otf') format('opentype');
+} */
+
+@font-face {
+  font-family: 'Instrument Sans1';
+  src: url(font/Aspekta-550.ttf) format('truetype');
+}
+
+/* @font-face {
+  font-family: 'Instrument Sans1';
+  src: url(font/Aspekta-650.ttf) format('truetype');
+} */
 
 @font-face {
   font-family: 'MonaSans-SemiBold';
@@ -246,6 +280,10 @@ body {
   background-color: var(--body);
   transition: 0.5s;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 /*   padding-top: 65px; */
 }
 
@@ -628,22 +666,30 @@ body.fade-out #overlay {
 /*   width: 90%; */
   max-width: 750px;
   justify-content: center;
-  padding-left: 25px;
-  margin-right: 25px;
+  padding-left: 15px;
+  margin-right: 15px;
   font-family: 'Nohemi-Bold', sans-serif;
+  font-size: 31px;
   font-style: normal;
-/*   font-weight: normal!important; */
-  color: var(--basic-text-color);
+  font-weight: normal!important;
+  color: var(--basic-header-color);
   transition: 0.5s;
-/*   -webkit-text-stroke-width: 0!important;
-  -webkit-font-smoothing: antialiased; */
+  -webkit-text-stroke-width: 0!important;
+  -webkit-font-smoothing: antialiased;
 
-  font-family: "Instrument Sans", sans-serif;
+/*   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth"  94;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.5px; */
+
+/*   font-family: "Switzer", sans-serif; */
+  font-optical-sizing: auto;
+/*   font-weight: 700; */
+  font-style: normal;
+/*   font-variation-settings: "wdth" 94; */
+  letter-spacing: -0.24px;
 }
 
 .home-text {
@@ -653,17 +699,29 @@ body.fade-out #overlay {
   justify-content: center;
   padding-left: 25px;
   margin-right: 25px;
-  line-height: 1.7;
+/*   line-height: 1.65; */
   color: var(--basic-text-color);
   transition: 0.5s;
-  font-size: 16px;
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-/*   font-weight: 530; */
+  font-size: 15px;
+
+  font-family: "BD", sans-serif;
+  font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wdth" 94;
-  letter-spacing: -0.4px;
+  font-variation-settings: "wght" 500;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
+
+/*   font-optical-sizing:auto; */
+/*   font-weight: 500; */
+/*   font-weight: 530; */
+/*   font-variation-settings: "wdth" 93; */
+
+/*   font-weight: 500; */
+/*   font-size: 17px; */
+
+/*   transform: scale(1.24, 0.9); */
+
 }
 
 .content {
@@ -735,12 +793,22 @@ body.fade-out #overlay {
   padding-left: 25px;
   margin-right: 25px;
 
-  font-family: "Instrument Sans", sans-serif;
+/*   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-variation-settings: "wdth"  94;
-  letter-spacing: -0.5px;
+  font-variation-settings: "wdth"  94; */
+  letter-spacing: -0.24px;
+  font-size: 31px;
+
+  font-family: 'Nohemi-Bold', sans-serif;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: normal!important;
+  color: var(--basic-header-color);
+  transition: 0.5s;
+  -webkit-text-stroke-width: 0!important;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lexend-zetta-font {
@@ -979,6 +1047,7 @@ body.fade-out #overlay {
 .hamburger {
   display: none;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .bar {
@@ -990,7 +1059,7 @@ body.fade-out #overlay {
   transition: all 0.3 ease-in-out;
   background-color: var(--header-berkres-color);
   transition: 0.15s;
-  border-radius: 8px;
+/*   border-radius: 8px; */
 }
 
 .home-on-page {
@@ -1070,11 +1139,17 @@ body.fade-out #overlay {
   background: var(--input-field);
   font-size: 16px;
   
-/*   font-family: 'MonaSans'; */
-  font-family: 'Instrument Sans';
+/*   font-family: 'Instrument Sans';
   font-weight: 550;
   font-variation-settings: "wdth" 94;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.4px; */
+  font-family: 'BD';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
 
   transition: 0.5s;
   border-radius: 8px;
@@ -1093,10 +1168,16 @@ body.fade-out #overlay {
 
 /*   font-family: 'MonaSans'; */
 
-  font-family: 'Instrument Sans';
-  font-weight: 550;
+  font-family: 'BD';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
+/*   font-weight: 550;
   font-variation-settings: "wdth" 94;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.4px; */
 
   resize: vertical;
   transition: 0.5s;
@@ -1117,15 +1198,23 @@ body.fade-out #overlay {
   
 /*   font-family: 'MonaSans'; */
 
-  font-family: 'Instrument Sans';
+  font-family: 'BD';
 
   font-size: 13px;
 
-  font-weight: 550;
+/*   font-weight: 550;
   font-style: normal;
   font-variation-settings: "wdth" 96;
-  letter-spacing: -0.4px;
-  margin-top: 2px;
+  letter-spacing: -0.4px; */
+  margin-top: 3px;
+
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
+/*   margin-bottom: -22px; */
 }
 
 .submit-button {
@@ -1137,13 +1226,21 @@ body.fade-out #overlay {
   width: 100%;
   cursor: pointer;
 
-  font-family: "Instrument Sans", sans-serif;
+/*   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 650;
   font-style: normal;
   font-variation-settings: "wdth" 94;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.5px; */
 
+  font-family: 'BD';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
+  padding-bottom: 7px;
   font-size: 16px;
   margin-bottom: 80px;
   transition: 0.4s;
@@ -1165,12 +1262,14 @@ body.fade-out #overlay {
   cursor: pointer;
   font-size: 15px;
 
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 650;
+  font-family: 'BD';
+  font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wdth" 94;
-  letter-spacing: -0.5px;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
+  padding-bottom: 8px;
 
   margin-bottom: 50px;
   transition: 0.4s;
@@ -1348,13 +1447,22 @@ body.fade-out #overlay {
   transition: 0.5s;
   color: var(--logo);
 
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
+/*   font-family: "Instrument Sans1", sans-serif;
+  font-optical-sizing: auto; */
 
-  font-weight: 550;
+/*   font-weight: 500; */
+/*   font-variation-settings: "wdth" 95;
+  letter-spacing: -0.4px; */
+
+
+  font-family: "BD", sans-serif;
+
+  font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wdth" 95;
-  letter-spacing: -0.4px;
+  font-variation-settings: "wght" 500;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.24px;
 }
 
 .dark-mode-toggle {
@@ -1548,6 +1656,53 @@ body.fade-out #overlay {
   width: 100%;
 }
 
+@media screen and (max-width: 550px)
+{
+  .home-text {
+    display: flex;
+  /*   width: 88.5%; */
+    max-width: 750px;
+    justify-content: center;
+    padding-left: 15px;
+    margin-right: 15px;
+  }
+
+  .berkresmusic-side {
+    font-family: 'Nohemi';
+    font-weight: normal !important;
+  
+    /* position: absolute; */
+    text-decoration: none;
+    justify-content: center;
+    font-size: 21px;
+    align-items: center;
+    color: var(--header-berkres-color);
+    display: flex;
+    /* left: -400px; */
+    margin-top: -1px;
+    /* margin-right: 77px; */
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    transition: 0.5s;
+    
+    /* Left margin applied here */
+    margin-left: 15px; /* Adds 15px left margin */
+    
+    /* Optional: Adjust the left and top positioning */
+    top: 23px;
+}
+
+@media screen and (max-width: 550px) {
+  .berkresmusic-side {
+      margin-left: 15px;
+      left: 15px;
+  }
+}
+
+
+}
+
 @media screen and (max-height: 670px)
 {
   .footer-error {
@@ -1598,6 +1753,50 @@ body.fade-out #overlay {
   }
 
   
+}
+
+@media screen and (max-width: 550px)
+{
+  .home-text {
+    display: flex;
+  /*   width: 88.5%; */
+    max-width: 750px;
+    justify-content: center;
+    padding-left: 15px;
+    margin-right: 15px;
+  }
+
+/*   .berkresmusic-side {
+
+    font-family: 'Nohemi';
+    font-weight: normal !important;
+  
+    position: absolute;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 21px;
+    align-items: center;
+    color: var(--header-berkres-color);
+    display: flex;
+    margin-top: -1px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    transition: 0.5s;
+    position: absolute;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--header-berkres-color);
+    display: flex;
+    left: 25px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    left: 200px;
+    top: 23px;
+  } */
+
 }
 
 @media screen and (max-width: 1466px)
@@ -1840,11 +2039,25 @@ body.fade-out #overlay {
   }
 }
 
-@media screen and (max-width: 950px) {
-  
+@media (max-width: 950px) {
+  .hamburger-menu {
+      margin-left: 25px;
+      margin-right: 25px;
+  }
+}
+
+@media (max-width: 550px) {
   .hamburger {
-    display: block;
-    margin-right: 25px;
+    display: inline-block;
+    margin-right: 15px;
+    width: auto;
+/*     padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: var(--darkmode-button-text-hover); */
+/*     border-radius: 8px;
+    margin-top: 23px; */
   }
 
   .berkresmusic-side {
@@ -1857,12 +2070,23 @@ body.fade-out #overlay {
     color: var(--header-berkres-color);
     display: flex;
 /*     top: 23px; */
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
+  .berkresmusic-side {
+    position: absolute;
+/*     font-style: normal; */
+    text-decoration: none;
+    justify-content: center;
+    font-size: 21px;
+    align-items: center;
+    color: var(--header-berkres-color);
+    display: flex;
+/*     top: 23px; */
     left: 25px;
-    -webkit-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
-/*     margin-left: calc(100vw + 100px); */
-    margin-left: 0px;
   }
 
   .dark-mode-button-mobile {
