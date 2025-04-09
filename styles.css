@@ -3,7 +3,7 @@
   --header-berkres-color: rgb(30, 30, 30);
   --header-options-color: rgb(0,0,0);
   --page-content-color: #ffffff;
-  --basic-text-color: rgb(27, 27, 27);
+  --basic-text-color: rgb(19, 19, 19);
   --basic-header-color: rgb(27, 27, 27);
   --hover-line-color: rgb(40, 40, 40);
   --body: #ffffff;
@@ -73,7 +73,7 @@
   --switzer: 'Switzer-Light';
   --imagegroup: rgb(20, 20, 20);
   --catalogue: rgb(41, 41, 41);
-  --news-article: rgb(20, 20, 20);
+  --news-article: rgb(22, 22, 22);
   --news-article-text: rgb(197, 197, 197);
   --archive-header: #1b1b1b;
   --archive-row: #252525;
@@ -460,13 +460,20 @@ body.fade-out #overlay {
 /*   font-family: 'General-SemiBold'; */
 /*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 
-  font-family: "Instrument Sans", sans-serif;
+/*   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 650;
   font-style: normal;
   font-variation-settings: "wdth" 94;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.5px; */
   z-index: 10;
+
+  font-family: "BD", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.75px;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 600;
 }
 
 .lexend-side.active {
@@ -666,10 +673,10 @@ body.fade-out #overlay {
 /*   width: 90%; */
   max-width: 750px;
   justify-content: center;
-  padding-left: 15px;
-  margin-right: 15px;
+  padding-left: 20px;
+  margin-right: 20px;
   font-family: 'Nohemi-Bold', sans-serif;
-  font-size: 31px;
+  font-size: 28px;
   font-style: normal;
   font-weight: normal!important;
   color: var(--basic-header-color);
@@ -697,20 +704,21 @@ body.fade-out #overlay {
 /*   width: 88.5%; */
   max-width: 750px;
   justify-content: center;
-  padding-left: 25px;
-  margin-right: 25px;
+  padding-left: 20px;
+  margin-right: 20px;
 /*   line-height: 1.65; */
   color: var(--basic-text-color);
   transition: 0.5s;
-  font-size: 15px;
+  font-size: 15.3px;
 
   font-family: "BD", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 500;
-  line-height: 150%;
-  font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
+  font-variation-settings: "wght" 450;
+/*   line-height: 156%; */
+  line-height: 173%;
+  font-feature-settings: "ss03"/*  , "ss12" */;
+  letter-spacing: -0.4px;
 
 /*   font-optical-sizing:auto; */
 /*   font-weight: 500; */
@@ -790,8 +798,8 @@ body.fade-out #overlay {
   transition: 0.5s;
   color: var(--basic-text-color);
 
-  padding-left: 25px;
-  margin-right: 25px;
+  padding-left: 20px;
+  margin-right: 20px;
 
 /*   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
@@ -799,10 +807,9 @@ body.fade-out #overlay {
   font-style: normal;
   font-variation-settings: "wdth"  94; */
   letter-spacing: -0.24px;
-  font-size: 31px;
 
   font-family: 'Nohemi-Bold', sans-serif;
-  font-size: 31px;
+  font-size: 28px;
   font-style: normal;
   font-weight: normal!important;
   color: var(--basic-header-color);
@@ -874,7 +881,7 @@ body.fade-out #overlay {
   align-items: center;
   color: var(--header-berkres-color);
   display: flex;
-  left: 25px;
+  left: 20px;
   -webkit-user-select: none; 
   -ms-user-select: none;
   user-select: none;
@@ -1117,8 +1124,8 @@ body.fade-out #overlay {
   width: 100%;
   max-width: 600px;
   margin-top: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
 }
 
@@ -1149,7 +1156,8 @@ body.fade-out #overlay {
   font-variation-settings: "wght" 550;
   line-height: 150%;
   font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
+  letter-spacing: -0.4px;
+  padding-bottom: 7px;
 
   transition: 0.5s;
   border-radius: 8px;
@@ -1166,24 +1174,20 @@ body.fade-out #overlay {
   background: var(--input-field);
   font-size: 16px;
 
-/*   font-family: 'MonaSans'; */
-
   font-family: 'BD';
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" 550;
   line-height: 150%;
   font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
-/*   font-weight: 550;
-  font-variation-settings: "wdth" 94;
-  letter-spacing: -0.4px; */
+  letter-spacing: -0.4px;
 
   resize: vertical;
   transition: 0.5s;
   resize: none;
   border-radius: 8px;
   box-sizing: border-box;
+  padding-bottom: 7px;
 }
 
 .label-contact {
@@ -1195,25 +1199,18 @@ body.fade-out #overlay {
   color: var(--basic-text-color);
   cursor: text;
   transition: 0.15s;
-  
-/*   font-family: 'MonaSans'; */
 
   font-family: 'BD';
 
   font-size: 13px;
-
-/*   font-weight: 550;
-  font-style: normal;
-  font-variation-settings: "wdth" 96;
-  letter-spacing: -0.4px; */
-  margin-top: 3px;
+  margin-top: 2px;
 
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" 550;
   line-height: 150%;
   font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
+  letter-spacing: -0.4px;
 /*   margin-bottom: -22px; */
 }
 
@@ -1239,8 +1236,8 @@ body.fade-out #overlay {
   font-variation-settings: "wght" 550;
   line-height: 150%;
   font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
-  padding-bottom: 7px;
+  letter-spacing: -0.4px;
+  padding-bottom: 8px;
   font-size: 16px;
   margin-bottom: 80px;
   transition: 0.4s;
@@ -1268,7 +1265,7 @@ body.fade-out #overlay {
   font-variation-settings: "wght" 550;
   line-height: 150%;
   font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
+  letter-spacing: -0.4px;
   padding-bottom: 8px;
 
   margin-bottom: 50px;
@@ -1455,14 +1452,13 @@ body.fade-out #overlay {
   letter-spacing: -0.4px; */
 
 
+  line-height: 150%;
   font-family: "BD", sans-serif;
-
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" 500;
-  line-height: 150%;
-  font-feature-settings: "ss03";
-  letter-spacing: -0.24px;
+  font-feature-settings: "ss03"/*  , "ss12" */;
+  letter-spacing: -0.4px;
 }
 
 .dark-mode-toggle {
@@ -1663,8 +1659,8 @@ body.fade-out #overlay {
   /*   width: 88.5%; */
     max-width: 750px;
     justify-content: center;
-    padding-left: 15px;
-    margin-right: 15px;
+    padding-left: 20px;
+    margin-right: 20px;
   }
 
   .berkresmusic-side {
@@ -1687,7 +1683,7 @@ body.fade-out #overlay {
     transition: 0.5s;
     
     /* Left margin applied here */
-    margin-left: 15px; /* Adds 15px left margin */
+    margin-left: 20px; /* Adds 15px left margin */
     
     /* Optional: Adjust the left and top positioning */
     top: 23px;
@@ -1695,8 +1691,8 @@ body.fade-out #overlay {
 
 @media screen and (max-width: 550px) {
   .berkresmusic-side {
-      margin-left: 15px;
-      left: 15px;
+      margin-left: 20px;
+      left: 20px;
   }
 }
 
@@ -1743,7 +1739,7 @@ body.fade-out #overlay {
     color: var(--header-berkres-color);
     display: flex;
 /*     top: 23px; */
-    left: 25px;
+    left: 20px;
     -webkit-user-select: none; 
     -ms-user-select: none;
     user-select: none;
@@ -1762,8 +1758,8 @@ body.fade-out #overlay {
   /*   width: 88.5%; */
     max-width: 750px;
     justify-content: center;
-    padding-left: 15px;
-    margin-right: 15px;
+    padding-left: 20px;
+    margin-right: 20px;
   }
 
 /*   .berkresmusic-side {
@@ -2006,7 +2002,7 @@ body.fade-out #overlay {
 
   .hamburger {
     display: block;
-    margin-right: 25px;
+    margin-right: 21px;
   }
 
   .hamburger.active .bar:nth-child(2){
@@ -2042,14 +2038,14 @@ body.fade-out #overlay {
 @media (max-width: 950px) {
   .hamburger-menu {
       margin-left: 25px;
-      margin-right: 25px;
+      margin-right: 21px;
   }
 }
 
 @media (max-width: 550px) {
   .hamburger {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 21px;
     width: auto;
 /*     padding-left: 7px;
     padding-right: 7px;
@@ -2070,7 +2066,7 @@ body.fade-out #overlay {
     color: var(--header-berkres-color);
     display: flex;
 /*     top: 23px; */
-    left: 15px;
+    left: 20px;
   }
 }
 
@@ -2086,7 +2082,7 @@ body.fade-out #overlay {
     color: var(--header-berkres-color);
     display: flex;
 /*     top: 23px; */
-    left: 25px;
+    left: 20px;
   }
 
   .dark-mode-button-mobile {
@@ -2099,7 +2095,7 @@ body.fade-out #overlay {
     border: none;
     border-width: 1px;
     top: 21px;
-    color: var(--basic-text-color);
+    color: var(--header-berkres-color);
     transition: 0.15s;
   }
 
