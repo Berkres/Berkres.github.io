@@ -309,9 +309,9 @@ body.loaded #page-wrapper {
 
 .spotify-container {
   max-width: 750px;  /* Ensures the embed doesn’t exceed 750px */
-  width: calc(100% - 50px);  /* Subtracts 50px (25px margin on each side) from total width */
+  width: calc(100% - 40px);  /* Subtracts 50px (25px margin on each side) from total width */
   margin: 0 auto;  /* Centers the embed */
-  padding: 0 25px; /* Adds 25px margin to left and right */
+/*   padding: 0 25px; */ /* Adds 25px margin to left and right */
   margin-bottom: 47px;
 }
 
@@ -334,7 +334,8 @@ body.loaded #page-wrapper {
   opacity: 0;
   pointer-events: none;
 /*   transition: opacity 0.8s ease-in-out; */
-  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1); /* Fast start, slow end */
+  transition: opacity 1s cubic-bezier(0.42, 2, 0.958, 1); /* Fast start, slow end */
+  /* opacity previously 1s */
 }
 
 /* When fading out */
@@ -474,6 +475,7 @@ body.fade-out #overlay {
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" 600;
+  font-feature-settings:  "ss03";
 }
 
 .lexend-side.active {
@@ -754,12 +756,15 @@ body.fade-out #overlay {
 }
 
 .about-artwork {
-  border: none;
+/*   border: none;
   margin-top: 15px;
-  margin-bottom: 65px;
+  margin-bottom: 65px; */
 /*   filter: drop-shadow(0px 5px 13px rgba(44, 42, 42, 0.400)); */
-  width: 400px;
-  height: 400px;
+
+  width: 450px;
+  height: 450px;
+  margin-bottom: 65px;
+  margin-top: 15px;
 }
 
 .prevent-select {
@@ -868,7 +873,7 @@ body.fade-out #overlay {
   color: var(--header-berkres-color);
   display: flex;
 /*   left: -400px; */
-  margin-top: -1px;
+  margin-top: -2px;
 /*   margin-right: 77px; */
   -webkit-user-select: none; 
   -ms-user-select: none;
@@ -1237,7 +1242,7 @@ body.fade-out #overlay {
   line-height: 150%;
   font-feature-settings: "ss03";
   letter-spacing: -0.4px;
-  padding-bottom: 8px;
+  padding-bottom: 7px;
   font-size: 16px;
   margin-bottom: 80px;
   transition: 0.4s;
@@ -1820,7 +1825,6 @@ body.fade-out #overlay {
     padding-top: 4px;
     transition: 0.15s;
     text-decoration: none;
-
   }
 
   .home-on-page {
@@ -1829,6 +1833,7 @@ body.fade-out #overlay {
 
   .news {
     margin-left: 100px;
+    opacity: 0.6;
   }
 
   .news-on-page {
@@ -1837,6 +1842,7 @@ body.fade-out #overlay {
 
   .discography {
     margin-left: 100px;
+    opacity: 0.6;
   }
 
   .discography-on-page {
@@ -1845,6 +1851,7 @@ body.fade-out #overlay {
 
   .about {
     margin-left: 100px;
+    opacity: 0.6;
   }
 
   .about-on-page {
@@ -1853,6 +1860,7 @@ body.fade-out #overlay {
 
   .contact {
     margin-left: 100px;
+    opacity: 0.6;
   }
 
   .contact-on-page {
@@ -2102,6 +2110,14 @@ body.fade-out #overlay {
   #dark-mode-icon-mobile {
     transition: 0.15s;
   }
+
+  .about-artwork {
+    max-width: calc(100vw - 40px); /* 20px links + 20px rechts */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 11px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2193,11 +2209,11 @@ body.fade-out #overlay {
   }
 
   .about-artwork {
-    border: none;
-    margin-top: 15px;
-    margin-bottom: 65px;
-    width: 300px;
-    height: 300px;
+    max-width: calc(100vw - 40px); /* 20px links + 20px rechts */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 11px;
   }
 
   .gallery-row {
@@ -2262,13 +2278,5 @@ body.fade-out #overlay {
   .berkresmusic-side {
     font-size: 19px;
     top: 24px;
-  }
-
-  .about-artwork {
-    border: none;
-    margin-top: 15px;
-    margin-bottom: 65px;
-    width: 250px;
-    height: 250px;
   }
 }
