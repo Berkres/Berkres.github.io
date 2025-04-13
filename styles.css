@@ -415,7 +415,9 @@ body.fade-out #overlay {
   transition: 0.5s;
 /*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 
-/*   box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 6px; */
+/*   box-shadow: rgba(0, 0, 0, 0.192) 0px -2px 56px; */
+  box-shadow: 0 8px 200px -6px rgba(0, 0, 0, 0.15);
+  box-shadow: offset-x offset-y blur-radius spread-radius color;
 }
 
 
@@ -457,16 +459,6 @@ body.fade-out #overlay {
   transition-duration: 0.5s;
   text-align: right;
   opacity: 0;
-
-/*   font-family: 'General-SemiBold'; */
-/*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-
-/*   font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 650;
-  font-style: normal;
-  font-variation-settings: "wdth" 94;
-  letter-spacing: -0.5px; */
   z-index: 10;
 
   font-family: "BD", sans-serif;
@@ -476,6 +468,9 @@ body.fade-out #overlay {
   font-style: normal;
   font-variation-settings: "wght" 600;
   font-feature-settings:  "ss03";
+/*   box-shadow: rgba(0, 0, 0, 0.192) 0px -2px 56px; */
+  box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+  box-shadow: offset-x offset-y blur-radius spread-radius color;
 }
 
 .lexend-side.active {
@@ -891,7 +886,7 @@ body.fade-out #overlay {
   -ms-user-select: none;
   user-select: none;
   left: 0px;
-  top: 23px;
+  top: 24px;
 }
 
 .berkresmusic {
@@ -1691,7 +1686,7 @@ body.fade-out #overlay {
     margin-left: 20px; /* Adds 15px left margin */
     
     /* Optional: Adjust the left and top positioning */
-    top: 23px;
+    top: 24px;
 }
 
 @media screen and (max-width: 550px) {
@@ -1760,44 +1755,11 @@ body.fade-out #overlay {
 {
   .home-text {
     display: flex;
-  /*   width: 88.5%; */
     max-width: 750px;
     justify-content: center;
     padding-left: 20px;
     margin-right: 20px;
   }
-
-/*   .berkresmusic-side {
-
-    font-family: 'Nohemi';
-    font-weight: normal !important;
-  
-    position: absolute;
-    text-decoration: none;
-    justify-content: center;
-    font-size: 21px;
-    align-items: center;
-    color: var(--header-berkres-color);
-    display: flex;
-    margin-top: -1px;
-    -webkit-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
-    transition: 0.5s;
-    position: absolute;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    color: var(--header-berkres-color);
-    display: flex;
-    left: 25px;
-    -webkit-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
-    left: 200px;
-    top: 23px;
-  } */
-
 }
 
 @media screen and (max-width: 1466px)
@@ -2073,7 +2035,6 @@ body.fade-out #overlay {
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-/*     top: 23px; */
     left: 20px;
   }
 }
@@ -2089,7 +2050,6 @@ body.fade-out #overlay {
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
-/*     top: 23px; */
     left: 20px;
   }
 
@@ -2157,22 +2117,6 @@ body.fade-out #overlay {
   } */
 }
 
-@media screen and (max-width: 549px) {
-/*   .textarea-contact {
-    width: 95.5%;
-  }
-
-  .input-contact {
-    width: 95.5%;
-  } */
-}
-
-@media screen and (max-width: 460px) {
-/*   .berkresmusic-side {
-    left: 20px;
-  } */
-}
-
 @media screen and (max-width: 420px) {
   .dark-mode-button-mobile {
     right: 80px;
@@ -2180,14 +2124,6 @@ body.fade-out #overlay {
 }
 
 @media screen and (max-width: 443px) {
-/*   .textarea-contact {
-    width: 94.4%;
-  }
-
-  .input-contact {
-    width: 94.4%;
-  } */
-  
   .contact-title {
     position: absolute;
     top: 50%;
@@ -2243,10 +2179,6 @@ body.fade-out #overlay {
 }
 
 @media screen and (max-width: 370px) {
-/*   .textarea-contact {
-    width: 93%;
-  } */
-  
   .title {
     width: 300px;
   }
