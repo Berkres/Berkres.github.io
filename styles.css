@@ -416,8 +416,11 @@ body.fade-out #overlay {
 /*   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 
 /*   box-shadow: rgba(0, 0, 0, 0.192) 0px -2px 56px; */
-  box-shadow: 0 8px 200px -6px rgba(0, 0, 0, 0.15);
-  box-shadow: offset-x offset-y blur-radius spread-radius color;
+
+
+/*   box-shadow: 0 8px 200px -6px rgba(0, 0, 0, 0.15);
+
+  box-shadow: offset-x offset-y blur-radius spread-radius color; */
 }
 
 
@@ -469,8 +472,8 @@ body.fade-out #overlay {
   font-variation-settings: "wght" 600;
   font-feature-settings:  "ss03";
 /*   box-shadow: rgba(0, 0, 0, 0.192) 0px -2px 56px; */
-  box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.15);
-  box-shadow: offset-x offset-y blur-radius spread-radius color;
+/*   box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+  box-shadow: offset-x offset-y blur-radius spread-radius color; */
 }
 
 .lexend-side.active {
