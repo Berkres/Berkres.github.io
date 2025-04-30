@@ -371,7 +371,7 @@
         <div class="grid-container">
           <div class="grid-item">
             <div class="image-container">
-              <img src="artwork-big/JPG_Finally.jpg" alt="ARTWORK_Finally">
+              <img src="artwork-big/JPG_Finally.jpg" alt="ARTWORK-Finally">
             </div>
             <div class="text-container">
               <div class="works-title">Finally</div>
@@ -380,7 +380,7 @@
           </div>
           <div class="grid-item">
             <div class="image-container">
-              <img src="artwork-big/JPG_Different Place.jpg" alt="ARTWORK_Different-Place">
+              <img src="artwork-big/JPG_Different Place.jpg" alt="ARTWORK-Different-Place">
             </div>
             <div class="text-container">
               <div class="works-title">Different Place</div>
@@ -389,7 +389,7 @@
           </div>
           <div class="grid-item">
             <div class="image-container">
-              <img src="artwork-big/JPG_Lavender.jpg" alt="ARTWORK_Lavender">
+              <img src="artwork-big/JPG_Lavender.jpg" alt="ARTWORK-Lavender">
             </div>
             <div class="text-container">
               <div class="works-title">Lavender</div>
@@ -398,7 +398,7 @@
           </div>
           <div class="grid-item">
             <div class="image-container">
-              <img src="artwork-big/JPG_No Orientation.jpg" alt="ARTWORK_No Orientation">
+              <img src="artwork-big/JPG_No Orientation.jpg" alt="ARTWORK-No-Orientation">
             </div>
             <div class="text-container">
               <div class="works-title">No Orientation</div>
@@ -494,6 +494,32 @@
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
     
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+    </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
           const wrapper = document.getElementById("page-wrapper");

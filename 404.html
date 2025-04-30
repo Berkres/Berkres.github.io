@@ -181,7 +181,7 @@
         </p>
       </div>
 
-      <a href="./">
+      <a href="https://www.berkresmusic.com">
         <button class="error-button">Return to Homepage</button>
       </a>
 
@@ -233,7 +233,33 @@
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
 
-        <script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+    </script>
+
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
           const wrapper = document.getElementById("page-wrapper");
           const overlay = document.createElement("div");

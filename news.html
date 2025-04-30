@@ -172,9 +172,9 @@
         margin-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
-        font-size: 15px;
+        font-size: 15.3px;
         font-style: normal;
-        line-height: 1.8;
+/*         line-height: 1.8; */
         color: var(--basic-text-color);
         transition: 0.5s;
 /*         font-family: "Instrument Sans", sans-serif;
@@ -186,10 +186,10 @@
         font-family: "BD", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 500;
+        font-variation-settings: "wght" 450;
         line-height: 173%;
         font-feature-settings: "ss03";
-        letter-spacing: -0.24px;
+        letter-spacing: -0.4px;
       }
 
       .news-archive {
@@ -437,7 +437,7 @@
         </div>
 
         <div style="font-size: 18px; margin-bottom: 30px;">
-          <h2 class="home-heading">April 2025</h2>
+          <h2 class="home-heading">May 2025</h2>
         </div>
 
         <div class="news-section">
@@ -446,9 +446,11 @@
                   <img src="news-images/02Feb25.png">
                 </div>
                 <h2>Upcoming Album</h2>
-                <small>April 2, 2025</small>
+                <small>May 1, 2025</small>
                 <p>
-                  Berkres is currently working on an album with tracks ranging from solo piano to synthesizer.
+                  Berkres is currently working on an album featuring tracks that range from solo piano to synthesizer-driven compositions.
+                  Early drafts suggest the album will take listeners on a journey—from pure, delicate piano pieces to increasingly synth-influenced sounds.
+                  <br>While the synth gradually eclipses the piano toward the end of the album, the piano's “traces” slowly vanish—hinting at the album’s title, "Traces".
                 </p>
             </div>
   <!--        <div class="news-item">
@@ -474,7 +476,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="./february-2025">April, 2025</a></td>
+                    <td><a href="./may-2025">May, 2025</a></td>
                     <td style="text-align: right;">1 Article</td>
                 </tr>
             </tbody>
@@ -524,6 +526,32 @@
 
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("page-wrapper");
+          const overlay = document.createElement("div");
+          overlay.id = "overlay";
+          document.body.appendChild(overlay);
+
+          setTimeout(() => {
+              wrapper.style.opacity = "1";
+              wrapper.style.transform = "translateY(0)";
+          }, 500); // Slight delay for smooth entry
+
+          document.querySelectorAll("a").forEach(link => {
+              link.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  const href = e.target.href;
+
+                  overlay.style.opacity = "1"; // Fade in overlay
+                  setTimeout(() => {
+                      window.location.href = href; // Navigate after fade-out
+                  }, 800); // Match CSS transition time
+              });
+          });
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {

@@ -449,6 +449,60 @@ body.fade-out #overlay {
 
 }
 
+/* .download-button{
+  height: 40px;
+  width: 40%;
+  position: relative;
+  top: 30%;
+  right: 0;
+  padding: 10px 0;
+  color: var(--basic-text-color);
+  outline: none;
+  background: var(--input-field-submit);
+  border: none;
+  cursor: pointer;
+  padding-top: 9px;
+  font-family: 'BD';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.4px;
+  font-size: 16px;
+  transition: 0.4s;
+  border-radius: 8px;
+} */
+
+.download-button{
+  height: 40px;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  right: 0;
+  padding: 10px 15px;
+  color: var(--basic-text-color);
+  outline: none;
+  background: var(--input-field-submit);
+  border: none;
+  cursor: pointer;
+  padding-top: 9px;
+  font-family: 'BD';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 550;
+  line-height: 150%;
+  font-feature-settings: "ss03";
+  letter-spacing: -0.4px;
+  font-size: 16px;
+  transition: 0.4s;
+  border-radius: 8px;
+}
+
+.download-button:hover {
+  background-color: var(--submit-hover);
+}
+
 .lexend-side {
   display: flex;
   flex-direction: column;
@@ -2090,7 +2144,7 @@ body.fade-out #overlay {
   } */
 
   .submit-button {
-    padding: 10px 0;
+/*     padding: 10px 0; */
     color: var(--basic-text-color);
     outline: none;
     background: var(--input-field-submit);
