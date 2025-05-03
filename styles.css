@@ -114,10 +114,10 @@
   src: url(font/Aspekta-550.ttf) format('truetype');
 }
 
-/* @font-face {
-  font-family: 'Instrument Sans1';
-  src: url(font/Aspekta-650.ttf) format('truetype');
-} */
+@font-face {
+  font-family: 'CC';
+  src: url(font/AccidenzGrotesk-medium.otf) format('opentype');
+}
 
 @font-face {
   font-family: 'MonaSans-SemiBold';
@@ -520,7 +520,7 @@ body.fade-out #overlay {
 
   font-family: "BD", sans-serif;
   font-optical-sizing: auto;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.9px;
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" 600;
@@ -759,7 +759,8 @@ body.fade-out #overlay {
   max-width: 750px;
   justify-content: center;
   padding-left: 20px;
-  margin-right: 20px;
+  padding-right: 20px;
+/*   margin-right: 20px; */
 /*   line-height: 1.65; */
   color: var(--basic-text-color);
   transition: 0.5s;
@@ -1712,8 +1713,8 @@ body.fade-out #overlay {
   /*   width: 88.5%; */
     max-width: 750px;
     justify-content: center;
-    padding-left: 20px;
-    margin-right: 20px;
+/*     padding-left: 20px; */
+/*     margin-right: 20px; */
   }
 
   .berkresmusic-side {
@@ -1752,11 +1753,11 @@ body.fade-out #overlay {
 
 }
 
-@media screen and (max-height: 670px)
+@media screen and (max-height: 560px)
 {
   .footer-error {
     position: relative;
-    bottom: -80px;
+    bottom: 0px;
   }
 }
 
@@ -1810,8 +1811,8 @@ body.fade-out #overlay {
     display: flex;
     max-width: 750px;
     justify-content: center;
-    padding-left: 20px;
-    margin-right: 20px;
+/*     padding-left: 20px;
+    margin-right: 20px; */
   }
 }
 
