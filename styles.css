@@ -97,6 +97,17 @@
   src: url('font/BDLifelessGrotesk-Medium.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'LT';
+  src: url('font/Beep-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LTA';
+/*   src: url('font/Beep-Bold.otf') format('opentype'); */
+  src: url(font/MonaSans[slnt\,wdth\,wght].woff2) format('woff2');
+}
+
 
 
 @font-face {
@@ -474,7 +485,7 @@ body.fade-out #overlay {
   border-radius: 8px;
 } */
 
-.download-button{
+.download-button {
   height: 40px;
   width: 100%;
   position: relative;
@@ -487,12 +498,12 @@ body.fade-out #overlay {
   border: none;
   cursor: pointer;
   padding-top: 9px;
-  font-family: 'BD';
+  font-family: 'MonaSans';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
+  font-variation-settings: "wght" 600;
   line-height: 150%;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
   font-size: 16px;
   transition: 0.4s;
@@ -508,23 +519,26 @@ body.fade-out #overlay {
   flex-direction: column;
   position: fixed;
   width: 100%;
-  height: 290px;
+  height: 100%;
   background-color: var(--header-color);
-  right: -100%;
+/*   right: -100%; */
+  right: 0;
   top: 64px;
 /*   transition: 0.5s ease-in-out; */
   transition-duration: 0.5s;
   text-align: right;
   opacity: 0;
   z-index: 10;
+  visibility: hidden;
 
-  font-family: "BD", sans-serif;
+  font-family: "MonaSans", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: -0.9px;
+  font-size: 25px;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
-  font-feature-settings:  "ss03";
+  font-variation-settings: "wght" 650;
+  font-feature-settings: "ss01" on;
 /*   box-shadow: rgba(0, 0, 0, 0.192) 0px -2px 56px; */
 /*   box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.15);
   box-shadow: offset-x offset-y blur-radius spread-radius color; */
@@ -533,6 +547,7 @@ body.fade-out #overlay {
 .lexend-side.active {
   right: 0px;
   opacity: 1;
+  visibility: visible;
 }
 
 .brands-menu {
@@ -729,7 +744,7 @@ body.fade-out #overlay {
   justify-content: center;
   padding-left: 20px;
   margin-right: 20px;
-  font-family: 'Nohemi-Bold', sans-serif;
+  font-family: 'MonaSans', sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: normal!important;
@@ -737,6 +752,8 @@ body.fade-out #overlay {
   transition: 0.5s;
   -webkit-text-stroke-width: 0!important;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01" on;
+  font-variation-settings: "wght" 730;
 
 /*   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
@@ -750,7 +767,7 @@ body.fade-out #overlay {
 /*   font-weight: 700; */
   font-style: normal;
 /*   font-variation-settings: "wdth" 94; */
-  letter-spacing: -0.24px;
+  letter-spacing: -1.1px;
 }
 
 .home-text {
@@ -766,15 +783,15 @@ body.fade-out #overlay {
   transition: 0.5s;
   font-size: 15.3px;
 
-  font-family: "BD", sans-serif;
+  font-family: "MonaSans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 450;
+  font-variation-settings: "wght" 530;
 /*   line-height: 156%; */
   line-height: 173%;
-  font-feature-settings: "ss03";
+/*   font-feature-settings: "ss03"; */
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
-  text-align: justify;
 /*   font-optical-sizing:auto; */
 /*   font-weight: 500; */
 /*   font-weight: 530; */
@@ -864,9 +881,9 @@ body.fade-out #overlay {
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth"  94; */
-  letter-spacing: -0.24px;
+  letter-spacing: -1.1px;
 
-  font-family: 'Nohemi-Bold', sans-serif;
+  font-family: 'MonaSans', sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: normal!important;
@@ -874,6 +891,8 @@ body.fade-out #overlay {
   transition: 0.5s;
   -webkit-text-stroke-width: 0!important;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01" on;
+  font-variation-settings: "wght" 730;
 }
 
 .lexend-zetta-font {
@@ -1219,12 +1238,12 @@ body.fade-out #overlay {
   font-weight: 550;
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.4px; */
-  font-family: 'BD';
+  font-family: 'MonaSans';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
+  font-variation-settings: "wght" 600;
   line-height: 150%;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
   padding-bottom: 7px;
 
@@ -1243,12 +1262,12 @@ body.fade-out #overlay {
   background: var(--input-field);
   font-size: 16px;
 
-  font-family: 'BD';
+  font-family: 'MonaSans';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
+  font-variation-settings: "wght" 600;
   line-height: 150%;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
 
   resize: vertical;
@@ -1256,7 +1275,7 @@ body.fade-out #overlay {
   resize: none;
   border-radius: 8px;
   box-sizing: border-box;
-  padding-bottom: 7px;
+/*   padding-bottom: 7px; */
 }
 
 .label-contact {
@@ -1269,16 +1288,15 @@ body.fade-out #overlay {
   cursor: text;
   transition: 0.15s;
 
-  font-family: 'BD';
+  font-family: 'MonaSans';
 
   font-size: 13px;
-  margin-top: 2px;
 
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" 550;
   line-height: 150%;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
 /*   margin-bottom: -22px; */
 }
@@ -1299,14 +1317,14 @@ body.fade-out #overlay {
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.5px; */
 
-  font-family: 'BD';
+  font-family: 'MonaSans';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
+  font-variation-settings: "wght" 600;
   line-height: 150%;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
-  padding-bottom: 7px;
+/*   padding-bottom: 7px; */
   font-size: 16px;
   margin-bottom: 80px;
   transition: 0.4s;
@@ -1328,12 +1346,12 @@ body.fade-out #overlay {
   cursor: pointer;
   font-size: 15px;
 
-  font-family: 'BD';
+  font-family: 'MonaSans';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
+  font-variation-settings: "wght" 600;
   line-height: 150%;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
   padding-bottom: 8px;
 
@@ -1522,11 +1540,11 @@ body.fade-out #overlay {
 
 
   line-height: 150%;
-  font-family: "BD", sans-serif;
+  font-family: "MonaSans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 500;
-  font-feature-settings: "ss03"/*  , "ss12" */;
+  font-variation-settings: "wght" 600;
+  font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
 }
 
@@ -1729,7 +1747,7 @@ body.fade-out #overlay {
     color: var(--header-berkres-color);
     display: flex;
     /* left: -400px; */
-    margin-top: -1px;
+    margin-top: -2px;
     /* margin-right: 77px; */
     -webkit-user-select: none; 
     -ms-user-select: none;
@@ -1827,7 +1845,7 @@ body.fade-out #overlay {
   }
 }
 
-@media screen and (max-width: 950px)
+@media screen and (max-width: 768px) /* eigentlich 950*/
 {
   .dark-mode-button {
     display: none;
@@ -1839,48 +1857,60 @@ body.fade-out #overlay {
     padding-right: 4px;
     padding-bottom: 4px;
     padding-top: 4px;
+    margin-bottom: 20px;
+    padding-top: 40px;
     transition: 0.15s;
     text-decoration: none;
   }
 
   .home-on-page {
     margin-left: 100px;
+    margin-bottom: 20px;
+    padding-top: 40px;
   }
 
   .news {
     margin-left: 100px;
     opacity: 0.6;
+    margin-bottom: 20px;
   }
 
   .news-on-page {
     margin-left: 100px;
+    margin-bottom: 20px;
   }
 
   .discography {
     margin-left: 100px;
     opacity: 0.6;
+    margin-bottom: 20px;
   }
 
   .discography-on-page {
     margin-left: 100px;
+    margin-bottom: 20px;
   }
 
   .about {
     margin-left: 100px;
     opacity: 0.6;
+    margin-bottom: 20px;
   }
 
   .about-on-page {
     margin-left: 100px;
+    margin-bottom: 20px;
   }
 
   .contact {
     margin-left: 100px;
     opacity: 0.6;
+    margin-bottom: 20px;
   }
 
   .contact-on-page {
     margin-left: 100px;
+    margin-bottom: 20px;
   }
 
   .footer {
@@ -2059,7 +2089,7 @@ body.fade-out #overlay {
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 768px) { /*eigentlich 950*/
   .hamburger-menu {
       margin-left: 25px;
       margin-right: 21px;
@@ -2100,7 +2130,7 @@ body.fade-out #overlay {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 768px) { /* eigentlich 950*/
 
   .berkresmusic-side {
     position: absolute;
@@ -2263,6 +2293,7 @@ body.fade-out #overlay {
   .berkresmusic-side {
     font-size: 20px;
     top: 24px;
+    margin-top: -1px;
   }
 }
 
