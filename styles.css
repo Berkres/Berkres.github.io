@@ -489,6 +489,45 @@ body.fade-out #overlay {
   border-radius: 8px;
 } */
 
+.tabs-div {
+  display: flex;
+  justify-content: center;
+/*   background-color: bisque; */
+  width: 100%;
+/*   max-width: calc(100vw - 40px); */
+  max-width: 1160px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.tab-button {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  right: 0;
+  padding: 9px 14px;
+  color: var(--basic-text-color);
+  outline: none;
+  background: var(--input-field-submit);
+  border: none;
+  cursor: pointer;
+/*   padding-top: 9px; */
+  font-family: 'MonaSans';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" 600;
+  line-height: 150%;
+  font-feature-settings: "ss01" on;
+  letter-spacing: -0.5px;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 8px;
+}
+
+.tab-button:hover {
+  background-color: var(--submit-hover);
+}
+
 .download-button {
   height: 40px;
   width: 100%;
@@ -790,7 +829,7 @@ body.fade-out #overlay {
   font-family: "MonaSans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 530;
+  font-variation-settings: "wght" 470; /*davor 530*/
 /*   line-height: 156%; */
   line-height: 173%;
 /*   font-feature-settings: "ss03"; */
@@ -1547,7 +1586,7 @@ body.fade-out #overlay {
   font-family: "MonaSans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "wght" 550;
   font-feature-settings: "ss01" on;
   letter-spacing: -0.5px;
 }
