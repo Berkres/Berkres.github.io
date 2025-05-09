@@ -1,4 +1,4 @@
-let darkMode = localStorage.getItem("darkMode");
+/* let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 const darkModeToggleMobile = document.querySelector("#dark-mode-toggle-mobile");
@@ -69,10 +69,8 @@ darkModeToggle.addEventListener("click", () => {
   darkMode = localStorage.getItem("darkMode");
   if (darkMode !== "enabled") {
     enableDarkMode();
-/*     console.log("dark ON"); */
   } else {
     disableDarkMode();
-/*     console.log("dark OFF"); */
   }
 });
 
@@ -80,9 +78,79 @@ darkModeToggleMobile.addEventListener("click", () => {
   darkMode = localStorage.getItem("darkMode");
   if (darkMode !== "enabled") {
     enableDarkMode();
-/*     console.log("dark ON"); */
   } else {
     disableDarkMode();
-/*     console.log("dark OFF"); */
+  }
+});
+ */
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeToggle = document.querySelector("#dark-mode-toggle");
+  const darkModeToggleMobile = document.querySelector("#dark-mode-toggle-mobile");
+  const darkModeIcon = document.querySelector("#dark-mode-icon");
+  const darkModeIconMobile = document.querySelector("#dark-mode-icon-mobile");
+  const signatureImg = document.querySelector("#signature-image");
+
+  let darkMode = localStorage.getItem("darkMode");
+
+  const setIcon = (iconElement, toSun) => {
+    if (!iconElement) return;
+    iconElement.style.opacity = "0";
+    setTimeout(() => {
+      iconElement.classList.remove(toSun ? "fa-moon" : "fa-sun");
+      iconElement.classList.add(toSun ? "fa-sun" : "fa-moon");
+      iconElement.style.opacity = "1";
+    }, 150);
+  };
+
+  const updateSignatureImage = (src) => {
+    if (!signatureImg) return;
+    signatureImg.style.opacity = "0";
+    setTimeout(() => {
+      signatureImg.src = src;
+      signatureImg.style.opacity = "1";
+    }, 150);
+  };
+
+  const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    console.log("DARK");
+    localStorage.setItem("darkMode", "enabled");
+    updateSignatureImage("LOGO-WHITE.png");
+    setIcon(darkModeIcon, true);
+    setIcon(darkModeIconMobile, true);
+  };
+
+  const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+    console.log("BRIGHT");
+    localStorage.setItem("darkMode", null);
+    updateSignatureImage("LOGO-BLACK.png");
+    setIcon(darkModeIcon, false);
+    setIcon(darkModeIconMobile, false);
+  };
+
+  const toggleDarkMode = () => {
+    darkMode = localStorage.getItem("darkMode");
+    if (darkMode !== "enabled") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  };
+
+  // Initialize dark mode state on page load
+  if (darkMode === "enabled") {
+    enableDarkMode();
+  }
+
+  // Event listeners
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
+
+  if (darkModeToggleMobile) {
+    darkModeToggleMobile.addEventListener("click", toggleDarkMode);
   }
 });
