@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Häufiger oder Seltener?</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #cce4ff; /* angenehmes Blau */
+      color: #333;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h1, p, #score {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .highlight-box {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25%;
+      height: 80px;
+      background: linear-gradient(to right, #2196f3 80%, transparent 100%);
+      clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+      z-index: 0;
+    }
+
+    .word-container {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 80px;
+      font-size: 28px;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .word-container > div {
+      width: 30%;
+      padding: 20px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 20px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    button:first-of-type {
+      background-color: #ca724a; /* Pastellrot */
+    }
+
+    button:last-of-type {
+      background-color: #4CAF50;
+    }
+
+    #score {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .word-container::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+/*       background-color: rgba(33, 150, 243, 0.1); */
+      z-index: -1;
+    }
+
+    #gameover {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Häufiger oder Seltener?</h1>
+  <p id="question"></p>
+<!--   <div class="highlight-box"></div> -->
+  <div class="word-container">
+    <div id="left-word"></div>
+    <div id="right-word"></div>
+  </div>
+  <div class="buttons">
+    <button onclick="checkAnswer('seltener')">Seltener</button>
+    <button onclick="checkAnswer('häufiger')">Häufiger</button>
+  </div>
+  <div id="score">Punkte: 0</div>
+
+  <div id="gameover">Falsch! Aheft ist fuchsteufelswild.</div>
+
+  <script>
+    const words = [
+      { text: "und", freq: 0.065 },
+      { text: "oder", freq: 0.025 },
+      { text: "Haus", freq: 0.002 },
+      { text: "Auto", freq: 0.003 },
+      { text: "Feuerwehr", freq: 0.0002 },
+      { text: "Hund", freq: 0.0015 },
+      { text: "Banane", freq: 0.0005 },
+      { text: "Baum", freq: 0.001 },
+      { text: "Geld", freq: 0.0025 },
+      { text: "Liebe", freq: 0.0018 },
+      { text: "Computer", freq: 0.002 },
+      { text: "Internet", freq: 0.0017 },
+      { text: "Toilette", freq: 0.0009 },
+      { text: "Katze", freq: 0.0013 },
+      { text: "Politik", freq: 0.0008 },
+      { text: "Regen", freq: 0.0006 },
+      { text: "Musik", freq: 0.0014 },
+      { text: "Schule", freq: 0.0011 },
+      { text: "Freiheit", freq: 0.0007 },
+      { text: "Arzt", freq: 0.00095 },
+      { text: "schnell", freq: 0.004 },
+      { text: "blau", freq: 0.0012 },
+      { text: "klebrig", freq: 0.00008 },
+      { text: "witzig", freq: 0.0005 },
+      { text: "effizient", freq: 0.0003 },
+
+      // Verben
+      { text: "laufen", freq: 0.0035 },
+      { text: "denken", freq: 0.0022 },
+      { text: "springen", freq: 0.0016 },
+      { text: "programmieren", freq: 0.0007 },
+      { text: "rechnen", freq: 0.0011 },
+
+      // Fachbegriffe
+      { text: "Photosynthese", freq: 0.0001 },
+      { text: "Algorithmus", freq: 0.00015 },
+      { text: "Quantenmechanik", freq: 0.00001 },
+      { text: "Inflation", freq: 0.00025 },
+      { text: "Neuron", freq: 0.0002 },
+
+      // Präpositionen
+      { text: "mit", freq: 0.015 },
+      { text: "auf", freq: 0.012 },
+      { text: "unter", freq: 0.005 },
+      { text: "gegen", freq: 0.004 },
+
+      // Füllwörter
+      { text: "äh", freq: 0.002 },
+      { text: "also", freq: 0.003 },
+      { text: "halt", freq: 0.0022 },
+      { text: "sozusagen", freq: 0.001 },
+      { text: "naja", freq: 0.0013 },
+
+      // Umgangssprache / Kurioses
+      { text: "Dings", freq: 0.0006 },
+      { text: "krass", freq: 0.0017 },
+      { text: "chillig", freq: 0.0004 },
+      { text: "eh", freq: 0.0018 },
+      { text: "mega", freq: 0.0016 },
+
+      // Substantive
+      { text: "Pizza", freq: 0.0015 },
+      { text: "Papier", freq: 0.0021 },
+      { text: "Gehirn", freq: 0.00095 },
+      { text: "Zahnarzt", freq: 0.0009 },
+      { text: "Aheft", freq: 0.1 },
+      { text: "Cheffe-Pohlant", freq: 0.0000001 },
+      { text: "Haul Paas", freq: 0.05 },
+      { text: "Faschist", freq: 0.07 },
+      { text: "Faschismus", freq: 0.009 },
+      { text: "Kaffee", freq: 0.0019 }
+    ];
+
+    let score = 0;
+    let leftWord, rightWord;
+
+    function getRandomWord(exclude) {
+      let word;
+      do {
+        word = words[Math.floor(Math.random() * words.length)];
+      } while (word === exclude);
+      return word;
+    }
+
+    function setupRound() {
+      document.getElementById("gameover").style.display = "none";
+
+      if (!leftWord) leftWord = getRandomWord();
+      rightWord = getRandomWord(leftWord);
+
+      document.getElementById("left-word").textContent = leftWord.text;
+      document.getElementById("right-word").textContent = rightWord.text;
+      document.getElementById("question").textContent = 
+        `Findet das Wort "${rightWord.text}" mehr oder weniger Gebrauch im Alltag als "${leftWord.text}"?`;
+    }
+
+    function checkAnswer(choice) {
+      const isCorrect = 
+        (choice === "häufiger" && rightWord.freq > leftWord.freq) ||
+        (choice === "seltener" && rightWord.freq < leftWord.freq);
+
+      if (isCorrect) {
+        score++;
+        leftWord = rightWord;
+        setupRound();
+      } else {
+        score = 0;
+        leftWord = null;
+        document.getElementById("gameover").style.display = "flex";
+        setTimeout(() => setupRound(), 2100);
+      }
+      document.getElementById("score").textContent = `Punkte: ${score}`;
+    }
+
+    setupRound();
+  </script>
+</body>
+</html>
