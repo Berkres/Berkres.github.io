@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const enableDarkMode = () => {
-    document.body.classList.add("darkmode");
+    document.documentElement.classList.add("darkmode");
     console.log("DARK");
     localStorage.setItem("darkMode", "enabled");
     updateSignatureImage("LOGO-WHITE.png");
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const disableDarkMode = () => {
-    document.body.classList.remove("darkmode");
+    document.documentElement.classList.remove("darkmode");
     console.log("BRIGHT");
     localStorage.setItem("darkMode", null);
     updateSignatureImage("LOGO-BLACK.png");
