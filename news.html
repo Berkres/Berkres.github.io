@@ -10,6 +10,15 @@
 
       gtag('config', 'G-JXR9761X00');
     </script>
+
+    <script>
+      (function() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.documentElement.classList.add("darkmode");
+        }
+      })();
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -43,13 +52,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
-    <script>
-      (function() {
-        if (localStorage.getItem("darkMode") === "enabled") {
-          document.documentElement.classList.add("darkmode");
-        }
-      })();
-    </script>
+
 
     <style>
       .lexend-deca-font {
@@ -132,7 +135,7 @@
         margin-bottom: 10px;
         transition: 0.5s;
         font-size: 20px;
-        margin-bottom: -4px;
+        margin-bottom: -3px;
         margin-left: 10px;
         margin-right: 10px;
 /*         font-family: "Instrument Sans", sans-serif;
@@ -144,12 +147,12 @@
         margin-top: 10px;
 /*         letter-spacing: -0.4px; */
 
-        font-family: "MonaSans", sans-serif;
+        font-family: "BDO-Bold", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 700;
+/*         font-variation-settings: "wght" 700; */
         line-height: 150%;
-        font-feature-settings: "ss01" on;
+/*         font-feature-settings: "ss01" on; */
         letter-spacing: -0.5px;
 /*         font-size: 23px; */
       }
@@ -168,20 +171,20 @@
 /*         margin-top: 100px; */
 /*         letter-spacing: -0.4px; */
 
-        font-family: "MonaSans", sans-serif;
+        font-family: "BDO-Regular", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 600;
+/*         font-variation-settings: "wght" 600; */
         line-height: 150%;
-        font-feature-settings: "ss01" on;
+/*         font-feature-settings: "ss01" on; */
         letter-spacing: -0.5px;
       }
 
       .news-item p {
-        margin-top: 10px;
+        margin-top: 5px;
         margin-left: 10px;
         margin-right: 10px;
-        font-size: 15.3px;
+        font-size: 14.5px;
         font-style: normal;
 /*         line-height: 1.8; */
         color: var(--basic-text-color);
@@ -192,13 +195,13 @@
         font-variation-settings: "wdth" 94;
         letter-spacing: -0.4px; */
 
-        font-family: "MonaSans", sans-serif;
+        font-family: "BDO-Regular", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 470;
-        line-height: 173%;
-        font-feature-settings: "ss01" on;
-        letter-spacing: -0.5px;
+/*         font-variation-settings: "wght" 470; */
+        line-height: 180%;
+/*         font-feature-settings: "ss01" on; */
+        letter-spacing: -0.4px;
       }
 
       .news-archive {
@@ -256,12 +259,12 @@
         padding-top: 8px;
         padding-bottom: 4px;
 
-        font-family: "MonaSans", sans-serif;
+        font-family: "BDO-Medium", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 650;
+/*         font-variation-settings: "wght" 650; */
         line-height: 150%;
-        font-feature-settings: "ss01" on;
+/*         font-feature-settings: "ss01" on; */
         letter-spacing: -0.5px;
       }
 
@@ -272,12 +275,12 @@
         transition: 0.5s;
         font-size: 14px;
 
-        font-family: "MonaSans", sans-serif;
+        font-family: "BDO-Regular", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 550;
+ /*        font-variation-settings: "wght" 550; */
         line-height: 150%;
-        font-feature-settings: "ss01" on;
+/*         font-feature-settings: "ss01" on; */
         letter-spacing: -0.5px;
       }
 
@@ -294,12 +297,12 @@
         position: relative;
         display: inline-block;
 
-        font-family: "MonaSans", sans-serif;
+        font-family: "BDO-Regular", sans-serif;
         font-weight: normal;
         font-style: normal;
-        font-variation-settings: "wght" 550;
+/*         font-variation-settings: "wght" 550; */
         line-height: 150%;
-        font-feature-settings: "ss01" on;
+/*         font-feature-settings: "ss01" on; */
         letter-spacing: -0.5px;
       }
 
@@ -427,8 +430,8 @@
       <div class="home-img">
       
         <picture>
-          <source type="image/webp" srcset="WEBP/news-banner.webp">
-          <img src="smaller-banners/news-banner.png" class="home-img">
+          <source type="image/webp" srcset="WEBP/News.webp">
+          <img src="smaller-banners/News.jpg" class="home-img">
         </picture>
         
         <div class="home-title">NEWS</div>

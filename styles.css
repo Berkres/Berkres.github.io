@@ -260,16 +260,16 @@ html {
   src: url(BDOGrotesk/BDOGrotesk-Bold.otf) format('opentype'); 
 }
 
-/* @font-face {
+@font-face {
   font-family: 'BDO-Regular';
   src: url(BDOGrotesk/BDOGrotesk-Regular.otf) format('opentype'); 
-} */
+}
 
-@font-face {
+/* @font-face {
   font-family: 'BDO-Regular';
   src: url(font/OverusedGrotesk-SemiBold.ttf) format('truetype'); 
 }
-
+ */
 @font-face {
   font-family: 'BDO-ExtraBold';
   src: url(BDOGrotesk/BDOGrotesk-ExtraBold.otf) format('opentype'); 
@@ -550,7 +550,7 @@ body.no-scroll {
   height: 40px;
   width: 100%;
   position: relative;
-  top: 10px;
+  top: 13px;
   right: 0;
   padding: 10px 14px;
   color: var(--basic-text-color);
@@ -559,14 +559,14 @@ body.no-scroll {
   border: none;
   cursor: pointer;
   padding-top: 9px;
-  font-family: 'MonaSans';
+  font-family: 'BDO-Medium';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+/*   font-variation-settings: "wght" 600; */
   line-height: 150%;
-  font-feature-settings: "ss01" on;
+/*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
-  font-size: 16px;
+  font-size: 14.5px;
   transition: 0.4s;
   border-radius: 8px;
 }
@@ -950,17 +950,18 @@ body.no-scroll {
 /*   line-height: 1.65; */
   color: var(--basic-text-color);
   transition: 0.5s;
-  font-size: 15.3px;
+  font-size: 14.5px;
 
-  font-family: "MonaSans", sans-serif;
+  font-family: "BDO-Regular", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 470; /*davor 530*/
+/*   font-variation-settings: "wght" 470;  *//*davor 530*/
 /*   line-height: 156%; */
-  line-height: 173%;
+/*   line-height: 173%; */
+  line-height: 180%;
 /*   font-feature-settings: "ss03"; */
-  font-feature-settings: "ss01" on;
-  letter-spacing: -0.5px;
+/*   font-feature-settings: "ss01" on; */
+  letter-spacing: -0.4px;
 /*   font-optical-sizing:auto; */
 /*   font-weight: 500; */
 /*   font-weight: 530; */
@@ -1109,7 +1110,7 @@ body.no-scroll {
   position: absolute;
   text-decoration: none;
   justify-content: center;
-  font-size: 21px;
+  font-size: 20px;
   align-items: center;
   color: var(--header-berkres-color);
   display: flex;
@@ -1132,7 +1133,7 @@ body.no-scroll {
   -ms-user-select: none;
   user-select: none;
   left: 0px;
-  top: 24px;
+  top: 25px;
 }
 
 .berkresmusic {
@@ -1154,7 +1155,8 @@ body.no-scroll {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Nohemi-Bold';
+  font-family: 'BDO-ExtraBold';
+  letter-spacing: -2.3px;
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -1165,7 +1167,8 @@ body.no-scroll {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Nohemi-Bold';
+  font-family: 'BDO-ExtraBold';
+  letter-spacing: -2.3px;
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -1188,7 +1191,8 @@ body.no-scroll {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Nohemi-Bold';
+  font-family: 'BDO-ExtraBold';
+  letter-spacing: -2.3px;
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -1409,14 +1413,14 @@ body.no-scroll {
   font-weight: 550;
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.4px; */
-  font-family: 'MonaSans';
+  font-family: 'BDO-Medium';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+/*   font-variation-settings: "wght" 600; */
   line-height: 150%;
-  font-feature-settings: "ss01" on;
+/*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
-  padding-bottom: 7px;
+/*   padding-bottom: 7px; */
 
   transition: 0.5s;
   border-radius: 8px;
@@ -1433,12 +1437,12 @@ body.no-scroll {
   background: var(--input-field);
   font-size: 16px;
 
-  font-family: 'MonaSans';
+  font-family: 'BDO-Medium';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+/*   font-variation-settings: "wght" 600; */
   line-height: 150%;
-  font-feature-settings: "ss01" on;
+/*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
 
   resize: vertical;
@@ -1459,15 +1463,15 @@ body.no-scroll {
   cursor: text;
   transition: 0.15s;
 
-  font-family: 'MonaSans';
+  font-family: 'BDO-Regular';
 
   font-size: 13px;
 
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
+/*   font-variation-settings: "wght" 550; */
   line-height: 150%;
-  font-feature-settings: "ss01" on;
+/*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
 /*   margin-bottom: -22px; */
 }
@@ -1488,15 +1492,15 @@ body.no-scroll {
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.5px; */
 
-  font-family: 'MonaSans';
+  font-family: 'BDO-Medium';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+/*   font-variation-settings: "wght" 600; */
   line-height: 150%;
-  font-feature-settings: "ss01" on;
+/*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
 /*   padding-bottom: 7px; */
-  font-size: 16px;
+  font-size: 14.5px;
   margin-bottom: 80px;
   transition: 0.4s;
   border-radius: 8px;
@@ -1515,16 +1519,16 @@ body.no-scroll {
   border: none;
   width: 100%;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14.5px;
 
-  font-family: 'MonaSans';
+  font-family: 'BDO-Medium';
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+/*   font-variation-settings: "wght" 600; */
   line-height: 150%;
-  font-feature-settings: "ss01" on;
+/*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
-  padding-bottom: 8px;
+/*   padding-bottom: 8px; */
 
   margin-bottom: 50px;
   transition: 0.4s;
@@ -1698,7 +1702,7 @@ body.no-scroll {
   align-items: center;
   margin-top: 100px;
 /*   font-family: 'BDO-Regular'; */
-  font-size: 15px;
+  font-size: 14.5px;
   transition: 0.5s;
   color: var(--logo);
 
@@ -1711,11 +1715,11 @@ body.no-scroll {
 
 
   line-height: 150%;
-  font-family: "MonaSans", sans-serif;
+  font-family: "BDO-Medium", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 550;
-  font-feature-settings: "ss01" on;
+/*   font-variation-settings: "wght" 550;
+  font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
 }
 
@@ -1913,7 +1917,7 @@ body.no-scroll {
     /* position: absolute; */
     text-decoration: none;
     justify-content: center;
-    font-size: 21px;
+    font-size: 20px;
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
@@ -1977,7 +1981,7 @@ body.no-scroll {
 /*     font-style: normal; */
     text-decoration: none;
     justify-content: center;
-    font-size: 21px;
+    font-size: 20px;
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
@@ -2327,11 +2331,12 @@ body.no-scroll {
 /*     font-style: normal; */
     text-decoration: none;
     justify-content: center;
-    font-size: 21px;
+    font-size: 20px;
     align-items: center;
     color: var(--header-berkres-color);
     display: flex;
     left: 20px;
+    top: 25px;
   }
 
   .dark-mode-button-mobile {
