@@ -553,21 +553,22 @@ body.no-scroll {
   top: 13px;
   right: 0;
   padding: 10px 14px;
+  padding-left: 13px;
   color: var(--basic-text-color);
   outline: none;
   background: var(--input-field-submit);
   border: none;
   cursor: pointer;
   padding-top: 9px;
-  font-family: 'BDO-Medium';
+  font-family: 'BDO-DemiBold';
   font-weight: normal;
   font-style: normal;
 /*   font-variation-settings: "wght" 600; */
   line-height: 150%;
 /*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
-  font-size: 14.5px;
-  transition: 0.4s;
+  font-size: 14.2px;
+  transition: 0.25s;
   border-radius: 8px;
 }
 
@@ -950,7 +951,7 @@ body.no-scroll {
 /*   line-height: 1.65; */
   color: var(--basic-text-color);
   transition: 0.5s;
-  font-size: 14.5px;
+  font-size: 14.2px;
 
   font-family: "BDO-Regular", sans-serif;
   font-weight: normal;
@@ -961,7 +962,7 @@ body.no-scroll {
   line-height: 180%;
 /*   font-feature-settings: "ss03"; */
 /*   font-feature-settings: "ss01" on; */
-  letter-spacing: -0.4px;
+  letter-spacing: -0.33px;
 /*   font-optical-sizing:auto; */
 /*   font-weight: 500; */
 /*   font-weight: 530; */
@@ -1169,6 +1170,7 @@ body.no-scroll {
   transform: translate(-50%, -50%);
   font-family: 'BDO-ExtraBold';
   letter-spacing: -2.3px;
+  line-height: 45px;
   font-size: 50px;
   color:#f0f0f0;
   text-shadow: 2px 2px 15px rgb(19, 17, 18);
@@ -1420,7 +1422,8 @@ body.no-scroll {
   line-height: 150%;
 /*   font-feature-settings: "ss01" on; */
   letter-spacing: -0.5px;
-/*   padding-bottom: 7px; */
+  padding-bottom: 9px;
+  padding-top: 9px;
 
   transition: 0.5s;
   border-radius: 8px;
@@ -1457,7 +1460,7 @@ body.no-scroll {
 /*   height: 100%; */
   position: absolute;
   left: 0;
-  top: 0;
+  top: 1px;
   padding: 10px;
   color: var(--basic-text-color);
   cursor: text;
@@ -1492,7 +1495,7 @@ body.no-scroll {
   font-variation-settings: "wdth" 94;
   letter-spacing: -0.5px; */
 
-  font-family: 'BDO-Medium';
+  font-family: 'BDO-DemiBold';
   font-weight: normal;
   font-style: normal;
 /*   font-variation-settings: "wght" 600; */
@@ -1502,7 +1505,7 @@ body.no-scroll {
 /*   padding-bottom: 7px; */
   font-size: 14.5px;
   margin-bottom: 80px;
-  transition: 0.4s;
+  transition: 0.25s;
   border-radius: 8px;
 }
 
@@ -1521,7 +1524,7 @@ body.no-scroll {
   cursor: pointer;
   font-size: 14.5px;
 
-  font-family: 'BDO-Medium';
+  font-family: 'BDO-DemiBold';
   font-weight: normal;
   font-style: normal;
 /*   font-variation-settings: "wght" 600; */
@@ -1531,7 +1534,7 @@ body.no-scroll {
 /*   padding-bottom: 8px; */
 
   margin-bottom: 50px;
-  transition: 0.4s;
+  transition: 0.25s;
   border-radius: 8px;
   margin-top: 25px;
 }
