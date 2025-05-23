@@ -41,16 +41,20 @@
 }
 
 html.darkmode {
-  --header-color: rgb(16,16,16);
+/*   --header-color: rgb(16,16,16); */
+  --header-color: rgb(29, 29, 29);
   --header-berkres-color: rgb(230, 230, 230);
   --header-options-color: rgb(230, 230, 230);
-  --page-content-color: rgb(16,16,16);
+/*   --page-content-color: rgb(16,16,16); */
+  --page-content-color: rgb(25, 25, 25);
 /*   --basic-text-color: rgb(225, 225, 225); */
 --basic-text-color: rgb(201, 201, 201);
 --basic-header-color: rgb(224, 224, 224);
   --hover-line-color: rgb(230, 230, 230);
-  --body: rgb(16,16,16);
-  --footer: rgb(8, 8, 8);
+/*   --body: rgb(16,16,16); */
+  --body: rgb(25, 25, 25);
+  --footer: rgb(15, 15, 15);
+/*   --footer: rgb(8, 8, 8); */
   --logo: rgb(100, 100, 100);
   --darkmode-button: rgb(51, 51, 51);
   --darkmode-button-text: rgb(225, 225, 225);
@@ -458,10 +462,10 @@ body.no-scroll {
   box-shadow: offset-x offset-y blur-radius spread-radius color; */
 }
 
-.darkmode .navbar-wrapper {
+/* .darkmode .navbar-wrapper {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   filter: none;
-}
+} */
 
 
 .centerHeader {
