@@ -354,7 +354,8 @@ body.loaded #page-wrapper {
 #page-wrapper {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+/*   transition: opacity 0.8s ease-out, transform 0.8s ease-out; */
+  transition: opacity 1.3s ease-out, transform 1.3s ease-out;
 }
 
 /* Overlay for smooth fade-out */

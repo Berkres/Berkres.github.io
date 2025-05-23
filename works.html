@@ -515,62 +515,48 @@
     
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-          const wrapper = document.getElementById("page-wrapper");
-          const overlay = document.createElement("div");
-          overlay.id = "overlay";
-          document.body.appendChild(overlay);
+        const wrapper = document.getElementById("page-wrapper");
 
-          setTimeout(() => {
-              wrapper.style.opacity = "1";
-              wrapper.style.transform = "translateY(0)";
-          }, 500); // Slight delay for smooth entry
+        // Create overlay
+        const overlay = document.createElement("div");
+        overlay.id = "overlay";
+        document.body.appendChild(overlay);
 
-          document.querySelectorAll("a").forEach(link => {
-              link.addEventListener("click", (e) => {
-                  e.preventDefault();
-                  const href = e.target.href;
+        // Smooth fade-in (overlay disappears)
+        requestAnimationFrame(() => {
+          overlay.style.opacity = "0";
+        });
 
-                  overlay.style.opacity = "1"; // Fade in overlay
-                  setTimeout(() => {
-                      window.location.href = href; // Navigate after fade-out
-                  }, 800); // Match CSS transition time
-              });
+        // Reveal content shortly after
+        setTimeout(() => {
+          wrapper.style.opacity = "1";
+          wrapper.style.transform = "translateY(0)";
+        }, 1000); // Adjust as needed
+
+        // Handle link clicks for fast fade-out
+        document.querySelectorAll("a").forEach(link => {
+          if (link.hostname !== location.hostname || link.target === "_blank") return;
+
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = link.href;
+
+            overlay.style.transition = "opacity 300ms ease-in"; // fast fade-out
+            overlay.style.opacity = "1"; // show overlay
+
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
           });
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          const wrapper = document.getElementById("page-wrapper");
-          const overlay = document.createElement("div");
-          overlay.id = "overlay";
-          document.body.appendChild(overlay);
-
-          setTimeout(() => {
-              wrapper.style.opacity = "1";
-              wrapper.style.transform = "translateY(0)";
-          }, 500); // Slight delay for smooth entry
-
-          document.querySelectorAll("a").forEach(link => {
-              link.addEventListener("click", (e) => {
-                  e.preventDefault();
-                  const href = e.target.href;
-
-                  overlay.style.opacity = "1"; // Fade in overlay
-                  setTimeout(() => {
-                      window.location.href = href; // Navigate after fade-out
-                  }, 800); // Match CSS transition time
-              });
-          });
+        });
       });
 
+      // Hide overlay if coming from bfcache
       window.addEventListener("pageshow", (event) => {
-          if (event.persisted) { // Page was restored from the browser cache
-              const overlay = document.getElementById("overlay");
-              if (overlay) {
-                  overlay.style.opacity = "0"; // Hide overlay on back navigation
-              }
-          }
+        if (event.persisted) {
+          const overlay = document.getElementById("overlay");
+          if (overlay) overlay.style.opacity = "0";
+        }
       });
     </script>
   </body>
