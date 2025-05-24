@@ -52,6 +52,54 @@ html.darkmode {
 --basic-header-color: rgb(224, 224, 224);
   --hover-line-color: rgb(230, 230, 230);
 /*   --body: rgb(16,16,16); */
+/*   --body: rgb(25, 25, 25); */
+  --body: rgb(29, 29, 29);
+  --footer: rgb(15, 15, 15);
+/*   --footer: rgb(8, 8, 8); */
+  --logo: rgb(100, 100, 100);
+  --darkmode-button: rgb(51, 51, 51);
+  --darkmode-button-text: rgb(225, 225, 225);
+  --header-shadow: rgb(0, 0, 0);
+  --title-img: rgb(10, 10, 10);
+  --darkmode-button-hover: rgb(230, 230, 230);
+  --darkmode-button-text-hover: #000000;
+  --bool: 1;
+  --dark-mode-button-shadow: rgba(151, 151, 151, 0.7);
+  --input-field: #202020;
+  --input-field-submit: rgb(52, 52, 52);
+  --submit-hover: rgb(100, 100, 100);
+  --table-head: rgb(11,11,11);
+  --table-odd: #121212;
+  --table-even: #171717;
+  --sheet-music-item: rgba(0, 0, 0, 0.2);
+  --sheet-music-item-border: rgba(0, 0, 0, 0);
+  --download-button: rgb(67, 102, 143);
+  --download-button-hover: #2c4e70;
+  --switzer: 'Switzer-Light';
+  --imagegroup: rgb(20, 20, 20);
+  --catalogue: rgb(41, 41, 41);
+/*   --news-article: rgb(22, 22, 22); */
+  --news-article: rgb(28, 28, 28);
+  --news-article-text: rgb(197, 197, 197);
+  --archive-header: #1b1b1b;
+  --archive-row: #252525;
+  --archive-text: #d4d4d4;
+  --row-border: #424242;
+  --list-line: rgb(31, 31, 31);
+}
+
+body.darkmode {
+/*   --header-color: rgb(16,16,16); */
+  --header-color: rgb(29, 29, 29);
+  --header-berkres-color: rgb(230, 230, 230);
+  --header-options-color: rgb(230, 230, 230);
+/*   --page-content-color: rgb(16,16,16); */
+  --page-content-color: rgb(25, 25, 25);
+/*   --basic-text-color: rgb(225, 225, 225); */
+--basic-text-color: rgb(201, 201, 201);
+--basic-header-color: rgb(224, 224, 224);
+  --hover-line-color: rgb(230, 230, 230);
+/*   --body: rgb(16,16,16); */
   --body: rgb(25, 25, 25);
   --footer: rgb(15, 15, 15);
 /*   --footer: rgb(8, 8, 8); */
@@ -77,7 +125,8 @@ html.darkmode {
   --switzer: 'Switzer-Light';
   --imagegroup: rgb(20, 20, 20);
   --catalogue: rgb(41, 41, 41);
-  --news-article: rgb(22, 22, 22);
+  --news-article: rgb(28, 28, 28);
+/*   --news-article: rgb(139, 139, 139); */
   --news-article-text: rgb(197, 197, 197);
   --archive-header: #1b1b1b;
   --archive-row: #252525;
@@ -992,7 +1041,8 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   background-color: var(--page-content-color);
-  margin-top: 50px;
+  padding-top: 50px;
+/*   margin-top: 50px; */
   transition: 0.5s;
 }
 
@@ -1004,7 +1054,8 @@ body.no-scroll {
   height: 100%;
   background-color: var(--page-content-color);
   z-index: -3;
-  margin-top: 50px;
+  padding-top: 50px;
+/*   margin-top: 50px; */
   transition: 0.5s;
 }
 
