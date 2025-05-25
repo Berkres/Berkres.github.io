@@ -137,6 +137,7 @@ body.darkmode {
 
 html {
   background-color: var(--body);
+  transition: 0.5s;
 }
 
 * {
@@ -1044,6 +1045,7 @@ body.no-scroll {
   padding-top: 50px;
 /*   margin-top: 50px; */
   transition: 0.5s;
+  padding-bottom: 35px;
 }
 
 .content-contact {
@@ -1067,7 +1069,7 @@ body.no-scroll {
 
   width: 450px;
   height: 450px;
-  margin-bottom: 65px;
+  margin-bottom: 26px;
   margin-top: 15px;
 }
 
@@ -1786,7 +1788,7 @@ body.no-scroll {
   font-style: normal;
 /*   font-variation-settings: "wght" 550;
   font-feature-settings: "ss01" on; */
-  letter-spacing: -0.5px;
+  letter-spacing: -0.33px;
 }
 
 .dark-mode-toggle {
@@ -2428,7 +2430,7 @@ body.no-scroll {
     height: auto;
     display: block;
     margin: 0 auto;
-    margin-bottom: 11px;
+    margin-bottom: -6px;
   }
 }
 
@@ -2507,7 +2509,7 @@ body.no-scroll {
     height: auto;
     display: block;
     margin: 0 auto;
-    margin-bottom: 11px;
+    margin-bottom: -6px;
   }
 
   .gallery-row {

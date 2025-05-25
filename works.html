@@ -175,7 +175,7 @@
 
     .grid-container {
       display: grid;
-      grid-gap: 24px; /* Adjust the gap between grid items */
+      grid-gap: 29px; /* Adjust the gap between grid items */
       grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
       max-width: 1160px; /* Limits the total width */
       width: calc(100% - 40px); /* Ensures spacing on both sides */
@@ -188,7 +188,7 @@
       display: flex;
       flex-direction: column; /* Stack image and text vertically */
       position: relative;
-      overflow: hidden;
+/*       overflow: hidden; */
     }
 
     /* The image part, ensuring the square shape */
@@ -202,9 +202,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 99.5%;
       height: 100%;
       object-fit: cover; /* Ensures image covers the entire container */
+/*       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);  */
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
     }
 
     /* Title and subtitle styles */
@@ -270,6 +273,10 @@
     @media (max-width: 567px) {
       .grid-container {
         grid-template-columns: 1fr; /* 1 column for very small screens */
+      }
+
+      .grid-item img {
+        width: 99.7%;
       }
     }
 
@@ -469,7 +476,7 @@
 
       </div>
         
-      <div class="footer" style="margin-top: 60px;">
+      <div class="footer" style="margin-top: 0px;">
         <div class="link-logos">
           <a href="https://open.spotify.com/intl-de/artist/1CeZSOG4byIcylMssW7qM8" target="_blank">
             <div class="logo">
